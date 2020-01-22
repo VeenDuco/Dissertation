@@ -1,7 +1,7 @@
 ---
 author            : "Duco Veen"
 date              : "Department of Methodology & Statistics, Utrecht University"
-title             : "Alternative Information: Bayesian Statistics, Expert Elicitation and Information Theory in the Social Sciences"
+subtitle             : "Alternative Information: Bayesian Statistics, Expert Elicitation and Information Theory in the Social Sciences"
 # header-includes:
 site: bookdown::bookdown_site
 output: 
