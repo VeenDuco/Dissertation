@@ -34,6 +34,7 @@ bibliography: ["Reader on statistics.bib", packages.bib, ch04.bib ,ch05.bib, ch0
 csl: apa.csl
 link-citations: yes
 github-repo: VeenDuco/Dissertation
+url: 'https\://veenduco.github.io/Dissertation/'
 
 favicon: "favicon.ico"
 ---
