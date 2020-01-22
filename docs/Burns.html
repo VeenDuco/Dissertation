@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 The importance of collaboration in Bayesian analyses with small samples | _main.utf8.md</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 The importance of collaboration in Bayesian analyses with small samples | _main.utf8.md" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 The importance of collaboration in Bayesian analyses with small samples | _main.utf8.md" />
+  
+  
+  
+
+<meta name="author" content="Duco Veen" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="Hierarchical.html"/>
+<link rel="next" href="elicitlgm.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#bayesian-statistics"><i class="fa fa-check"></i><b>1.1</b> Bayesian Statistics</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#prior-information"><i class="fa fa-check"></i><b>1.2</b> Prior Information</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#expert-elicitation"><i class="fa fa-check"></i><b>1.3</b> Expert Elicitation</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#aims-and-outline"><i class="fa fa-check"></i><b>1.4</b> Aims and Outline</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="fivestep.html"><a href="fivestep.html"><i class="fa fa-check"></i><b>2</b> Proposal for a Five-Step Method to Elicit Expert Judgment</a><ul>
+<li class="chapter" data-level="" data-path="fivestep.html"><a href="fivestep.html#abstract"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="2.1" data-path="fivestep.html"><a href="fivestep.html#ch02introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="fivestep.html"><a href="fivestep.html#five-step-method"><i class="fa fa-check"></i><b>2.2</b> Five-Step Method</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="fivestep.html"><a href="fivestep.html#step-1"><i class="fa fa-check"></i><b>2.2.1</b> Step 1</a></li>
+<li class="chapter" data-level="2.2.2" data-path="fivestep.html"><a href="fivestep.html#step-2"><i class="fa fa-check"></i><b>2.2.2</b> Step 2</a></li>
+<li class="chapter" data-level="2.2.3" data-path="fivestep.html"><a href="fivestep.html#step-3"><i class="fa fa-check"></i><b>2.2.3</b> Step 3</a></li>
+<li class="chapter" data-level="2.2.4" data-path="fivestep.html"><a href="fivestep.html#step-4"><i class="fa fa-check"></i><b>2.2.4</b> Step 4</a></li>
+<li class="chapter" data-level="2.2.5" data-path="fivestep.html"><a href="fivestep.html#step-5"><i class="fa fa-check"></i><b>2.2.5</b> Step 5</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="fivestep.html"><a href="fivestep.html#elicitation-studies"><i class="fa fa-check"></i><b>2.3</b> Elicitation Studies</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="fivestep.html"><a href="fivestep.html#user-feasibility-study"><i class="fa fa-check"></i><b>2.3.1</b> User Feasibility Study</a></li>
+<li class="chapter" data-level="2.3.2" data-path="fivestep.html"><a href="fivestep.html#elicitation-staffing-company"><i class="fa fa-check"></i><b>2.3.2</b> Elicitation Staffing Company</a></li>
+<li class="chapter" data-level="2.3.3" data-path="fivestep.html"><a href="fivestep.html#elicitation-large-financial-institution"><i class="fa fa-check"></i><b>2.3.3</b> Elicitation Large Financial Institution</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="fivestep.html"><a href="fivestep.html#ch02discussion"><i class="fa fa-check"></i><b>2.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="fivestep.html"><a href="fivestep.html#ch02ethics"><i class="fa fa-check"></i>Ethics Statement</a></li>
+<li class="chapter" data-level="" data-path="fivestep.html"><a href="fivestep.html#ch02funding"><i class="fa fa-check"></i>Funding</a></li>
+<li class="chapter" data-level="" data-path="fivestep.html"><a href="fivestep.html#ch02acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="fivestep.html"><a href="fivestep.html#ch02conflict"><i class="fa fa-check"></i>Conflict of Interest Statement</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="DAC1.html"><a href="DAC1.html"><i class="fa fa-check"></i><b>3</b> Using the Data Agreement Criterion to Rank Experts’ Beliefs</a><ul>
+<li class="chapter" data-level="" data-path="DAC1.html"><a href="DAC1.html#abstract-1"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="3.1" data-path="DAC1.html"><a href="DAC1.html#ch03introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="DAC1.html"><a href="DAC1.html#expert-data-disagreement"><i class="fa fa-check"></i><b>3.2</b> Expert-Data (Dis)Agreement</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="DAC1.html"><a href="DAC1.html#data-agreement-criterion"><i class="fa fa-check"></i><b>3.2.1</b> Data Agreement Criterion</a></li>
+<li class="chapter" data-level="3.2.2" data-path="DAC1.html"><a href="DAC1.html#DACvsBF"><i class="fa fa-check"></i><b>3.2.2</b> Comparison to Ranking by the Bayes Factor</a></li>
+<li class="chapter" data-level="3.2.3" data-path="DAC1.html"><a href="DAC1.html#DACvsBF2"><i class="fa fa-check"></i><b>3.2.3</b> DAC Versus BF</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="DAC1.html"><a href="DAC1.html#empirical-example"><i class="fa fa-check"></i><b>3.3</b> Empirical Example</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="DAC1.html"><a href="DAC1.html#elicitation-procedure"><i class="fa fa-check"></i><b>3.3.1</b> Elicitation Procedure</a></li>
+<li class="chapter" data-level="3.3.2" data-path="DAC1.html"><a href="DAC1.html#ranking-the-experts"><i class="fa fa-check"></i><b>3.3.2</b> Ranking the Experts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="DAC1.html"><a href="DAC1.html#ch03discussion"><i class="fa fa-check"></i><b>3.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="DAC1.html"><a href="DAC1.html#ch03ethics"><i class="fa fa-check"></i>Ethics Statement</a></li>
+<li class="chapter" data-level="" data-path="DAC1.html"><a href="DAC1.html#ch03funding"><i class="fa fa-check"></i>Funding</a></li>
+<li class="chapter" data-level="" data-path="DAC1.html"><a href="DAC1.html#ch03acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="DAC1.html"><a href="DAC1.html#ch03conflict"><i class="fa fa-check"></i>Conflicts of Interest Statement</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Hierarchical.html"><a href="Hierarchical.html"><i class="fa fa-check"></i><b>4</b> A Step Forward: Bayesian Hierarchical Modelling as a Tool in Assessment of Individual Discrimination Performance</a><ul>
+<li class="chapter" data-level="" data-path="Hierarchical.html"><a href="Hierarchical.html#abstract-2"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="4.1" data-path="Hierarchical.html"><a href="Hierarchical.html#ch04introduction"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="Hierarchical.html"><a href="Hierarchical.html#method"><i class="fa fa-check"></i><b>4.2</b> Method</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="Hierarchical.html"><a href="Hierarchical.html#participants"><i class="fa fa-check"></i><b>4.2.1</b> Participants</a></li>
+<li class="chapter" data-level="4.2.2" data-path="Hierarchical.html"><a href="Hierarchical.html#stimuli"><i class="fa fa-check"></i><b>4.2.2</b> Stimuli</a></li>
+<li class="chapter" data-level="4.2.3" data-path="Hierarchical.html"><a href="Hierarchical.html#procedure"><i class="fa fa-check"></i><b>4.2.3</b> Procedure</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="Hierarchical.html"><a href="Hierarchical.html#results-3"><i class="fa fa-check"></i><b>4.3</b> Results</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="Hierarchical.html"><a href="Hierarchical.html#summary-of-the-group-data-published-in-de_klerk_lost_2019"><i class="fa fa-check"></i><b>4.3.1</b> Summary of the group data published in <span class="citation">Klerk et al. (<span>2019</span>)</span></a></li>
+<li class="chapter" data-level="4.3.2" data-path="Hierarchical.html"><a href="Hierarchical.html#data-screening"><i class="fa fa-check"></i><b>4.3.2</b> Data Screening</a></li>
+<li class="chapter" data-level="4.3.3" data-path="Hierarchical.html"><a href="Hierarchical.html#analysis-1-linear-regression-model-with-autoregressive-ar1-error-structure"><i class="fa fa-check"></i><b>4.3.3</b> Analysis 1: Linear Regression Model with Autoregressive (AR1) Error Structure</a></li>
+<li class="chapter" data-level="4.3.4" data-path="Hierarchical.html"><a href="Hierarchical.html#analysis-2-hierarchical-bayesian-analysis"><i class="fa fa-check"></i><b>4.3.4</b> Analysis 2: Hierarchical Bayesian Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="Hierarchical.html"><a href="Hierarchical.html#discussion"><i class="fa fa-check"></i><b>4.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="Hierarchical.html"><a href="Hierarchical.html#ch04ethics"><i class="fa fa-check"></i>Ethics Statement</a></li>
+<li class="chapter" data-level="" data-path="Hierarchical.html"><a href="Hierarchical.html#ch04acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="Hierarchical.html"><a href="Hierarchical.html#ch05appendix"><i class="fa fa-check"></i>Appendix A</a></li>
+<li class="chapter" data-level="" data-path="Hierarchical.html"><a href="Hierarchical.html#ch05appendixB"><i class="fa fa-check"></i>Appendix B</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="Hierarchical.html"><a href="Hierarchical.html#software"><i class="fa fa-check"></i><b>4.4.1</b> Software</a></li>
+<li class="chapter" data-level="4.4.2" data-path="Hierarchical.html"><a href="Hierarchical.html#priors"><i class="fa fa-check"></i><b>4.4.2</b> Priors</a></li>
+<li class="chapter" data-level="4.4.3" data-path="Hierarchical.html"><a href="Hierarchical.html#estimation-and-convergence"><i class="fa fa-check"></i><b>4.4.3</b> Estimation and Convergence</a></li>
+<li class="chapter" data-level="4.4.4" data-path="Hierarchical.html"><a href="Hierarchical.html#posterior-predictive-check"><i class="fa fa-check"></i><b>4.4.4</b> Posterior predictive check</a></li>
+<li class="chapter" data-level="4.4.5" data-path="Hierarchical.html"><a href="Hierarchical.html#sensitivity-analysis"><i class="fa fa-check"></i><b>4.4.5</b> Sensitivity Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="Burns.html"><a href="Burns.html"><i class="fa fa-check"></i><b>5</b> The importance of collaboration in Bayesian analyses with small samples</a><ul>
+<li class="chapter" data-level="" data-path="Burns.html"><a href="Burns.html#abstract-3"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="5.1" data-path="Burns.html"><a href="Burns.html#ch05introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="Burns.html"><a href="Burns.html#latent-growth-models-with-small-sample-sizes"><i class="fa fa-check"></i><b>5.2</b> Latent Growth Models with small sample sizes</a></li>
+<li class="chapter" data-level="5.3" data-path="Burns.html"><a href="Burns.html#empirical-example-analysis-plan"><i class="fa fa-check"></i><b>5.3</b> Empirical example: Analysis plan</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="Burns.html"><a href="Burns.html#research-question-model-specification-and-an-overview-of-data"><i class="fa fa-check"></i><b>5.3.1</b> Research question, model specification and an overview of data</a></li>
+<li class="chapter" data-level="5.3.2" data-path="Burns.html"><a href="Burns.html#specifying-and-understanding-priors"><i class="fa fa-check"></i><b>5.3.2</b> Specifying and understanding priors</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="Burns.html"><a href="Burns.html#empirical-example-conducting-the-analysis"><i class="fa fa-check"></i><b>5.4</b> Empirical example: Conducting the analysis</a></li>
+<li class="chapter" data-level="5.5" data-path="Burns.html"><a href="Burns.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging</a></li>
+<li class="chapter" data-level="5.6" data-path="Burns.html"><a href="Burns.html#moving-forward-alternative-models"><i class="fa fa-check"></i><b>5.6</b> Moving forward: Alternative Models</a></li>
+<li class="chapter" data-level="5.7" data-path="Burns.html"><a href="Burns.html#conclusion"><i class="fa fa-check"></i><b>5.7</b> Conclusion</a></li>
+<li class="chapter" data-level="5.8" data-path="Burns.html"><a href="Burns.html#acknowledgements"><i class="fa fa-check"></i><b>5.8</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="elicitlgm.html"><a href="elicitlgm.html"><i class="fa fa-check"></i><b>6</b> Expert Elicitation in the Social Sciences: The case of Posttraumatic Stress Symptoms Development in Children with Burn Injuries</a><ul>
+<li class="chapter" data-level="" data-path="elicitlgm.html"><a href="elicitlgm.html#abstract-4"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="6.1" data-path="elicitlgm.html"><a href="elicitlgm.html#ch06introduction"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="elicitlgm.html"><a href="elicitlgm.html#methods"><i class="fa fa-check"></i><b>6.2</b> Methods</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="elicitlgm.html"><a href="elicitlgm.html#motivating-example"><i class="fa fa-check"></i><b>6.2.1</b> Motivating Example</a></li>
+<li class="chapter" data-level="6.2.2" data-path="elicitlgm.html"><a href="elicitlgm.html#expert-elicitation-1"><i class="fa fa-check"></i><b>6.2.2</b> Expert Elicitation</a></li>
+<li class="chapter" data-level="6.2.3" data-path="elicitlgm.html"><a href="elicitlgm.html#sample-of-experts"><i class="fa fa-check"></i><b>6.2.3</b> Sample of Experts</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="elicitlgm.html"><a href="elicitlgm.html#results-4"><i class="fa fa-check"></i><b>6.3</b> Results</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="elicitlgm.html"><a href="elicitlgm.html#individual-and-group-expert-judgements"><i class="fa fa-check"></i><b>6.3.1</b> Individual and Group Expert Judgements</a></li>
+<li class="chapter" data-level="6.3.2" data-path="elicitlgm.html"><a href="elicitlgm.html#prior-data-disagreement"><i class="fa fa-check"></i><b>6.3.2</b> Prior-Data (dis)Agreement</a></li>
+<li class="chapter" data-level="6.3.3" data-path="elicitlgm.html"><a href="elicitlgm.html#audio-recordings"><i class="fa fa-check"></i><b>6.3.3</b> Audio Recordings</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="elicitlgm.html"><a href="elicitlgm.html#discussion-1"><i class="fa fa-check"></i><b>6.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="elicitlgm.html"><a href="elicitlgm.html#conflicts-of-interest"><i class="fa fa-check"></i>Conflicts of Interest</a></li>
+<li class="chapter" data-level="" data-path="elicitlgm.html"><a href="elicitlgm.html#ethics-statement"><i class="fa fa-check"></i>Ethics Statement</a></li>
+<li class="chapter" data-level="" data-path="elicitlgm.html"><a href="elicitlgm.html#acknowledgements-1"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="elicitlgm.html"><a href="elicitlgm.html#funding"><i class="fa fa-check"></i>Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="thesisdiscussion.html"><a href="thesisdiscussion.html"><i class="fa fa-check"></i><b>7</b> Discussion</a><ul>
+<li class="chapter" data-level="7.1" data-path="thesisdiscussion.html"><a href="thesisdiscussion.html#hidden-assumptions"><i class="fa fa-check"></i><b>7.1</b> Hidden assumptions</a></li>
+<li class="chapter" data-level="7.2" data-path="thesisdiscussion.html"><a href="thesisdiscussion.html#expert-knowledge"><i class="fa fa-check"></i><b>7.2</b> Expert Knowledge</a></li>
+<li class="chapter" data-level="7.3" data-path="thesisdiscussion.html"><a href="thesisdiscussion.html#taking-a-decision"><i class="fa fa-check"></i><b>7.3</b> Taking a decision</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="nederlandse-samenvatting.html"><a href="nederlandse-samenvatting.html"><i class="fa fa-check"></i>Nederlandse Samenvatting</a></li>
+<li class="chapter" data-level="" data-path="dankwoord.html"><a href="dankwoord.html"><i class="fa fa-check"></i>Dankwoord</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html"><i class="fa fa-check"></i>Curriculum Vitae</a><ul>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#academic-publications"><i class="fa fa-check"></i>Academic Publications</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#book-chapters"><i class="fa fa-check"></i>Book Chapters</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#technical-reports"><i class="fa fa-check"></i>Technical Reports</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#manuscripts-under-review"><i class="fa fa-check"></i>Manuscripts under review</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#grants"><i class="fa fa-check"></i>Grants</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#awards"><i class="fa fa-check"></i>Awards</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="ref.html"><a href="ref.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Burns" class="section level1">
+<h1><span class="header-section-number">5</span> The importance of collaboration in Bayesian analyses with small samples</h1>
+
+
+<div id="abstract-3" class="section level2 unnumbered">
+<h2>Abstract</h2>
+
+<p>This chapter addresses Bayesian estimation with (weakly) informative priors as a solution for small sample size issues. Special attention is paid to the problems that may arise in the analysis process, showing that Bayesian estimation should not be considered a quick solution for small sample size problems in complex models. The analysis steps are described and illustrated with an empirical example for which the planned analysis goes awry. Several solutions are presented for the problems that arise, and the chapter shows that different solutions can result in different posterior summaries and substantive conclusions. Therefore, statistical solutions should always be evaluated in the context of the substantive research question. This emphasizes the need for a constant interaction and collaboration between applied researchers and statisticians.</p>
+<!-- \indent _keywords:_ Need To; enter keywords -->
+
+<!-- Mio\v{c}evi\'c -->
+</div>
+<div id="ch05introduction" class="section level2">
+<h2><span class="header-section-number">5.1</span> Introduction</h2>
+<p>Complex statistical models, such as Structural Equation Models (SEMs), generally require large sample sizes <span class="citation">(Tabachnick, Fidell, &amp; Ullman, <a href="#ref-tabachnick_using_2007" role="doc-biblioref">2007</a>; Wang &amp; Wang, <a href="#ref-wang_structural_2012" role="doc-biblioref">2012</a>)</span>. In practice, a large enough sample cannot always be easily obtained. Still, some research questions can only be answered with complex statistical models. Fortunately, solutions exist to overcome estimation issues with small sample sizes for complex models, see <span class="citation">Smid et al. (<a href="#ref-smid_bayesian_2019" role="doc-biblioref">2019</a><a href="#ref-smid_bayesian_2019" role="doc-biblioref">b</a>)</span> for a systematic review comparing frequentist and Bayesian approaches . The current chapter addresses one of these solutions, namely Bayesian estimation with informative priors. In the process of Bayesian estimation, the WAMBS-checklist <span class="citation">(When-to-Worry-and-How-to-Avoid-the-Misuse-of-Bayesian-Statistics; Depaoli &amp; Van de Schoot, <a href="#ref-depaoli_improving_2017" role="doc-biblioref">2017</a>)</span> is a helpful tool; see also <span class="citation">Schoot, Veen, Smeets, Winter, &amp; Depaoli (<a href="#ref-van_de_schoot_tutorial_2020" role="doc-biblioref">2020</a>)</span>. However, problems may arise in Bayesian analyses with informative priors, and whereas these problems are generally recognized in the field, they are not always described or solved in existing tutorials, statistical handbooks or example papers. This chapter offers an example of issues arising in the estimation of a Latent Growth Model (LGM) with a distal outcome using Bayesian methods with informative priors and a small data set of young children with burn injuries and their mothers. Moreover, we introduce two additional tools for diagnosing estimation issues: divergent transitions and the effective sample size of the posterior parameter samples, available in Stan <span class="citation">(Stan Development Team, <a href="#ref-stan_development_team_rstan:_2018" role="doc-biblioref">2018</a><a href="#ref-stan_development_team_rstan:_2018" role="doc-biblioref">b</a>)</span> which makes use of an advanced Hamiltonian Monte Carlo (HMC) algorithm called the No-U-Turn-Sampler <span class="citation">(NUTS: Hoffman &amp; Gelman, <a href="#ref-hoffman_no-u-turn_2014" role="doc-biblioref">2014</a>)</span>. These diagnostics can be used in addition to the checks described in the WAMBS checklist.</p>
+<p>In the following sections, we briefly introduce LGMs and address the role of sample size, followed by an empirical example for which we present an analysis plan. Next, we show the process of adjusting the analysis in response to estimation problems. We show that different solutions can differentially impact the posterior summaries and substantive conclusions. This chapter highlights the importance of collaboration between substantive experts and statisticians when an initial analysis plan goes awry.</p>
+</div>
+<div id="latent-growth-models-with-small-sample-sizes" class="section level2">
+<h2><span class="header-section-number">5.2</span> Latent Growth Models with small sample sizes</h2>
+<p>Latent Growth Models (LGMs) include repeated measurements of observed variables, and allow researchers to examine change over time in the construct of interest. LGMs can be extended to include distal outcomes and covariates (see Figure <a href="Burns.html#fig:ch05fig1">5.1</a>). One of the benefits of specifying an LGM as a structural equation model (SEM), as opposed to a multilevel model as discussed in <span class="citation">Hox &amp; McNeish (<a href="#ref-hox_small_2020" role="doc-biblioref">2020</a>)</span>, is that growth can be specified as a non-monotonic or even non-linear function. For instance, we can specify an LGM in which part of the growth process is fixed and another part is estimated from the data. In Figure <a href="Burns.html#fig:ch05fig1">5.1</a>, two constraints on the relationships between the latent slope and measurement occasions are freed for two waves, thereby estimating <span class="math inline">\(\lambda_{22}\)</span> and <span class="math inline">\(\lambda_{23}\)</span> from the data. As a result, we allow individuals to differ in the way their manifest variables change from the first to the last measurement.</p>
+<div class="figure" style="text-align: center"><span id="fig:ch05fig1"></span>
+<img src="figures/chapter_5/Figure1.png" alt="The Latent Growth Model as used in the empirical example. The parameters of interest are the intercept of the latent factor f1 ($\beta_0$), f1 regressed on the latent intercept ($\beta_1$), the latent slope ($\beta_2$) and x5 ($\beta_3$) and the residual variance of the latent factor f1 ($\sigma_\epsilon^2$). The two blue factor loadings indicate freely estimated relationships for $\lambda_{22}$ and $\lambda_{23}$ (respectively). The red residual variance parameter ($\theta_{77}$) is highlighted throughout the empirical example. " width="80%" />
+<p class="caption">
+Figure 5.1: The Latent Growth Model as used in the empirical example. The parameters of interest are the intercept of the latent factor f1 (<span class="math inline">\(\beta_0\)</span>), f1 regressed on the latent intercept (<span class="math inline">\(\beta_1\)</span>), the latent slope (<span class="math inline">\(\beta_2\)</span>) and x5 (<span class="math inline">\(\beta_3\)</span>) and the residual variance of the latent factor f1 (<span class="math inline">\(\sigma_\epsilon^2\)</span>). The two blue factor loadings indicate freely estimated relationships for <span class="math inline">\(\lambda_{22}\)</span> and <span class="math inline">\(\lambda_{23}\)</span> (respectively). The red residual variance parameter (<span class="math inline">\(\theta_{77}\)</span>) is highlighted throughout the empirical example.
+</p>
+</div>
+<p>One drawback of LGMs, however, is that such models generally require large sample sizes. The more restrictions we place on a model, the fewer parameters there are to estimate, and the smaller the required sample size. The restrictions placed should, however, be in line with theory and research questions. Small sample sizes can cause problems such as high bias and low coverage <span class="citation">(Hox &amp; Maas, <a href="#ref-hox_accuracy_2001" role="doc-biblioref">2001</a>)</span>, nonconvergence or improper solutions such as negative variance estimates <span class="citation">(Wang &amp; Wang, <a href="#ref-wang_structural_2012" role="doc-biblioref">2012</a>, Chapter 7)</span>, and the question is how large should the sample size be to avoid these issues. Several simulation studies using maximum likelihood estimation have provided information on required sample sizes for SEM in general, and LGM specifically. To get an indication of the required sample size, we can use some rather arbitrary rules of thumb. <span class="citation">Anderson &amp; Gerbing (<a href="#ref-anderson_structural_1988" role="doc-biblioref">1988</a>)</span> recommend N = 100-150 for SEM in general. <span class="citation">Hertzog, Oertzen, Ghisletta, &amp; Lindenberger (<a href="#ref-hertzog_evaluating_2008" role="doc-biblioref">2008</a>)</span> investigated the power of LGM to detect individual differences in rate of change (i.e., the variance of the latent slope in LGMs). This is relevant for the model in Figure <a href="Burns.html#fig:ch05fig1">5.1</a> because the detection of these differences is needed if the individual rate of change over time (individual parameter estimates for the latent slope) is suitable to be used as a predictor in a regression analysis. In favorable simulation conditions (high Growth Curve Reliability, high correlation between intercept and slope, and many measurement occasions), maximum likelihood estimation has sufficient power to detect individual differences in change with N = 100. However, in unfavorable conditions even a sample size of 500 did not result in enough power to detect individual differences in change. Additionally, the model in the simulation studies by Hertzog and colleagues contained fewer parameters when compared to the LGM model used in the current chapter, thus suggesting that running the model in this chapter would require even larger sample sizes than those recommended by Hertzog and colleagues.</p>
+<p>Bayesian estimation is often suggested as a solution for problems encountered in SEM with small sample sizes because it does not rely on the central limit theorem. A recent review examined the performance of Bayesian estimation in comparison to frequentist estimation methods for SEM in small samples on the basis of previously published simulation studies <span class="citation">(Smid et al., <a href="#ref-smid_bayesian_2019" role="doc-biblioref">2019</a><a href="#ref-smid_bayesian_2019" role="doc-biblioref">b</a>)</span>. It was concluded that Bayesian estimation could be regarded as a valid solution for small sample problems in terms of reducing bias and increasing coverage only when thoughtful priors were specified. In general, naive (i.e., flat or uninformative) priors resulted in high levels of bias. These findings highlight the importance of thoughtfully including prior information when using Bayesian estimation in the context of small samples. Specific simulation studies for LGMs can be found in papers by <span class="citation">(McNeish, <a href="#ref-mcneish_using_2016" role="doc-biblioref">2016</a><a href="#ref-mcneish_using_2016" role="doc-biblioref">a</a>, <a href="#ref-mcneish_using_2016-1" role="doc-biblioref">2016</a><a href="#ref-mcneish_using_2016-1" role="doc-biblioref">b</a>; Smid et al., <a href="#ref-smid_predicting_2019" role="doc-biblioref">2019</a><a href="#ref-smid_predicting_2019" role="doc-biblioref">a</a>; Van De Schoot, Broere, Perryck, Zondervan-Zwijnenburg, &amp; Van Loey, <a href="#ref-van_de_schoot_analyzing_2015" role="doc-biblioref">2015</a>; Zondervan-Zwijnenburg, Depaoli, Peeters, &amp; Schoot, <a href="#ref-zondervan-zwijnenburg_pushing_2018" role="doc-biblioref">2018</a>)</span>.</p>
+<p>In general, it is difficult to label a sample size as small or large, and this can only be done with respect to the complexity of the model. In the remainder of this chapter we use the example of the extensive and quite complex LGM that can be seen in Figure <a href="Burns.html#fig:ch05fig1">5.1</a>. We show that with a sample that is small with respect to the complexity of this model, issues arise in the estimation process even with Bayesian estimation with thoughtful priors. Moreover, we provide details on diagnostics, debugging of the analysis and the search for appropriate solutions. We show the need for both statistical and content expertise to make the most of a complicated situation.</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="empirical-example-analysis-plan" class="section level2">
+<h2><span class="header-section-number">5.3</span> Empirical example: Analysis plan</h2>
+<p>In practice, there are instances in which only small sample data are available, for example in the case of specific and naturally small or difficult to access populations. In these cases, collecting more data is not an option, and simplifying research questions and statistical models is also undesirable because this will not lead to an appropriate answer to the intended research questions. In this section we introduce an empirical example for which only a small data set was available, and at the same time the research question required the complicated model in Figure <a href="Burns.html#fig:ch05fig1">5.1</a>.</p>
+<div id="research-question-model-specification-and-an-overview-of-data" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Research question, model specification and an overview of data</h3>
+<p>The empirical example comprises a longitudinal study of child and parental adjustment after a pediatric burn event. Pediatric burn injuries can have long-term consequences for the child’s health-related quality of life (HRQL), in terms of physical, psychological and social functioning. In addition, a pediatric burn injury is a potentially traumatic event for parents, and parents may experience posttraumatic stress symptoms (PTSS; i.e., symptoms of re-experiencing, avoidance and arousal) as a result. Parents’ PTSS could also impact the child’s long-term HRQL. It is important to know whether the initial level of parental PTSS after the event or the development of symptoms is a better predictor of long-term child HRQL, since this may provide information about the appropriate timing of potential interventions. Therefore, the research question of interest was how the initial level and the development of mothers’ posttraumatic stress symptoms (PTSS) over time predict the child’s long-term health-related quality of life (HRQL).</p>
+<p>In terms of statistical modelling, the research question required an LGM to model PTSS development and a measurement model for the distal outcome, namely, the child’s HRQL. The full hypothesized model and the main parameters of interest, i.e. the regression coefficients of the predictors for the child’s HRQL, <span class="math inline">\(\beta_0\)</span> for the intercept, <span class="math inline">\(\beta_1\)</span> for HRQL regressed on the latent intercept, <span class="math inline">\(\beta_2\)</span> for HRQL regressed on the latent slope, <span class="math inline">\(\beta_3\)</span> for HRQL regressed on the covariate, percentage of Total Body Surface Area (TBSA) burned, and the residual variance <span class="math inline">\(\sigma_\epsilon^2\)</span>, are displayed in Figure <a href="Burns.html#fig:ch05fig1">5.1</a>.</p>
+<p>Mothers reported on PTSS at four time points (up to 18 months) after the burn injury by filling out the Impact of Event Scale <span class="citation">(IES; Horowitz, Wilner, &amp; Alvarez, <a href="#ref-horowitz_impact_1979" role="doc-biblioref">1979</a>)</span>. The total IES score from each of the four time points was used in the LGM. Eighteen months postburn, mothers completed the Health Outcomes Burn Questionnaire <span class="citation">(HOBQ; Kazis et al., <a href="#ref-kazis_development_2002" role="doc-biblioref">2002</a>)</span>, which consists of 10 subscales. Based on a confirmatory factor analysis, these subscales were divided into three factors, i.e., Development, Behavior and Concern factors. For illustrative reasons, we only focus on the Behavior factor in the current chapter which was measured by just two manifest variables. TBSA was used to indicate burn severity; this is the proportion of the body that is affected by second- or third-degree burns and it was used as a covariate. For more detailed information about participant recruitment, procedures, and measurements see <span class="citation">(Bakker, Van der Heijden, Van Son, &amp; Van Loey, <a href="#ref-bakker_course_2013" role="doc-biblioref">2013</a>)</span>.</p>
+<p>Data from only 107 families was available. Even though data were collected in multiple burn centers across the Netherlands and Belgium over a prolonged period of time (namely 3 years), obtaining this sample size was already a challenge because of two main reasons. Firstly, the incidence of pediatric burns is relatively low. Yearly, around 160 children between the ages of 0 and 4 years old require hospitalization in a specialized Dutch burn center <span class="citation">(Baar, Vloemans, Beerthuizen, Middelkoop, &amp; R3, <a href="#ref-van_baar_epidemiologie_2015" role="doc-biblioref">2015</a>)</span>. Secondly, the acute hospitalization period in which families were recruited to participate is extremely stressful. Participating in research in this demanding and emotional phase may be perceived as an additional burden by parents.</p>
+<p>Still, we aimed to answer a research question that required the complex statistical model displayed in Figure <a href="Burns.html#fig:ch05fig1">5.1</a>. Therefore, we used Bayesian estimation with weakly informative priors to overcome the issues of small sample size estimation with ML-estimation, for which the model shown in Figure <a href="Burns.html#fig:ch05fig1">5.1</a> resulted in negative variance estimates.</p>
+</div>
+<div id="specifying-and-understanding-priors" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Specifying and understanding priors</h3>
+<p>The specification of the priors is one of the essential elements of Bayesian analysis, especially when the sample size is small. Given the complexity of the LGM model relative to the sample size, prior information was incorporated to facilitate the estimation of the model (i.e., step 1 of the WAMBS-checklist). In addition to careful consideration of the plausible parameter space, we used previous results to inform the priors in our current model <span class="citation">(Egberts, Van de Schoot, Geenen, &amp; Van Loey, <a href="#ref-egberts_parents_2017" role="doc-biblioref">2017</a>)</span>.</p>
+<p>The prior for the mean of the latent intercept (<span class="math inline">\(\alpha_1\)</span>) could be regarded as informative with respect to the location specification. The location parameter, or mean of the normally distributed prior <span class="math inline">\(N(\mu_0, \sigma_0^2)\)</span>, was based on the results of a previous study <span class="citation">(Egberts et al., <a href="#ref-egberts_parents_2017" role="doc-biblioref">2017</a>, Table 1)</span> and set at 26. If priors are based on information from previously published studies, it is important to reflect on the exchangeability of the prior and current study, see for instance <span class="citation">Miočević, Levy, &amp; Savord (<a href="#ref-miocevic_role_2020" role="doc-biblioref">2020</a>)</span>. Exchangeability would indicate that the samples are drawn from the same population and a higher prior certainty can be used. To evaluate exchangeability, the characteristics of the sample and the data collection procedure were evaluated. Both studies used identical questionnaires and measurement intervals, and the data were collected in exactly the same burn centers. The main difference between the samples was the age of the children (i.e., age range in the current sample: 8 months-4 years; age range in the previous sample: 8-18 years), and related to that, the age of the mothers also differed (i.e., mean age in the current sample: 32 years; mean age in the previous sample: 42 years). Although generally, child age has not been associated with parents’ PTSS after medical trauma <span class="citation">(e.g., Landolt, Vollrath, Ribi, Gnehm, &amp; Sennhauser, <a href="#ref-landolt_incidence_2003" role="doc-biblioref">2003</a>)</span>, the two studies are not completely exchangeable as a results of the age difference. Therefore, additional uncertainty about the value of the parameter was specified by selecting a relatively high prior variance (see Table <a href="Burns.html#tab:ch05tab1">5.1</a>).</p>
+<p>The priors for the regression coefficients are related to the expected scale of their associated parameters. For <span class="math inline">\(\beta_1\)</span> a <span class="math inline">\(N(0,4)\)</span> prior was specified, thereby allocating the most density mass on the plausible parameter space. Therefore, given the scale of the instruments used, and the parametrization of the factor score model, the latent factor scores can take on values between zero and 100. A regression coefficient of -4 or 4 would be extremely implausible. If our expected value of 26 is accurate for the intercept, this would change our predicted factor score by -104 or 104, respectively. This would constitute a change larger than the range of the construct.
+For <span class="math inline">\(\beta_2\)</span> in contrast, a <span class="math inline">\(N(0, 2500)\)</span> prior was specified because small latent slope values, near the prior group mean of the latent slope of zero, should be allowed to have large impacts on the latent factor scores. For instance, a slope value of 0.1 could be associated with a drop of 50 in HRQL, resulting in a coefficient of -500. Figure <a href="Burns.html#fig:ch05fig2">5.2</a> shows what would have happened to the prior predictive distributions for the latent factor scores if a N(0,2500) prior was specified for <span class="math inline">\(\beta_1\)</span> instead of the <span class="math inline">\(N(0, 4)\)</span> prior, keeping all other priors constant. The prior predictive densities for the factor scores in panel B of Figure <a href="Burns.html#fig:ch05fig2">5.2</a> place far too much support on parts of the parameter space that are impossible. The factor scores can only take on values between zero and 100 in our model specification. For more information on prior predictive distributions, see for instance <span class="citation">Schoot et al. (<a href="#ref-van_de_schoot_tutorial_2020" role="doc-biblioref">2020</a>)</span>.</p>
+<div class="figure" style="text-align: center"><span id="fig:ch05fig2"></span>
+<img src="figures/chapter_5/Figure2.png" alt="The effect of changing a single prior in the model specification on the prior predictive distributions of the Latent Factor Scores. The prior for $\beta_1$ is changed from weakly informative (panel A; $N(0,4)$) to uninformative (panel B; $N(0,2500)$). " width="90%" />
+<p class="caption">
+Figure 5.2: The effect of changing a single prior in the model specification on the prior predictive distributions of the Latent Factor Scores. The prior for <span class="math inline">\(\beta_1\)</span> is changed from weakly informative (panel A; <span class="math inline">\(N(0,4)\)</span>) to uninformative (panel B; <span class="math inline">\(N(0,2500)\)</span>).
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+
+<table style="width:99%;">
+<caption><span id="tab:ch05tab1">Table 5.1: </span> Priors and justification for all priors that are used in the analysis. <span class="math inline">\(N(.,.)\)</span> is normal distribution with mean and variance <span class="math inline">\(N(\mu_0,\sigma_0^2)\)</span>, <span class="math inline">\(HN(\mu_0, \sigma_0^2)\)</span> is half-normal distribution encompassing only the positive part of the parameter space, <span class="math inline">\(U(.,.)\)</span> is uniform distribution with a lower bound and an upper bound. In Stan code the normal distribution is specified using a mean and standard deviation <span class="math inline">\(N\mu_0, \sigma_0)\)</span>, not a mean and variance <span class="math inline">\(N(\mu_0, \sigma_0^2)\)</span>. This is what causes the differences between the code in the data archive and this table.</caption>
+<colgroup>
+<col width="31%" />
+<col width="17%" />
+<col width="49%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Parameter</th>
+<th align="center">Prior</th>
+<th align="center">Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">group mean of the latent
+intercept (<span class="math inline">\(\alpha_1\)</span>)</td>
+<td align="center"><span class="math inline">\(N(26, 400)\)</span></td>
+<td align="center">Previous article on different
+cohort <span class="citation">(Egberts et al., <a href="#ref-egberts_parents_2017" role="doc-biblioref">2017</a>, Table 1)</span></td>
+</tr>
+<tr class="even">
+<td align="center">group standard deviation
+of the latent intercept
+(<span class="math inline">\(\sigma_{Int}\)</span>)</td>
+<td align="center"><span class="math inline">\(HN(0, 400)\)</span></td>
+<td align="center">Allows values to cover entire
+parameter space for IES</td>
+</tr>
+<tr class="odd">
+<td align="center">group mean of the latent
+slope (<span class="math inline">\(\alpha_2\)</span>)</td>
+<td align="center"><span class="math inline">\(N(0, 4)\)</span></td>
+<td align="center">Allows values to cover entire
+parameter space for IES</td>
+</tr>
+<tr class="even">
+<td align="center">group standard deviation
+of the latent slope
+(<span class="math inline">\(\sigma_{slope}\)</span>)</td>
+<td align="center"><span class="math inline">\(HN(0, 1)\)</span></td>
+<td align="center">Allows values to cover entire
+parameter space for IES</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x1-x4\)</span> regressed on
+<span class="math inline">\(x5\)</span> (<span class="math inline">\(\beta_{ies}\)</span>)</td>
+<td align="center"><span class="math inline">\(N(0, 4)\)</span></td>
+<td align="center">Allows values to cover entire
+parameter space for IES</td>
+</tr>
+<tr class="even">
+<td align="center">group mean relation IES
+3 months (<span class="math inline">\(x2\)</span>) regressed
+on slope
+(<span class="math inline">\(\mu_{\lambda_{22}}\)</span>)</td>
+<td align="center"><span class="math inline">\(N(3, 25)\)</span></td>
+<td align="center">Centered at 3 which would be the
+constraint in a linear LGM.
+Allowed to vary between individuals
+to allow for between-person
+differences in the way manifest
+variables change from the first
+to the last measurement</td>
+</tr>
+<tr class="odd">
+<td align="center">group mean relation
+IES 12 months (<span class="math inline">\(x3\)</span>)
+regressed on slope
+(<span class="math inline">\(\mu_{\lambda_{23}}\)</span>)</td>
+<td align="center"><span class="math inline">\(N(12, 25)\)</span></td>
+<td align="center">Centered at 12 which would be the
+constraint in a linear LGM.
+Allowed to vary between individuals
+to allow for between-person
+differences in the way manifest
+variables change from the first
+to the last measurement.</td>
+</tr>
+<tr class="even">
+<td align="center">group standard deviation
+relation IES 3 months
+(<span class="math inline">\(x2\)</span>) regressed on slope
+(<span class="math inline">\(\sigma_{\lambda_{22}}\)</span>)</td>
+<td align="center"><span class="math inline">\(HN(0, 6.25)\)</span></td>
+<td align="center">Allows for large and small
+between-person differences in the
+way manifest variables change from
+the first to the last measurement.</td>
+</tr>
+<tr class="odd">
+<td align="center">group standard deviation
+relation IES 12 months
+(<span class="math inline">\(x3\)</span>) regressed on slope
+(<span class="math inline">\(\sigma_{\lambda_{23}}\)</span>)</td>
+<td align="center"><span class="math inline">\(HN(0, 6.25)\)</span></td>
+<td align="center">Allows for large and small
+between-person differences in the
+way manifest variables change from
+the first to the last measurement.</td>
+</tr>
+<tr class="even">
+<td align="center">All residual standard
+deviations <span class="math inline">\(x1-x4\)</span>
+(<span class="math inline">\(\sigma_{\epsilon_{ies}}\)</span>)</td>
+<td align="center"><span class="math inline">\(HN(0, 100)\)</span></td>
+<td align="center">Allows values to cover entire
+parameter space for the observed
+variables</td>
+</tr>
+<tr class="odd">
+<td align="center">Intercepts factor
+regressions (<span class="math inline">\(\beta_0\)</span>)</td>
+<td align="center"><span class="math inline">\(N(50, 2500)\)</span></td>
+<td align="center">Covers full factor score parameter
+space centered at middle</td>
+</tr>
+<tr class="even">
+<td align="center">Factors regressed on
+Level (<span class="math inline">\(\beta_1\)</span>)</td>
+<td align="center"><span class="math inline">\(N(0, 4)\)</span></td>
+<td align="center">Allows values to cover entire
+parameter space for the factor scores</td>
+</tr>
+<tr class="odd">
+<td align="center">Factors regressed on
+Shape (<span class="math inline">\(\beta_2\)</span>)</td>
+<td align="center"><span class="math inline">\(N(0, 2500)\)</span></td>
+<td align="center">Allows values to cover entire
+parameter space for the factor scores</td>
+</tr>
+<tr class="even">
+<td align="center">Factors regressed on
+TBSA (<span class="math inline">\(\beta_3\)</span>)</td>
+<td align="center"><span class="math inline">\(N(0, 4)\)</span></td>
+<td align="center">Allows values to cover entire
+parameter space for the factor scores</td>
+</tr>
+<tr class="odd">
+<td align="center">Residual standard
+deviation factors
+(<span class="math inline">\(\sigma_\epsilon\)</span>)</td>
+<td align="center"><span class="math inline">\(HN(0, 100)\)</span></td>
+<td align="center">Allows values to cover entire
+parameter space for the residuals</td>
+</tr>
+</tbody>
+</table>
+
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div id="empirical-example-conducting-the-analysis" class="section level2">
+<h2><span class="header-section-number">5.4</span> Empirical example: Conducting the analysis</h2>
+<p>Based on theoretical considerations, we specified the model as shown in Figure <a href="Burns.html#fig:ch05fig1">5.1</a> using the priors as specified in Table <a href="Burns.html#tab:ch05tab1">5.1</a>. We used Stan <span class="citation">(Carpenter et al., <a href="#ref-carpenter_stan:_2017" role="doc-biblioref">2017</a>)</span> via RStan <span class="citation">(Stan Development Team, <a href="#ref-stan_development_team_rstan:_2018" role="doc-biblioref">2018</a><a href="#ref-stan_development_team_rstan:_2018" role="doc-biblioref">b</a>)</span> to estimate the model and we used the advanced version of the Hamiltonian Monte Carlo (HMC) algorithm called the No-U-Turn sampler <span class="citation">(NUTS; Hoffman &amp; Gelman, <a href="#ref-hoffman_no-u-turn_2014" role="doc-biblioref">2014</a>)</span>. To run the model, we used the following code which by default ran the model using four chains with 2000 MCMC iterations of which 1000 are warmup samples:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">fit_default &lt;-<span class="st"> </span><span class="kw">sampling</span>(model, <span class="dt">data =</span> <span class="kw">list</span>(<span class="dt">X =</span> X, I, K, </a>
+<a class="sourceLine" id="cb1-2" title="2">                                           <span class="dt">run_estimation =</span> <span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb1-3" title="3">                        <span class="dt">seed =</span> <span class="dv">11</span>,  <span class="dt">show_messages =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
+<p>For reproducibility purposes, the OSF webpage <a href="https://osf.io/am7pr/">(https://osf.io/am7pr/)</a> includes all annotated Rstan code and the data.</p>
+<p>Upon completion of the estimation, we received the following warnings from Rstan indicating severe issues with the estimation procedure:</p>
+<pre><code>Warning messages:
+1: There were 676 divergent transitions after warmup. 
+Increasing adapt_delta above 0.8 may help. See:
+http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup 
+2: There were 16 transitions after warmup that exceeded the 
+maximum treedepth. Increase max_treedepth above 10. See
+http://mc-stan.org/misc/warnings.html#maximum-treedepth-exceeded 
+3: There were 4 chains where the estimated 
+Bayesian Fraction of Missing Information was low. 
+See http://mc-stan.org/misc/warnings.html#bfmi-low 
+4: Examine the pairs() plot to diagnose sampling problems</code></pre>
+<p>Fortunately, the warning messages also pointed to online resources with more detailed information about the problems. In what follows, we describe two diagnostics to detect issues in the estimation procedure: divergent transitions (this section) and the effective sample size of the MCMC algorithm (next section).</p>
+<p>The most important warning message is about divergent transitions (warning message 1). The appearance of divergent transitions is a strong indicator that the posterior results as shown in column 1 of Table <a href="Burns.html#tab:ch05tab3">5.3</a> cannot be trusted <span class="citation">(Stan Development Team, <a href="#ref-stan_development_team_stan_2019" role="doc-biblioref">2019</a>, Chapter 14)</span>. For detailed, highly technical information on this diagnostic, see <span class="citation">Betancourt (<a href="#ref-betancourt_diagnosing_2016" role="doc-biblioref">2016</a>)</span>. Very loosely formulated, the occurrence of many divergent transitions indicates that there is something going wrong in drawing MCMC samples from the posterior. When the estimator moves from one iteration to the next, it does so using a particular step size. The larger steps the estimator can take between iterations, the more effectively it can explore the parameter space of the posterior distribution (compare Figure <a href="Burns.html#fig:ch05fig3">5.3</a>A with <a href="Burns.html#fig:ch05fig3">5.3</a>B). When a divergent transition occurs, the step size is too large to efficiently explore part of the posterior distribution and the sampler runs into problems when transitioning from one iteration to the next, (see Figure <a href="Burns.html#fig:ch05fig3">5.3</a>C). The Stan Development Team uses the following analogy to provide some intuition for the problem:</p>
+<blockquote>
+<p>“For some intuition, imagine walking down a steep mountain. If you take too big of a step you will fall, but if you can take very tiny steps you might be able to make your way down the mountain, albeit very slowly. Similarly, we can tell Stan to take smaller steps around the posterior distribution, which (in some but not all cases) can help avoid these divergences.”</p>
+<p><span class="citation">Stan Development Team (<a href="#ref-stan_development_team_brief_2018" role="doc-biblioref">2018</a><a href="#ref-stan_development_team_brief_2018" role="doc-biblioref">a</a>)</span></p>
+</blockquote>
+<p>The posterior results for the parameters of interest (<span class="math inline">\(\beta_0, \beta_1, \beta_2, \beta_3, \sigma_\epsilon\)</span>) are shown in Table <a href="Burns.html#tab:ch05tab3">5.3</a>, column 1. Note that these results cannot be trusted and should not be interpreted because of the many divergent transitions. Divergent transitions can sometimes be resolved by simply taking smaller steps (see next section), which increases computational time.</p>
+
+<div class="figure" style="text-align: center"><span id="fig:ch05fig3"></span>
+<img src="figures/chapter_5/Figure3/Figure3A.PNG" alt="Effect of decreasing the step size of the HMC on the efficiency of the exploration of the posterior distribution (Panel A and B). The green arrow shows the step between two consecutive iterations. Panel A uses a large step size and swiftly samples from both posterior distributions, one of which is a normal distribution and one of which a common distributional form for variance parameters. Panel B, in contrast, needs more time to sample from both distributions and describe them accurately because the steps are a lot smaller in between iterations. Panel C shows an example of a divergent transition, which is indicative of problems with the sampling algorithm. These screenshots come from an application developed by Feng (2016) that provides insight into different Bayesian sampling algorithms and their behavior for different shapes of posterior distributions." width="70%" /><img src="figures/chapter_5/Figure3/Figure3B.PNG" alt="Effect of decreasing the step size of the HMC on the efficiency of the exploration of the posterior distribution (Panel A and B). The green arrow shows the step between two consecutive iterations. Panel A uses a large step size and swiftly samples from both posterior distributions, one of which is a normal distribution and one of which a common distributional form for variance parameters. Panel B, in contrast, needs more time to sample from both distributions and describe them accurately because the steps are a lot smaller in between iterations. Panel C shows an example of a divergent transition, which is indicative of problems with the sampling algorithm. These screenshots come from an application developed by Feng (2016) that provides insight into different Bayesian sampling algorithms and their behavior for different shapes of posterior distributions." width="70%" /><img src="figures/chapter_5/Figure3/Figure3C.PNG" alt="Effect of decreasing the step size of the HMC on the efficiency of the exploration of the posterior distribution (Panel A and B). The green arrow shows the step between two consecutive iterations. Panel A uses a large step size and swiftly samples from both posterior distributions, one of which is a normal distribution and one of which a common distributional form for variance parameters. Panel B, in contrast, needs more time to sample from both distributions and describe them accurately because the steps are a lot smaller in between iterations. Panel C shows an example of a divergent transition, which is indicative of problems with the sampling algorithm. These screenshots come from an application developed by Feng (2016) that provides insight into different Bayesian sampling algorithms and their behavior for different shapes of posterior distributions." width="70%" />
+<p class="caption">
+Figure 5.3: Effect of decreasing the step size of the HMC on the efficiency of the exploration of the posterior distribution (Panel A and B). The green arrow shows the step between two consecutive iterations. Panel A uses a large step size and swiftly samples from both posterior distributions, one of which is a normal distribution and one of which a common distributional form for variance parameters. Panel B, in contrast, needs more time to sample from both distributions and describe them accurately because the steps are a lot smaller in between iterations. Panel C shows an example of a divergent transition, which is indicative of problems with the sampling algorithm. These screenshots come from an application developed by <span class="citation">Feng (<a href="#ref-feng_markov-chain_2016" role="doc-biblioref">2016</a>)</span> that provides insight into different Bayesian sampling algorithms and their behavior for different shapes of posterior distributions.
+</p>
+</div>
+</div>
+<div id="debugging" class="section level2">
+<h2><span class="header-section-number">5.5</span> Debugging</h2>
+<p>The occurrence of divergent transitions can also be an indication of more serious issues with the model or with a specific parameter. One of the ways to find out which parameter might be problematic is to inspect how efficiently the sampler sampled from the posterior of each parameter. The efficiency of the sampling process can be expressed as the Effective Sample Size (ESS) for each parameter, where sample size does not refer to the data but to the samples taken from the posterior. In the default setting we saved 1000 of these samples per chain, so in total we obtained 4000 MCMC samples for each parameter. However, these MCMC samples are related to each other, which can be expressed by the degree of autocorrelation (point 5 on the WAMBS checklist in Chapter 3). ESS expresses how many independent MCMC samples are equivalent to the autocorrelated MCMC samples that were drawn. If a small ESS for a certain parameter is obtained, there is little information available to construct the posterior distribution of that parameter. This will also manifest itself in the form of autocorrelation and non-smooth histograms of posteriors. For more details on ESS and how RStan calculates it, see the Stan Reference Manual <span class="citation">(Stan Development Team, <a href="#ref-stan_development_team_stan_2019" role="doc-biblioref">2019</a>)</span>.</p>
+<p>In Table <a href="Burns.html#tab:ch05tab2">5.2</a> we provide the ESS for <span class="math inline">\(\alpha_1, \beta_1, \theta_{77}\)</span> and the factor score of mother and child pair no. 33 (denoted by <span class="math inline">\(fs_{33}\)</span>).<span class="math inline">\(fs_{33}\)</span> was estimated efficiently and the ESS was 60% of the number of MCMC samples, followed by <span class="math inline">\(\alpha_1\)</span> (14%) and <span class="math inline">\(\beta_1\)</span> (11%). <span class="math inline">\(\theta_{77}\)</span>, in contrast, had an ESS of only 0.5% of the number of MCMC samples indicating an equivalence of only 20 MCMC samples had been used to construct the posterior distribution. There is no clear cut-off value for the ESS, although it is obvious that higher values are better and that 20 is very low. The default diagnostic threshold used in the R package shinystan <span class="citation">(Gabry, <a href="#ref-gabry_shinystan:_2018" role="doc-biblioref">2018</a>)</span>, used for interactive visual and numerical diagnostics, is set to 10%.</p>
+<p>The effects of ESS on the histograms of these four parameters can be seen in Figure <a href="Burns.html#fig:ch05fig4">5.4</a> which shows a smooth distribution for <span class="math inline">\(fs_{33}\)</span> but not for <span class="math inline">\(\theta_{77}\)</span>. Based on the ESS and the inspection of Figure <a href="Burns.html#fig:ch05fig4">5.4</a>, the residual variance parameter <span class="math inline">\(\theta_{77}\)</span> was estimated with the lowest efficiency and probably exhibited the most issues in model estimation.</p>
+
+<table style="width:99%;">
+<caption><span id="tab:ch05tab2">Table 5.2: </span> Examples of Effective Sample Size (ESS) per parameter for the different model and estimation settings we used. Each column represents a different model, and each row represents a different variable. We report ESS with the corresponding percentage of the total number of iterations that was used to estimate that particular model in brackets. Note that with the highly efficient NUTS sampling algorithm a higher efficiency can be obtained compared to independent MC samples <span class="citation">(Stan Development Team, <a href="#ref-stan_development_team_stan_2019" role="doc-biblioref">2019</a>, Chapter 15)</span>.</caption>
+<colgroup>
+<col width="9%" />
+<col width="16%" />
+<col width="17%" />
+<col width="12%" />
+<col width="13%" />
+<col width="14%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Parameter</th>
+<th align="center">Model with default
+estimation settings</th>
+<th align="center">Model with small
+step size in
+estimation setting</th>
+<th align="center">Alternative I:
+Remove perfect
+HRQL scores</th>
+<th align="center">Alternative II:
+<span class="math inline">\(IG(0.5, 0.5)\)</span>
+prior for
+<span class="math inline">\(\theta_{77}\)</span></th>
+<th align="center">Alternative III:
+Replace factor
+score with <span class="math inline">\(x7\)</span></th>
+<th align="center">Alternative IV:
+Possible increase
+of variance in
+latent factor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(fs_{33}\)</span></td>
+<td align="center">2390 (60%)</td>
+<td align="center">9843 (123%)</td>
+<td align="center">2219 (55%)</td>
+<td align="center">1307 (33%)</td>
+<td align="center">-</td>
+<td align="center">2485 (62%)</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\alpha_1\)</span></td>
+<td align="center">575 (14%)</td>
+<td align="center">1000 (13%)</td>
+<td align="center">655 (16%)</td>
+<td align="center">145 (4%)</td>
+<td align="center">227 (6%)</td>
+<td align="center">611 (15%)</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\beta_1\)</span></td>
+<td align="center">424 (11%)</td>
+<td align="center">1966 (25%)</td>
+<td align="center">487 (12%)</td>
+<td align="center">647 (16%)</td>
+<td align="center">58 (1%)</td>
+<td align="center">1004 (25%)</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\theta_{77}\)</span></td>
+<td align="center">20 (0.5%)</td>
+<td align="center">12 (0.2%)</td>
+<td align="center">9 (0.2%)</td>
+<td align="center">33 (0.8%)</td>
+<td align="center">-</td>
+<td align="center">46 (1.2%)</td>
+</tr>
+</tbody>
+</table>
+
+<p>To investigate if there were systematic patterns in the divergences, we plotted the samples of the parameters <span class="math inline">\(fs_{33}\)</span> and <span class="math inline">\(\theta_{77}\)</span> against the log posterior (denoted by <span class="math inline">\(lp\)</span>) (see Figure <a href="Burns.html#fig:ch05fig5">5.5</a>). <span class="math inline">\(lp\)</span> is, very loosely formulated, an indication of the likelihood of the data given all posterior parameters. <span class="math inline">\(lp\)</span> is sampled for each MCMC iteration as just another parameter. Note that, in contrast to log-likelihoods, <span class="math inline">\(lp\)</span> cannot be used for model comparison. Plots such as those in Figure <a href="Burns.html#fig:ch05fig5">5.5</a> can point us to systematic patterns for the divergent transitions, which would indicate that a particular part of the parameter space is hard to explore. In Figure <a href="Burns.html#fig:ch05fig5">5.5</a>A it can be seen that for <span class="math inline">\(fs_{33}\)</span>, which did not exhibit problems in terms of ESS, the divergent transitions are more or less randomly distributed across the posterior parameter space. Also, the traceplot and histogram for <span class="math inline">\(fs_{33}\)</span> would pass the WAMBS-checklist on initial inspection. There is one hotspot around the value of -1700 for the <span class="math inline">\(lp\)</span> where a cluster of divergent transitions occurs. This is also visible in the traceplot, where it can be seen that one of the chains is stuck and fails to efficiently explore the parameter space shown as an almost horizontal line for many iterations. On closer inspection, a similar behavior in one of the chains could be seen for <span class="math inline">\(fs_{33}\)</span> as well.</p>
+<p>In Figure <a href="Burns.html#fig:ch05fig5">5.5</a>B it can be seen that for <span class="math inline">\(\theta_{77}\)</span>, which exhibited problems in terms of ESS, the divergent transitions occur mainly in a very specific part of the posterior parameter space, i.e., many divergent transitions occur close to zero. This also shows up in the traceplot, where for several iterations the sampler could not move away from zero. This indicates that our sampling algorithm ran into problems when exploring the possibility that <span class="math inline">\(\theta_{77}\)</span> might be near zero. Note that a similar issue arises in one chain around the value of 2.5 for many iterations, resulting in a hot spot which corresponds to the deviant chain for <span class="math inline">\(lp\)</span>. Perhaps an additional parameter could be found which explains the issues concerning this systematic pattern of divergent transitions. For now, we continued with a focus on <span class="math inline">\(\theta_{77}\)</span>.</p>
+<p>The first solution, also offered in the warning message provided by Stan, was to force Stan to use a smaller step size by increasing the <em>adapt_delta</em> setting of the estimator. We also deal with the second warning by increasing <em>max_treedepth</em>, although this is related to efficiency and not an indication of model error and validity issues. To make sure we could still explore the entire posterior parameter space, we extended the number of iterations post warmup to 2000 for each chain (<code>iter – warmup</code> in the code below). We used the following R code:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">fit_small_step &lt;-<span class="st"> </span><span class="kw">sampling</span>(model, </a>
+<a class="sourceLine" id="cb3-2" title="2">                           <span class="dt">data=</span><span class="kw">list</span>(<span class="dt">X =</span> X, I, K, <span class="dt">run_estimation =</span> <span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb3-3" title="3">                           <span class="dt">control=</span><span class="kw">list</span>(<span class="dt">adapt_delta =</span> <span class="fl">.995</span>,</a>
+<a class="sourceLine" id="cb3-4" title="4">                                        <span class="dt">max_treedepth =</span> <span class="dv">16</span>),</a>
+<a class="sourceLine" id="cb3-5" title="5">                           <span class="dt">warmup =</span> <span class="dv">3000</span>, <span class="dt">iter =</span> <span class="dv">5000</span>, <span class="dt">seed =</span> <span class="dv">11235813</span>) </a></code></pre></div>
+<p>We inspected the ESS for the same parameters again, which can be seen in Table <a href="Burns.html#tab:ch05tab2">5.2</a>. The problems seem to occur for the <span class="math inline">\(\theta_{77}\)</span> parameter again, and it has even decreased in efficiency. We compared the posterior for <span class="math inline">\(\theta_{77}\)</span> and <span class="math inline">\(lp\)</span> between the default estimation settings and the estimation settings forcing a smaller step size in Figure <a href="Burns.html#fig:ch05fig6">5.6</a>. The smaller step sizes have decreased the number of divergent transitions to almost zero. Also, they enabled more exploration of posterior parameter values near zero. However, the posterior distribution still showed signs of problematic exploration given the strange pattern of MCMC samples close to 0.5 (see step 6 of the WAMBS checklist; do posterior estimates make substantive sense?). Apparently, the solution offered by the Rstan warning message to decrease the step size, which often solves the issue of obtaining divergent transitions, failed to provide an efficient result in this case. Thus the posterior estimates in Table <a href="Burns.html#tab:ch05tab3">5.3</a>, column 2 still cannot be trusted. In the next section, we briefly explore different solutions that might help us to obtain trustworthy results.</p>
+<div class="figure" style="text-align: center"><span id="fig:ch05fig4"></span>
+<img src="figures/chapter_5/Figure4.png" alt="Histograms of MCMC samples for $\alpha_1, \beta_1, \theta_{77}$ and $fs_{33}$. $\theta_{77}$ has a non-smooth histogram, which indicates low ESS while the smooth histogram for $fs_{33}$ is indicative of higher ESS." width="70%" />
+<p class="caption">
+Figure 5.4: Histograms of MCMC samples for <span class="math inline">\(\alpha_1, \beta_1, \theta_{77}\)</span> and <span class="math inline">\(fs_{33}\)</span>. <span class="math inline">\(\theta_{77}\)</span> has a non-smooth histogram, which indicates low ESS while the smooth histogram for <span class="math inline">\(fs_{33}\)</span> is indicative of higher ESS.
+</p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="figure" style="text-align: center"><span id="fig:ch05fig5"></span>
+<img src="figures/chapter_5/Figure5/Figure5a.png" alt="Plot of the posterior samples of $lp$ (y-axis) against $fs_{33}$ (x-axis, panel A) and $\theta_{77}$ (x-axis, panel B) with divergent transitions marked by red dots. Additionally, the histograms and trace plots of the corresponding parameters have been placed on the margins." width="90%" /><img src="figures/chapter_5/Figure5/Figure5b.png" alt="Plot of the posterior samples of $lp$ (y-axis) against $fs_{33}$ (x-axis, panel A) and $\theta_{77}$ (x-axis, panel B) with divergent transitions marked by red dots. Additionally, the histograms and trace plots of the corresponding parameters have been placed on the margins." width="90%" />
+<p class="caption">
+Figure 5.5: Plot of the posterior samples of <span class="math inline">\(lp\)</span> (y-axis) against <span class="math inline">\(fs_{33}\)</span> (x-axis, panel A) and <span class="math inline">\(\theta_{77}\)</span> (x-axis, panel B) with divergent transitions marked by red dots. Additionally, the histograms and trace plots of the corresponding parameters have been placed on the margins.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:ch05fig6"></span>
+<img src="figures/chapter_5/Figure6.png" alt="Plots of the posterior samples of $lp$ against $\theta_{77}$ for the default estimation settings (panel A) and the estimation settings that have been forced to take smaller step sizes (panel B). Divergent transitions are indicated by red dots. " width="80%" />
+<p class="caption">
+Figure 5.6: Plots of the posterior samples of <span class="math inline">\(lp\)</span> against <span class="math inline">\(\theta_{77}\)</span> for the default estimation settings (panel A) and the estimation settings that have been forced to take smaller step sizes (panel B). Divergent transitions are indicated by red dots.
+</p>
+</div>
+</div>
+<div id="moving-forward-alternative-models" class="section level2">
+<h2><span class="header-section-number">5.6</span> Moving forward: Alternative Models</h2>
+<p>At this stage in the analysis process we continue to face difficulties with obtaining trustworthy posterior estimates due to divergent transitions. After exploring a smaller step size in the previous section, there are multiple options that can be considered and these can be based on statistical arguments, substantive theoretical arguments or, ideally, on both. Some statistical options can be sought in terms of the reparameterization of the model <span class="citation">(Gelman, <a href="#ref-gelman_parameterization_2004" role="doc-biblioref">2004</a>)</span>, that is, the reformulation of the same model in an alternative form, for instance by using non-centered parametrizations in hierarchical models <span class="citation">(Betancourt &amp; Girolami, <a href="#ref-betancourt_hamiltonian_2015" role="doc-biblioref">2015</a>)</span>. This needs to be done carefully and with consideration of the effects on prior implications and posterior estimates. The optimal course of action will differ from one situation to another, and we show five arbitrary ways of moving forward, but all require adjustments to the original analysis plan. We considered the following options:
+1. Subgroup removal: We removed 32 cases that scored perfectly, i.e. a score of 100, on the manifest variable <span class="math inline">\(x7\)</span>. This would potentially solve issues with the residual variance of <span class="math inline">\(x7\)</span> (<span class="math inline">\(\theta_{77}\)</span>).
+2. Changing one of the priors: We specified a different prior on <span class="math inline">\(\theta_{77}\)</span>, namely, an Inverse Gamma (<span class="math inline">\(IG(0.5,0.5)\)</span>) instead of a Half-Normal (<span class="math inline">\(HN(0,100)\)</span>) <span class="citation">(see: Van De Schoot et al., <a href="#ref-van_de_schoot_analyzing_2015" role="doc-biblioref">2015</a>)</span>. The IG prior forced the posterior distribution away from zero. If <span class="math inline">\(\theta_{77}\)</span> was zero, this implies that <span class="math inline">\(x7\)</span> is a perfect indicator of the latent variable. Since a perfect indicator is unlikely, we specified a prior that excludes this possibility.
+3. Changing the distal outcome: We replaced the latent distal outcome with the manifest variable <span class="math inline">\(x7\)</span>. <span class="math inline">\(\theta_{77}\)</span> estimates contained values of zero, which would indicate that x7 is a good or perfect indicator and could serve as a proxy for the latent variable. Replacing the latent factor with a single manifest indicator reduces the complexity of the model.
+4. A possible increase of variance in the distal latent factor score: we removed cases that exhibited little variation between the scores on <span class="math inline">\(x6\)</span> and <span class="math inline">\(x7\)</span>.</p>
+<p>We ran the model using these four adjustments (see the OSF webpage for details). Table <a href="Burns.html#tab:ch05tab3">5.3</a> presents the posterior results of these additional analyses and an assessment of the extent to which the alternatives required adjustments to the original research question. The first three alternative solutions still contained divergent transitions and consequently the results could not be trusted. The fourth alternative solution did not result in divergent transitions. The ESS of the fourth alternative solution was still low, both in terms of the percentage of iterations and in absolute value (see Table <a href="Burns.html#tab:ch05tab2">5.2</a>). Although the low ESS in terms of percentage may not be resolved, the absolute ESS can be raised by increasing the total number of iterations. Even though we could draw conclusions using results from the fourth alternative solution, the rather arbitrary removal of cases changed the original research question. We investigated, and thus generalized to, a different population compared to the original analysis plan. Using an alternative model or a subset of the data could provide a solution to estimation issues. However, this could impact our substantive conclusions, e.g., see <span class="math inline">\(\beta_1\)</span> in Table <a href="Burns.html#tab:ch05tab3">5.3</a>, for which the 95% credibility interval in the fourth alternative contained zero, in contrast to credibility intervals for this parameter obtained using other alternative solutions. As substantive conclusions can be impacted by the choices we make, the transparency of the research process is crucial.</p>
+
+
+<table style="width:99%;">
+<caption><span id="tab:ch05tab3">Table 5.3: </span> Results for the parameters of interest in the different models that we estimated. The mean parameter values are reported with the 95% credibility intervals in brackets. The extent to which we need to adjust analytic strategy is assessed by the authors, DV for statistical input, and ME as the content specialist on this research area. Note that alternative III changes the actual model such that Figure <a href="Burns.html#fig:ch05fig1">5.1</a> is not an accurate representation anymore.</caption>
+<colgroup>
+<col width="13%" />
+<col width="15%" />
+<col width="15%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Parameter</th>
+<th align="center">Model with default
+estimation settings</th>
+<th align="center">Model with small
+step size in
+estimation setting</th>
+<th align="center">Alternative I:
+Remove perfect
+HRQL scores</th>
+<th align="center">Alternative II:
+<span class="math inline">\(IG(0.5, 0.5)\)</span>
+prior for
+<span class="math inline">\(\theta_{77}\)</span></th>
+<th align="center">Alternative III:
+Replace factor
+score with <span class="math inline">\(x7\)</span></th>
+<th align="center">Alternative IV:
+Possible increase
+of variance in
+latent factor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\beta_0\)</span></td>
+<td align="center">66.28
+[39.58, 83.68]</td>
+<td align="center">66.83
+[38.89, 84.12]</td>
+<td align="center">65.56
+[48,78, 75.83]</td>
+<td align="center">62.10
+[30.95, 83.52]</td>
+<td align="center">69.76
+[39.04, 93.51]</td>
+<td align="center">64.46
+[47.21, 78.71]</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\beta_1\)</span></td>
+<td align="center">-0.32
+[-0.55, -0.10]</td>
+<td align="center">-0.31
+[-0.53, -0.09]</td>
+<td align="center">-0.23
+[-0.44, -0.01]</td>
+<td align="center">-0.32
+[-0.53, -0.10]</td>
+<td align="center">-0.40
+[-0.67, -0.11]</td>
+<td align="center">-0.22
+[-0.51, 0.10]</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\beta_2\)</span></td>
+<td align="center">-31.87
+[-74.80, -7.63]</td>
+<td align="center">-31.46
+[-76.41, -7.42]</td>
+<td align="center">-19.39
+[-44.93, -7.47]</td>
+<td align="center">-39.16
+[-92,18,-7.81</td>
+<td align="center">-47.06
+] [-96.94, -12</td>
+<td align="center">-35.66
+.19] [-64.16, -15.30]</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\beta_3\)</span></td>
+<td align="center">-0.61
+[-0.92, -0.31]</td>
+<td align="center">-0.62
+[-0.93, -0.31]</td>
+<td align="center">-0.40
+[-0.67, -0.14]</td>
+<td align="center">-0,61
+[-0,93, -0,30]</td>
+<td align="center">-0.78
+[-1.16, -0.41]</td>
+<td align="center">-0.53
+[-1.02, -0.06]</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\sigma_\epsilon\)</span></td>
+<td align="center">8.36
+[3.77, 10.88]</td>
+<td align="center">7.93
+[2.92, 10.77]</td>
+<td align="center">4.76
+[0.54, 8.29]</td>
+<td align="center">7.40
+[1.98, 10.87]</td>
+<td align="center">10.06
+[3.73, 13.74]</td>
+<td align="center">6.63
+[2.07, 10.63]</td>
+</tr>
+<tr class="even">
+<td align="center">Divergent
+transitions
+present</td>
+<td align="center">YES</td>
+<td align="center">YES</td>
+<td align="center">YES</td>
+<td align="center">YES</td>
+<td align="center">YES</td>
+<td align="center">NO</td>
+</tr>
+<tr class="odd">
+<td align="center">To what extent
+do we need to
+adjust analytic
+strategy?</td>
+<td align="center">Not at all</td>
+<td align="center">Not at all</td>
+<td align="center">Substantially;
+we generalize
+to a different
+(known)
+population.</td>
+<td align="center">Negligible;
+theory behind
+research
+question
+remains the
+same.</td>
+<td align="center">Substantially;
+data-driven
+change of model
+(replacing
+measurement model
+with a single
+manifest
+variable).</td>
+<td align="center">Substantially;
+we generalize
+to a different
+(unknown)
+population.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div id="conclusion" class="section level2">
+<h2><span class="header-section-number">5.7</span> Conclusion</h2>
+<p>Bayesian estimation with (weakly) informative priors is suggested as a solution to deal with small sample size issues. The current chapter illustrated the process of conducting Bayesian estimation with (weakly) informative priors along with the potential problems that can arise. The WAMBS-checklist was a helpful tool in this process, and we propose supplementing the checklist steps with an inspection of the effective number of samples taken using MCMC. As we have shown, a low ESS can point toward specific parameters to investigate, which is especially useful for complex models with many parameters, as investigating each parameter individually would be time-consuming. We recommend using advanced statistical software (such as stan) because the implemented algorithms (e.g., HMC or NUTS) can have a positive impact on the ESS, and estimates of ESS are readily available. Moreover, the use of advanced algorithms such as HMC or NUTS provides additional diagnostic information about the estimation in the form of divergent transitions, which can be used in addition to the WAMBS-checklist.</p>
+<p>The empirical example showed that even Bayesian estimation with informative priors has limits in terms of its performance for complex models with small sample sizes. Thus, using a Bayesian analysis should not be considered a ‘quick fix’. Careful consideration of the analysis steps and the intermediate results is imperative. Different solutions can differentially impact the posterior parameter estimates and thereby the substantive conclusions, and there is a need for constant interaction and collaboration between applied researchers, who formulate the research questions, and the statisticians, who possess the statistical and methodological knowledge.</p>
+</div>
+<div id="acknowledgements" class="section level2">
+<h2><span class="header-section-number">5.8</span> Acknowledgements</h2>
+<p>Both authors were supported by the Netherlands Organization for Scientific Research (grant number NWO-VIDI-452-14-006). This work was a result of the collaborative efforts of our project team, including Dr. Nancy van Loey and prof. Dr. Rens van de Schoot. The synthetic data used in the empirical example were based on a study funded by the Dutch Burns Foundation (Grant No. 07.107). We thank all participating parents and the research team in the burn centers in the Netherlands and Belgium.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-anderson_structural_1988">
+<p>Anderson, J. C., &amp; Gerbing, D. W. (1988). Structural equation modeling in practice: A review and recommended two-step approach. <em>Psychological Bulletin</em>, <em>103</em>(3), 411.</p>
+</div>
+<div id="ref-van_baar_epidemiologie_2015">
+<p>Baar, Vloemans, Beerthuizen, Middelkoop, &amp; R3, N. B. R. (2015). Epidemiologie.</p>
+</div>
+<div id="ref-bakker_course_2013">
+<p>Bakker, A., Van der Heijden, P. G., Van Son, M. J., &amp; Van Loey, N. E. (2013). Course of traumatic stress reactions in couples after a burn event to their young child. <em>Health Psychology</em>, <em>32</em>(10), 1076.</p>
+</div>
+<div id="ref-betancourt_diagnosing_2016">
+<p>Betancourt, M. (2016). Diagnosing Suboptimal Cotangent Disintegrations in Hamiltonian Monte Carlo. <em>arXiv Preprint arXiv:1604.00695</em>.</p>
+</div>
+<div id="ref-betancourt_hamiltonian_2015">
+<p>Betancourt, M., &amp; Girolami, M. (2015). Hamiltonian Monte Carlo for hierarchical models. <em>Current Trends in Bayesian Methodology with Applications</em>, <em>79</em>, 30.</p>
+</div>
+<div id="ref-carpenter_stan:_2017">
+<p>Carpenter, B., Gelman, A., Hoffman, M. D., Lee, D., Goodrich, B., Betancourt, M., … Riddell, A. (2017). Stan: A probabilistic programming language. <em>Journal of Statistical Software</em>, <em>76</em>(1).</p>
+</div>
+<div id="ref-depaoli_improving_2017">
+<p>Depaoli, S., &amp; Van de Schoot, R. (2017). Improving transparency and replication in Bayesian statistics: The WAMBS-Checklist. <em>Psychological Methods</em>, <em>22</em>(2), 240.</p>
+</div>
+<div id="ref-egberts_parents_2017">
+<p>Egberts, M. R., Van de Schoot, R., Geenen, R., &amp; Van Loey, N. E. (2017). Parents’ posttraumatic stress after burns in their school-aged child: A prospective study. <em>Health Psychology</em>, <em>36</em>(5), 419.</p>
+</div>
+<div id="ref-feng_markov-chain_2016">
+<p>Feng, C. (2016). The Markov-chain Monte Carlo Interactive Gallery. Retrieved from <a href="https://chi-feng.github.io/mcmc-demo/">https://chi-feng.github.io/mcmc-demo/</a></p>
+</div>
+<div id="ref-gabry_shinystan:_2018">
+<p>Gabry, J. (2018). <em>Shinystan: Interactive Visual and Numerical Diagnostics and Posterior Analysis for Bayesian Models</em>. Retrieved from <a href="https://CRAN.R-project.org/package=shinystan">https://CRAN.R-project.org/package=shinystan</a></p>
+</div>
+<div id="ref-gelman_parameterization_2004">
+<p>Gelman, A. (2004). Parameterization and Bayesian modeling. <em>Journal of the American Statistical Association</em>, <em>99</em>(466), 537–545.</p>
+</div>
+<div id="ref-hertzog_evaluating_2008">
+<p>Hertzog, C., Oertzen, T. von, Ghisletta, P., &amp; Lindenberger, U. (2008). Evaluating the power of latent growth curve models to detect individual differences in change. <em>Structural Equation Modeling: A Multidisciplinary Journal</em>, <em>15</em>(4), 541–563.</p>
+</div>
+<div id="ref-hoffman_no-u-turn_2014">
+<p>Hoffman, M. D., &amp; Gelman, A. (2014). The No-U-Turn sampler: Adaptively setting path lengths in Hamiltonian Monte Carlo. <em>Journal of Machine Learning Research</em>, <em>15</em>(1), 1593–1623.</p>
+</div>
+<div id="ref-horowitz_impact_1979">
+<p>Horowitz, M., Wilner, N., &amp; Alvarez, W. (1979). Impact of Event Scale: A measure of subjective stress. <em>Psychosomatic Medicine</em>, <em>41</em>(3), 209–218.</p>
+</div>
+<div id="ref-hox_accuracy_2001">
+<p>Hox, J. J., &amp; Maas, C. J. (2001). The accuracy of multilevel structural equation modeling with pseudobalanced groups and small samples. <em>Structural Equation Modeling</em>, <em>8</em>(2), 157–174.</p>
+</div>
+<div id="ref-hox_small_2020">
+<p>Hox, J. J., &amp; McNeish, D. (2020). Small samples in multilevel modeling. In <em>Small sample size solutions: A guide for applied researchers and practitioners</em>. Routledge.</p>
+</div>
+<div id="ref-kazis_development_2002">
+<p>Kazis, L. E., Liang, M. H., Lee, A., Ren, X. S., Phillips, C. B., Hinson, M., … Goodwin, C. W. (2002). The development, validation, and testing of a health outcomes burn questionnaire for infants and children 5 years of age and younger: American Burn Association/Shriners Hospitals for Children. <em>The Journal of Burn Care &amp; Rehabilitation</em>, <em>23</em>(3), 196–207.</p>
+</div>
+<div id="ref-landolt_incidence_2003">
+<p>Landolt, M. A., Vollrath, M., Ribi, K., Gnehm, H. E., &amp; Sennhauser, F. H. (2003). Incidence and associations of parental and child posttraumatic stress symptoms in pediatric patients. <em>Journal of Child Psychology and Psychiatry</em>, <em>44</em>(8), 1199–1207.</p>
+</div>
+<div id="ref-mcneish_using_2016">
+<p>McNeish, D. (2016a). On using Bayesian methods to address small sample problems. <em>Structural Equation Modeling: A Multidisciplinary Journal</em>, <em>23</em>(5), 750–773.</p>
+</div>
+<div id="ref-mcneish_using_2016-1">
+<p>McNeish, D. (2016b). Using data-dependent priors to mitigate small sample bias in latent growth models: A discussion and illustration using M plus. <em>Journal of Educational and Behavioral Statistics</em>, <em>41</em>(1), 27–56.</p>
+</div>
+<div id="ref-miocevic_role_2020">
+<p>Miočević, M., Levy, R., &amp; Savord, A. (2020). The Role of Exchangeability in Sequential Updating of Findings from Small Sample Studies. In <em>Small sample size solutions: A guide for applied researchers and practitioners</em>. Routledge.</p>
+</div>
+<div id="ref-van_de_schoot_tutorial_2020">
+<p>Schoot, R. van de, Veen, D., Smeets, L., Winter, S., &amp; Depaoli, S. (2020). A tutorial on using the WAMBS-checklist to avoid the misuse Bayesian Statistics. In <em>Small sample size solutions: A guide for applied researchers and practitioners</em>. Routledge.</p>
+</div>
+<div id="ref-smid_predicting_2019">
+<p>Smid, S., Depaoli, S., &amp; Van De Schoot, R. (2019a). Predicting a Distal Outcome Variable from a Latent Growth Model: ML versus Bayesian Estimation. doi:<a href="https://doi.org/https://doi.org/10.1080/10705511.2019.1604140">https://doi.org/10.1080/10705511.2019.1604140</a></p>
+</div>
+<div id="ref-smid_bayesian_2019">
+<p>Smid, S., McNeish, D., Miočević, M., &amp; Van De Schoot, R. (2019b). Bayesian versus Frequentist Estimation for Structural Equation Models in Small sample Contexts: A Systematic Review, 1–31. doi:<a href="https://doi.org/10.1080/10705511.2019.1577140">10.1080/10705511.2019.1577140</a></p>
+</div>
+<div id="ref-stan_development_team_brief_2018">
+<p>Stan Development Team. (2018a). Brief Guide to Stan’s Warnings. Retrieved from <a href="https://mc-stan.org/misc/warnings.html">https://mc-stan.org/misc/warnings.html</a></p>
+</div>
+<div id="ref-stan_development_team_rstan:_2018">
+<p>Stan Development Team. (2018b). <em>RStan: The R interface to Stan</em>. Retrieved from <a href="http://mc-stan.org/">http://mc-stan.org/</a></p>
+</div>
+<div id="ref-stan_development_team_stan_2019">
+<p>Stan Development Team. (2019). Stan Reference Manual. Retrieved from <a href="https://mc-stan.org/docs/2_19/reference-manual/">https://mc-stan.org/docs/2_19/reference-manual/</a></p>
+</div>
+<div id="ref-tabachnick_using_2007">
+<p>Tabachnick, B. G., Fidell, L. S., &amp; Ullman, J. B. (2007). <em>Using multivariate statistics</em> (Vol. 5). Pearson Boston, MA.</p>
+</div>
+<div id="ref-van_de_schoot_analyzing_2015">
+<p>Van De Schoot, R., Broere, J. J., Perryck, K. H., Zondervan-Zwijnenburg, M., &amp; Van Loey, N. E. (2015). Analyzing small data sets using Bayesian estimation: The case of posttraumatic stress symptoms following mechanical ventilation in burn survivors. <em>European Journal of Psychotraumatology</em>, <em>6</em>(1), 25216.</p>
+</div>
+<div id="ref-wang_structural_2012">
+<p>Wang, J., &amp; Wang, X. (2012). <em>Structural equation modeling: Applications using Mplus</em>. John Wiley &amp; Sons.</p>
+</div>
+<div id="ref-zondervan-zwijnenburg_pushing_2018">
+<p>Zondervan-Zwijnenburg, M., Depaoli, S., Peeters, M., &amp; Schoot, R. van de. (2018). Pushing the Limits: The Performance of Maximum Likelihood and Bayesian Estimation With Small and Unbalanced Samples in a Latent Growth Model. <em>Methodology</em>, <em>1</em>(1), 1–13.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Hierarchical.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="elicitlgm.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "section"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

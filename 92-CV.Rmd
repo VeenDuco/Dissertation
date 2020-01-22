@@ -1,0 +1,108 @@
+# Curriculum Vitae {-}
+
+\chaptermark{CURRICULUM VITAE}
+\thispagestyle{empty}
+\markboth{CURRICULUM VITAE}{CURRICULUM VITAE}
+<!-- https://tex.stackexchange.com/questions/291307/how-to-hide-show-section-levels-in-the-table-of-contents -->
+\addtocontents{toc}{\setcounter{tocdepth}{-10}}
+
+
+Duco Veen was born on March 13, 1990, in Zutphen, the Netherlands. In 2014 he obtained his BSc. in Psychology from the University of Twente. In 2016 he completed the research master Methodology and Statistics in the behavioral, social and biomedical sciences and obtained his MSC. from Utrecht University, Cum Laude. 
+
+In august of 2016, Duco started as a PhD candidate at the department of Methodology & Statistics of Utrecht University. During his PhD, he gave a dozen oral presentations by invitation or at conferences. He also presented posters at four conferences, notably winning the EADP/ERU Best Poster Award at the 18\textsuperscript{th} European Conference on Developmental Psychology. He has taught in several bachelor, pre-master and summerschool courses at Utrecht University and taught internationally at the South Africa Stats Camp Training Seminar at Hammanskraal, South Africa. Early 2019, Duco spend two months as a Visiting Researcher with the Stan Development Team at Columbia University, New York. 
+
+As of December 2019, Duco holds a post-doctoral position at Utrecht University to assist in setting up a collaborative effort on artificial intelligence for health between four major Dutch academic institutions. 
+
+
+
+
+## Academic Publications {-}
+
+  - **Veen D.**, & Klugkist, I., (2019) Standard Errors, Priors, and Bridge Sampling: A Discussion of Liu et al. *Journal of the Korean Statistical Society.* 48(4), 515-517.
+
+  - de Klerk, M., **Veen, D.**, Wijnen, F. & de Bree, E. (2019). A Step Forward: Bayesian Hierarchical Modelling as a Tool in Assessment of Individual Discrimination Performance. *Infant Behavior and Development*. 57, 101345. Doi: 10.1016/j.infbeh.2019.101345
+  
+  - Meershoek, A.J.A., de Vries, E.E., **Veen, D.**, den Ruijter, H.M., & de Borst, G.J. (2019).
+Meta‐analysis of the outcomes of treatment of internal carotid artery near occlusion. *British Journal of Surgery*, 106(6), 665-671.
+
+  - **Veen, D.**, Stoel, D., Schalken, N., Mulder, K., & van de Schoot, R. (2019). Correction: Veen, D.; Stoel, D.; Schalken, N.; Mulder, K.; Van de Schoot, R. Using the Data Agreement Criterion to Rank Experts’ Beliefs. Entropy 2018, 20, 592. *Entropy*, 21(3), 307.
+
+  - **Veen, D.**, Stoel, D., Schalken, N., Mulder, K., & van de Schoot, R. (2018). Using the Data Agreement Criterion to Rank Experts' Beliefs. *Entropy*, 20(8). Doi: 10.3390/e20080592
+
+  - Fox, J-P, **Veen, D.**, & Klotzke, K. (2018). Generalized Linear Mixed Models for Randomized Responses. *Methodology*. http://dx.doi.org/10.1027/1614-2241/a000153
+
+  - **Veen, D.**, Stoel ,D., Zondervan-Zwijnenburg, M. & van de Schoot, R. (2017) Proposal for a Five-Step Method to Elicit Expert Judgment. *Frontiers in Psychology* 8:2110. doi: 10.3389/fpsyg.2017.02110
+
+## Book Chapters {-}
+
+  - **Veen, D.**, & Egberts, M. R. (2020). The importance of collaboration in Bayesian analyses with small samples. In R. Van de Schoot & M. Miočević (Eds.), *Small sample size solutions: A guide for applied researchers and practitioners.* Routledge.
+
+  - Van de Schoot, R., **Veen, D.**, Smeets, L., Winter, S. D., & Depaoli, S. (2020). A tutorial on using the WAMBS-checklist to avoid the misuse of Bayesian statistics. In R. Van de Schoot & M. Miočević (Eds.), *Small sample size solutions: A guide for applied researchers and practitioners.* Routledge.
+
+
+## Technical Reports {-}
+
+  - Luyten, H., **Veen, D.** & Meelissen, M.R.M. (2015). De relatie tussen leerling- en  schoolkenmerken en digitale geletterdheid van 14-jarigen: secundaire analyses op de data van ICILS-2013. Enschede: Universiteit Twente.
+
+
+## Manuscripts under review {-}
+
+  - **Veen, D.**, Egberts, M. R., van Loey, N. E. E., & van de Schoot, R. (2019) *Expert Elicitation in the Social Sciences: The case of Posttraumatic Stress Symptoms Development in Children with Burn Injuries*. 
+  
+  - van de Schoot, R., Winter, S., Griffioen, E., Grimmelikhuijsen, S., Arts, I., **Veen, D.**, & Tummers, L. (2019). *Using Questionable Research Practices to Survive in Academia*.
+
+<!-- ## Oral Presentations {-} -->
+
+<!--   - **Veen, D.**, Egberts, M. R. & van de Schoot, R. (2019, May). On Elicitation of Prior Information for Latent Change Analysis. Part of the symposium entitled, “Risks of Default Priors in Bayesian Structural Equation Models with Small Samples and Two Approaches on How to Avoid Those Risks” at the 31st Association for Psychological Science (APS) annual convention, Washington, D.C., USA. -->
+
+<!--   - **Veen, D.** (2019, April). On expert elicitation and evaluation. Presentation delivered at statistics student seminar, Columbia University, New York, NY, USA. -->
+
+<!--   - Klaassen F., **Veen, D.** (2018, July) Duo presentation: On reasons to use subjective Bayes. Presentation delivered at VIII European Congress of Methodology. Part of the symposium entitled, “Applying Subjective Bayes to Real Life Data”, Jena, Germany.  -->
+
+<!--   - **Veen, D.**, Stoel, D., Schalken, N. & van de Schoot, R. (2018, July). Using the Data Agreement Criterion to Rank Experts’ Beliefs. Presentation delivered at Bayesian Young Statisticians Meeting (BaYSM) 2018, Coventry, Great Britain.  -->
+
+<!--   - Meershoek, A.J.A., **Veen, D.** (2018, May). Duo presentation: Treatment of internal carotid artery NEar occlusiON (NEON study): An individual patient data meta-analysis. Presentation delivered at research meeting of UMC Utrecht Department of Vascular Surgery, Utrecht, the Netherlands. -->
+
+<!--   - Egberts, M. & **Veen, D.** (2018, March) Duo presentation: Increasing Power of Statistical Analyses Through Collaboration. Presentation delivered at Small Sample Size Solutions (S4) Conference, Utrecht, the Netherlands. -->
+
+<!--   - de Klerk, M. & **Veen, D.** (2018, March) Duo presentation: Improving the Assessment of Individual Phoneme Discrimination Performance. Presentation delivered at Small Sample Size Solutions (S4) Conference, Utrecht, the Netherlands. -->
+
+<!--   - **Veen, D.** (2018, February).  On Using Expert Knowledge as Prior Information. Presentation delivered at Statistics Netherlands (CBS), Heerlen, the Netherlands.  -->
+
+<!--   - **Veen, D.**, Izeboud, E. & van de Schoot, R. (2017, May). Systematic Review of Elicitation Software: Expert Knowledge as a Source of Data. Part of the symposium entitled, “Experts and Animals: How Can They Help Us?” at the 29th Association for Psychological Science (APS) annual convention, Boston, MA, USA. -->
+
+<!--   - **Veen, D.**, Stoel, D., & van de Schoot, R. (2017, May). Using the Data Agreement Criterion to Rank Experts’ Beliefs. Part of the symposium entitled, “What the Dutch can do with prior information (and you too)” at the 2017 Modern Modeling Methods (M3) Conference, Storrs, CT, USA. -->
+
+
+<!-- ## Poster Presentations {-} -->
+
+<!--  - Egberts, M., **Veen, D.**, van de Schoot, R. & van Loey, N. (2018, August). Relating the development of maternal Post-Traumatic Stress to Health Related Quality of Life of children with severe burn injuries. Poster presented at StanCon 2018, Helsinki, Finland.  -->
+<!--   - **Veen, D.**, van Loey, N.E.E., van Baar, A.L., Wijnen, F.N.K. & van de Schoot, R. (2017, August). Eliciting and Using Expert Information in Latent Growth Curve Models. Poster presented at 18th European Conference on Developmental Psychology, Utrecht, the Netherlands. -->
+
+<!--   - **Veen, D.** & van de Schoot, R. (2018, June). How understanding prior-data compromise can lead to sample size determination. Poster presented at 33rd IOPS Summer Conference, Amsterdam, the Netherlands. -->
+
+<!--   - **Veen, D.**, van Loey, N.E.E., van Baar, A.L., Wijnen, F.N.K. & van de Schoot, R. (2016, November). Eliciting and Using Expert Information in Latent Growth Curve Models: Research Plan. Poster presented at VNOP-CAS-ISED research days 2016, Leiden, the Netherlands. -->
+
+
+## Grants {-}
+
+  - Education Incentive Funds - €14,300. (2017).  evelopment of Shiny applications for educational purposes. Miocevic, M., Aarts, E., Klaassen, F., Lek, K.M., Mulder, K.T., Namesnik, K.T., **Veen, D.**, Zondervan-Zwijnenburg, M.A.J.
+
+## Awards {-}
+
+  - The EADP/ERU Best Poster Award. (2017). Received for the poster presented at the 18th European Conference on Developmental Psychology, Utrecht, the Netherlands.
+
+
+\addtocontents{toc}{\setcounter{tocdepth}{1}} 
+
+<!-- ## Software {#softwareoverview} -->
+
+
+
+<!--  - [DAC](https://cran.r-project.org/web/packages/DAC/) -->
+<!--       - **Veen, D.**, Schalken, N., & van de Schoot R. (2018). DAC: Calculating Data Agreement Criterion Scores to Rank Experts Based on Their Beliefs. R package version 0.1.1. https://CRAN.R-project.org/package=DAC -->
+<!--       - Code available: [github](https://github.com/VeenDuco/DAC) -->
+
+<!--  - [GLMMRR](https://cran.r-project.org/web/packages/GLMMRR/) -->
+<!--       - Fox, J-P., Klotzke, K., & **Veen, D.** (2016). GLMMRR: Generalized Linear Mixed Model (GLMM) for Binary Randomized Response Data. R package version 0.2.0. Available from https://CRAN.R-project.org/package=GLMMRR -->
+<!--       - Code available: [github](https://github.com/cran/GLMMRR) -->

@@ -1,0 +1,8 @@
+<!-- `r if (knitr::is_html_output()) ' -->
+<!-- # References {- #ref} -->
+<!-- '` -->
+# References {- #ref}
+
+\chaptermark{REFERENCES}
+\thispagestyle{empty}
+\markboth{REFERENCES}{REFERENCES}

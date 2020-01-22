@@ -1,0 +1,242 @@
+```{r discussionSetup, include=FALSE, eval = FALSE}
+# functions needed
+posterior1 <- function(data, prior.mu.loc, prior.mu.scale){
+  sigma <- sd(data)
+  sum.x <- sum(data)
+  sigma.0 <- prior.mu.scale
+  mu.0 <- prior.mu.loc
+  post.mu <- (1/ ( (1/sigma.0^2) + (n/sigma^2) ) ) * ( (mu.0 / sigma.0^2) + (sum.x / sigma^2)  )
+  post.sd <- sqrt( ( (1/sigma.0^2)+(n/sigma^2)  )^-1    )
+  return(c(post.mu, post.sd))
+}
+
+
+
+# sigma and mu unknown analytic updating
+# https://en.wikipedia.org/wiki/Conjugate_prior
+# https://en.wikipedia.org/wiki/Inverse-gamma_distribution 
+# note beta/(alpha - 1) or beta/(alpha + 1) respectively for mean and mode
+posterior2 <- function(data,prior.mean,prior.var, nu){
+  mu <- c(prior.mean)
+  var <- c(prior.var)
+  nu <- nu #prior sample size is set to 1
+  alpha.prime <- c(1) #prior for variance is set to invGamma(1,1)
+  beta.prime <- c(1) #prior for variance is set to invGamma(1,1)
+  x <- data
+  n <- length(x) #sample size
+  
+  alpha.prime[2] <- alpha.prime[1] + (n/2)
+  beta.prime[2] <- beta.prime[1] + sum(.5*(x-mean(x))^2) + ((n*nu[1]*(mean(x)-mu[1])^2)/ (2*(n+nu[1])))
+  
+  mu[2] <- (mu[1]*nu[1] + mean(x)*n) / (nu[1]+n)
+  var[2] <- beta.prime[2] / (alpha.prime[2] - 1)
+  
+  post.mu <- matrix(c(mu[2],sqrt((var[2]/(nu+n)))),ncol=2)
+  colnames(post.mu) <- c("post mean mu","post sd mu")
+  post.var <- matrix(c(alpha.prime[2],beta.prime[2]),ncol = 2)
+  colnames(post.var) <- c("post alpha", "post beta")
+  out <- list(mean = post.mu, variance = post.var)
+  return(out)
+}
+
+# data
+set.seed(903)
+n <- 20
+y.sample <- rnorm(n, 100, 40)
+y <- y.sample[1:n]
+
+x <- seq(0,150,length.out = 3000)
+xx <- seq(0, 2500, length.out = 6000)
+
+```
+
+# Discussion {#thesisdiscussion}
+
+\chaptermark{DISCUSSION}
+\thispagestyle{empty}
+
+The [introduction of this thesis](#introduction) started by explaining Bayesian statistics as a way of updating information. I start this discussion by  reflecting on the example that I used in Chapter [1](#introduction), discussing the importance of (hidden) assumptions, and I relate this to possible differences between experts and data. I consider different roles that expert knowledge can play in research, and under what conditions I think those roles could be appropriate. Finally, I give consideration to what seems a natural future direction for (my) research; decision making.
+
+## Hidden assumptions
+
+In Chapter [1](#introduction) the example of coin tosses is used to introduce the concept of Bayesian statistics, even though in the remainder of this thesis the normal distribution is used in the analyses. Why then, not explain Bayesian statistics using the normal distribution? The main reason is that the coin tossing example requires a single parameter $\theta$, resulting in a straight-forward single-parameter model. Two parameters should be considered with respect to the normal distribution: the mean ($\mu$) and variance ($\sigma^2$). This makes explanations more complex and the interactions between the two parameter might not make for an intuitive initial framework. Many text books decide to first explain the situation in which either $\mu$ or $\sigma^2$ is fixed [e.g. @albert_bayesian_2009; @gelman_bayesian_2013; @kaplan_bayesian_2014; @kruschke_doing_2010; @lynch_introduction_2007; @ntzoufras_bayesian_2011; @press_subjective_2009]. This decision is taken consciously, which is illustrated by the following comments.
+
+> "For the purpose of mathematical derivation, we make the unrealistic assumption
+> that the prior distribution is either a spike on $\sigma$ or a spike on $\mu$." 
+>
+> @kruschke_doing_2010 p. 322
+
+> "Perhaps a more realistic situation that arises in practice is when the
+> mean and variance of the normal distribution are unknown"
+>
+> @kaplan_bayesian_2014 p. 28
+
+\newpage
+
+> "In reality, we typically do not know $\sigma^2$ any more than we know $\mu$, 
+> and thus we have two quantities of interest that we should be updating with
+> new information"
+>
+> @lynch_introduction_2007 p. 65
+
+
+There is nothing wrong with explaining a simplistic version first. One reason not to do so is because an explanation with this 'unrealistic' or 'hidden' assumption might not make for proper intuition. In general, the more complex models become, the more complex specifying prior information becomes. Almost never is the specification of prior information as easy as in the examples in Chapter [1](#introduction) concerning the coin flips and the Beta distribution that has a natural interpretation in that case. Moreover, in multiparameter models the priors interact with one another to say something about the data that you might expect. Priors on certain parameters by themselves might look reasonable, but together they can sometimes imply very implausible situations about reality. Simulating fake data, or looking at implied predictive distributions as done in Chapter [5](#Burns), can help identify these problems [@gabry_visualization_2019; @van_de_schoot_tutorial_2020]. Moreover, recent work points to interpretation challenges for the prior if context of the likelihood is not taken into account [@gelman_prior_2017], or information about an experiment is ignored [@kennedy_experiment_2019]. Note in relation to this, how in the hierarchical model of Chapter [4](#Hierarchical), priors on the individual level are essentially based on the estimated group level effects, which includes information from both the prior and the likelihood. All this reflection on assumptions is not to criticize explanations in textbooks or articles. The point is made to highlight that the choices that are made with respect to the models and priors are highly influential for results and interpretations, and being explicit about them is a minimal requirement. 
+
+
+## Expert Knowledge
+
+Being transparent about models, priors and choices is related to the issue of eliciting expert knowledge. As mentioned in the introduction of Chapter [3](#DAC1), when conducting an elicitation experts are forced to use a representation system that belongs to the statistical realm. They are forced to use the same parametric representation as the statistical model. For non-trivial problems, statistical models can become complex quickly. If expert knowledge is elicited with the purpose of being used as a prior distribution in a statistical model, the implicit assumption is made that the expert adheres to the same model as statistically specified. This can be a rather strict assumption, in which confidence will decrease when models become more complex.
+
+In this dissertation in Chapters [3](#DAC1) and [6](#elicitlgm) we focus on the comparison of experts' elicited distributions among one another and their contrast with respect to what traditional data implies given our statistical model. If discrepancies occur between the two this can be highly informative and it need not be that one or the other is at fault and wrong. The discrepancies are so interesting because the differences can occur due to different implied models. When discussing with experts why their beliefs diverge from one another, or from the traditional data, we can learn subtle differences in the implied models that experts use. The information obtained using experts-data (dis)agreements methodology might inform us to specify slightly different statistical models or include other variables in our statistical models. In the long run, if the experts learn from the data, and the model is refined based on expert knowledge, we can expect both sources of information to converge.
+
+Note that I reflect here on cases where we do have data, not on cases where expert knowledge is used when no data is available. Obviously in those cases we do not have the luxury of comparing multiple sources of information. It is often more desirable to have any information, for instance provided by experts, than no information. In this scenario it is even more essential to have quality checks available to evaluate experts' expertise. As discussed in Chapter [6](#elicitlgm), the classical method is a much used procedure in this instance [@cooke_experts_1991, chapter 12]. The lack of suitable calibration questions for many social scientific research topics makes this method, at least for now, unfeasible in those settings. Moreover, the work presented in this dissertation is not a substitute for asking calibration questions, but should be viewed as an additional area of research. 
+
+In cases where calibration is possible, updating the elicited experts' beliefs with new data in a full Bayesian framework can certainly be considered. In cases where calibration is not an option, I would rather contrast expert knowledge as an alternative source of information than update it with traditionally collected data. The two alternative ways of incorporating information in prior distributions that were discussed in Chapter [1](#introduction), using previous research and logical constraints, seem more defensible than elicited expert priors without calibration. Especially the use of priors describing plausible parameter space seems no more than logical. In Chapters [3](#DAC1) and [6](#elicitlgm) we use uniform priors as benchmarks that could be considered in line with Laplace's (1749-1827) principle of insufficient reason. It seems that these might be more in line with the data in the proposed statistical model than some experts' beliefs. Whatever the reason, and whichever source of information is right, when using Kullback-Leibler divergences that assign truth status to the traditional data, the 'ignorant' benchmarks examples resonate the following idea:
+
+> "Ignorance is preferable to error and he is less remote from the truth who 
+> beliefs noting than he who believes what is wrong."
+>
+> Thomas Jefferson (1781)
+
+
+## Taking a decision
+
+I began this thesis by stating that all of us have to make decisions whilst facing uncertainty and incomplete information. In addition, I stated that Bayesian statistics offers a way to describe our state of knowledge in terms of probability. In this thesis we have indeed concerned ourselves mainly with obtaining prior, and estimating posterior, distributions of probability. We have contrasted sources of information, seeing this as an opportunity to learn and improve our knowledge and models. In short, we have concerned ourselves in this thesis with ways to systematically organize uncertainty and incomplete information, but not yet with the decision making process that should naturally follow from this.
+
+Two approaches that are often used in science to make a decision, or come to a conclusion, are model selection and hypothesis testing. Model selection is a very useful concept to refine our theory and models. However, it does not always lead to a decision. Hypothesis testing is more naturally focused at making decisions, e.g. can we reject the hypothesis that there is no effect? It seems, however, to be a rather unhelpful restriction to single out one value and contemplate the issue with respect to that value. Indeed, Bayesian estimation can be seen as a case in which we test an infinite number of hypotheses concerning which values are most likely for parameters [@jaynes_probability_2003, Chapter 4]. Moving beyond simple one dimensional questions to decisions that determine a course of action, it seems straightforward that we need to consider more than just an existence of an effect or not. Consider such questions as; do we implement a certain intervention in schools or not? Or should I get a certain type of insurance? To determine a course of action we need to be able to assess which choice seems most preferable out the options that are open to us. This cannot be assessed unless we assign value judgement to certain outcomes and take costs into account. Is raising the IQ of children by 1 point on average worth the investment if that means that we have to cut funding to hospitals by the same amount? Does the good outweigh the bad? That is the relevant question, not: should we change the way we teach at schools because an experiment provided us with $p<.05$ for a hypothesis stating that both methods of teaching were exactly equal? The following words express this sentiment in a delightful way:
+
+> "You cannot decide what to do today until you have decided what to do with the tomorrows that today's decisions might bring." 
+>
+> @lindley_understanding_2013, p. 249
+
+
+To extend the framework of Bayesian estimation into the field of decision making seems natural via the concepts of utility and loss. Given that a model has been found that seems reasonable, e.g. via model selection, the inference solutions obtained by applying probability theory only provide us with a state of knowledge concerning parameters, it does not tell us what to do with that information [@jaynes_probability_2003, Chapter 13]. Utility or loss functions can be defined and maximized to determine which decision is optimal [@goldstein_subjective_2006; @jaynes_probability_2003, Chapter 13]. Moreover, if sequential decisions should be taken, a decision tree should be made taking all information up to each point into account [@gelman_bayesian_2013, Chapter 9; @lindley_understanding_2013, Chapter 10]. Utility can be defined very transparently, but it is not free of subjective value judgement [@jaynes_probability_2003, Chapter 13]. For a wonderful example that illustrates this, see @jaynes_probability_2003, p. 400 - 402 on the differences in rationale and utility of insurance, viewed from the standpoints of the insurance agency, a poor person, a rich person, and a rich person with an aversion to risk. For a full decision analysis of different strategies in the context of risk reduction of lung cancer in relation to household environmental risk of exposure to radon gas, see @gelman_bayesian_2013 p. 246-256. 
+
+In no way am I saying that assigning utility and loss functions are easy concepts. Moreover, I will not claim to have the wisdom at this point to undertake such an elaborate evaluation and ensure wise decisions. However, if I had to take a decision on what to peruse next academically, using what I have learned from working on this dissertation, I would peruse decision making. But only after I reflected on what tomorrows today's decision would bring, given the uncertain and incomplete information that I have.
+
+
+
+
+
+
+
+<!-- When working with the more realistic model in which both $\mu$ and $\sigma^2$ are unknown things can seem a little different. To clarify this point, the example given in @sorensen_bayesian_2016 is replicated. I highlight how inference can differ depending on the choice of assumptions: is $\sigma^2$ known, or not.  -->
+
+<!-- @sorensen_bayesian_2016, just as in Chapter [1](#introduction), compare the effect on the posterior distribution when two different priors are used, one being more informative than the other. @sorensen_bayesian_2016 take an example in which the competing prior distributions of probability for $\mu$ both have a mean $\mu_0 = 60$, but different variances $\sigma^2_{0} = 1000$ and $\sigma^2_{0} = 100$. In the replication, data ($n=20$) was simulated such that the sample mean $\bar{x} \approx 100$ and the sample standard deviation $s \approx 40$. Figure \@ref(fig:discussionFig1) depicts what happens when $\sigma^2$ is assumed to be known.  -->
+
+
+<!-- (ref:discussionFig1) Reproduction of Figure 1 from @sorensen_bayesian_2016. -->
+
+```{r discussionFig1, echo = FALSE, fig.cap='(ref:discussionFig1)', fig.align= "center", fig.height = 3.5, eval = F}
+
+par(mfrow = c(1, 2))
+# uninf.
+out1 <- posterior1(data=y, prior.mu.loc = 60, prior.mu.scale = sqrt(1000))
+plot(x, dnorm(x, out1[1], out1[2]), type = "l", col = "blue", xlab = expression(mu),
+     lwd = 2, lty = 3, ylim = c(0,.07), bty = "n", ylab = "density",
+     main = expression(paste(sigma^2, " known, ", sigma[0]^2, "= 1000")))
+lines(x, dnorm(x, 60, sqrt(1000)), type = "l", col = "darkgreen", lty = 1)
+lines(x, dnorm(x,mean(y),(sd(y)/sqrt(n))),col='red',lwd=2, lty = 2)
+legend("topleft", c("Prior", "Likelihood", "Posterior"), lty = c(1:3), 
+       col = c("darkgreen", "red", "blue"), bty = "n", cex = .8)
+# inf
+out1 <- posterior1(data=y, prior.mu.loc = 60, prior.mu.scale = sqrt(100))
+plot(x, dnorm(x, out1[1], out1[2]), type = "l", col = "blue", xlab = expression(mu),
+     lwd = 2, lty = 3, ylim = c(0,.07), bty = "n", ylab = "density",
+     main = expression(paste(sigma^2, " known, ", sigma[0]^2, "= 100")))
+lines(x, dnorm(x, 60, sqrt(100)), type = "l", col = "darkgreen", lty = 1)
+lines(x, dnorm(x,mean(y),(sd(y)/sqrt(n))),col='red',lwd=2, lty = 2)
+
+```
+
+<!-- The assumption that $\sigma^2$ is known means that a spike on $\sigma^2$ is assumed. In this case the assumption is made that $\sigma^2$ is equal to the sample variance. Figure \@ref(fig:discussionFig1) should thus actually look like Figure \@ref(fig:discussionFig2) with the assumptions about both parameters in the model clearly visible.  -->
+
+
+
+```{r discussionFig2, echo = FALSE, fig.cap = "Extension of Figure 1 in which we now display the hidden assumption about $\\sigma^2$, that it is assumed to be known.", fig.align = "center", fig.show = 'hold', fig.height = 3.5, eval = F}
+
+
+par(mfrow = c(1, 2))
+# uninf.
+out1 <- posterior1(data=y, prior.mu.loc = 60, prior.mu.scale = sqrt(1000))
+plot(x, dnorm(x, out1[1], out1[2]), type = "l", col = "blue", xlab = expression(mu),
+     lwd = 2, lty = 3, ylim = c(0,.07), bty = "n", ylab = "density",
+     main = expression(paste(sigma^2, " known, ", sigma[0]^2, "= 1000")))
+lines(x, dnorm(x, 60, sqrt(1000)), type = "l", col = "darkgreen", lty = 1)
+lines(x, dnorm(x,mean(y),(sd(y)/sqrt(n))),col='red',lwd=2, lty = 2)
+legend("topleft", c("Prior", "Likelihood", "Posterior"), lty = c(1:3), 
+       col = c("darkgreen", "red", "blue"), bty = "n", cex = .8)
+# inf
+out1 <- posterior1(data=y, prior.mu.loc = 60, prior.mu.scale = sqrt(100))
+plot(x, dnorm(x, out1[1], out1[2]), type = "l", col = "blue", xlab = expression(mu),
+     lwd = 2, lty = 3, ylim = c(0,.07), bty = "n", ylab = "density",
+     main = expression(paste(sigma^2, " known, ", sigma[0]^2, "= 100")))
+lines(x, dnorm(x, 60, sqrt(100)), type = "l", col = "darkgreen", lty = 1)
+lines(x, dnorm(x,mean(y),(sd(y)/sqrt(n))),col='red',lwd=2, lty = 2)
+# legend("topleft", c("Prior", "Likelihood", "Posterior"), lty = c(1:3), 
+       # col = c("darkgreen", "red", "blue"), bty = "n")
+
+plot(NA, xlim = c(0, 2000), type = "l", col = "blue", xlab = expression(sigma^2),
+     lwd = 2, lty = 3, ylim = c(0,.07), bty = "n", ylab = "density")
+     # main = expression(paste(sigma^2, " known, ", sigma[0]^2, "= 1000")))
+abline(v = var(y), col = "darkgreen", lwd = 2, lty = 1)
+abline(v = var(y), col = "red", lwd = 2, lty = 2)
+abline(v = var(y), col = "blue", lwd = 2, lty = 3)
+# legend("topleft", c("Prior", "Likelihood", "Posterior"), lty = c(1:3), 
+       # col = c("darkgreen", "red", "blue"), bty = "n")
+
+
+plot(NA, xlim = c(0, 2000), type = "l", col = "blue", xlab = expression(sigma^2),
+     lwd = 2, lty = 3, ylim = c(0,.07), bty = "n", ylab = "density")
+     #main = expression(paste(sigma^2, " known, ", sigma[0]^2, "= 100")))
+abline(v = var(y), col = "darkgreen", lwd = 2, lty = 1)
+abline(v = var(y), col = "red", lwd = 2, lty = 2)
+abline(v = var(y), col = "blue", lwd = 2, lty = 3)
+# legend("topleft", c("Prior", "Likelihood", "Posterior"), lty = c(1:3),
+       # col = c("darkgreen", "red", "blue"), bty = "n")
+
+
+```
+
+
+
+<!-- The assumption that $\sigma^2$ is known can be let go, as is mentioned in textbooks as well. This makes for a situation in which a prior distribution has to be specified for $\sigma^2$ too, besides only for $\mu$. Let us assume that an inverse gamma distribution $IG(1,1)$ is used as a prior for $\sigma^2$ conform Figure \@ref(fig:discussionFig3). This figure also demonstrates the effect on the estimation of $\mu$ if $\sigma^2$ is also estimated. There is a discrepancy between the prior information about the mean and our observed information about the mean. However, this can be resolved by adjusting, or learning, that the variation could be different from what the original prior distribution implied. The posterior distribution for $\sigma^2$ is quite uncertain, which makes sense given the discrepancy between the priors and the data.  -->
+
+
+
+```{r discussionFig3, echo = FALSE, fig.cap = "The same model of Figure 1 and 2, but now we let go of the assumption that $\\sigma^2$ is knonw and estimate it.", fig.align = "center", fig.show = 'hold', fig.height = 3.5, eval = F}
+par(mfrow = c(1, 2))
+# uninf.
+out2 <- posterior2(data=y,prior.mean = 60, prior.var = sqrt(1000), nu = 1)
+plot(x, dnorm(x, out2$mean[1], out2$mean[2]), type = "l", col = "blue", 
+     lwd = 2, lty = 3, ylim = c(0,.07), bty = "n", ylab = "density",
+     main = expression(paste(sigma^2, " unknown, ", sigma[0]^2, "= 1000")))
+lines(x, dnorm(x, 60, sqrt(1000)), type = "l", col = "darkgreen", lty = 1)
+lines(x, dnorm(x,mean(y),(sd(y)/sqrt(n))),col='red',lwd=2, lty = 2)
+legend("topleft", c("Prior", "Likelihood", "Posterior"), lty = c(1:3), 
+       col = c("darkgreen", "red", "blue"), bty = "n", cex = .8)
+# inf
+out2 <- posterior2(data=y,prior.mean = 60, prior.var = sqrt(100), nu = 1)
+plot(x, dnorm(x, out2$mean[1], out2$mean[2]), type = "l", col = "blue", 
+     lwd = 2, lty = 3, ylim = c(0,.07), bty = "n", ylab = "density",
+     main = expression(paste(sigma^2, " unknown, ", sigma[0]^2, "= 100")))
+lines(x, dnorm(x, 60, sqrt(100)), type = "l", col = "darkgreen", lty = 1)
+lines(x, dnorm(x,mean(y),(sd(y)/sqrt(n))),col='red',lwd=2, lty = 2)
+
+# invgamma::qinvgamma(.5, 11, 11248.9)
+out2 <- posterior2(data=y,prior.mean = 60, prior.var = sqrt(1000), nu = 1)
+plot(xx, invgamma::dinvgamma(xx, 1, 1), col  = "darkgreen", ylim = c(0, .005),
+     lwd = 2, lty = 1, type = "l", xlab = expression(sigma^2),ylab = "density")
+abline(v = var(y), col = "red", lwd = 2, lty = 2)
+lines(xx, invgamma::dinvgamma(xx, out2$variance[1], out2$variance[2]),
+      col = "blue", type = "l")
+
+out2 <- posterior2(data=y,prior.mean = 60, prior.var = sqrt(100), nu = 1)
+plot(xx, invgamma::dinvgamma(xx, 1, 1), col  = "darkgreen", ylim = c(0, .005),
+     lwd = 2, lty = 1, type = "l", xlab = expression(sigma^2),ylab = "density")
+abline(v = var(y), col = "red", lwd = 2, lty = 2)
+lines(xx, invgamma::dinvgamma(xx, out2$variance[1], out2$variance[2]),
+      col = "blue", type = "l")
+
+
+```

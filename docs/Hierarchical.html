@@ -1,0 +1,2112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 A Step Forward: Bayesian Hierarchical Modelling as a Tool in Assessment of Individual Discrimination Performance | _main.utf8.md</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 A Step Forward: Bayesian Hierarchical Modelling as a Tool in Assessment of Individual Discrimination Performance | _main.utf8.md" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 A Step Forward: Bayesian Hierarchical Modelling as a Tool in Assessment of Individual Discrimination Performance | _main.utf8.md" />
+  
+  
+  
+
+<meta name="author" content="Duco Veen" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="DAC1.html"/>
+<link rel="next" href="Burns.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#bayesian-statistics"><i class="fa fa-check"></i><b>1.1</b> Bayesian Statistics</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#prior-information"><i class="fa fa-check"></i><b>1.2</b> Prior Information</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#expert-elicitation"><i class="fa fa-check"></i><b>1.3</b> Expert Elicitation</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#aims-and-outline"><i class="fa fa-check"></i><b>1.4</b> Aims and Outline</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="fivestep.html"><a href="fivestep.html"><i class="fa fa-check"></i><b>2</b> Proposal for a Five-Step Method to Elicit Expert Judgment</a><ul>
+<li class="chapter" data-level="" data-path="fivestep.html"><a href="fivestep.html#abstract"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="2.1" data-path="fivestep.html"><a href="fivestep.html#ch02introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="fivestep.html"><a href="fivestep.html#five-step-method"><i class="fa fa-check"></i><b>2.2</b> Five-Step Method</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="fivestep.html"><a href="fivestep.html#step-1"><i class="fa fa-check"></i><b>2.2.1</b> Step 1</a></li>
+<li class="chapter" data-level="2.2.2" data-path="fivestep.html"><a href="fivestep.html#step-2"><i class="fa fa-check"></i><b>2.2.2</b> Step 2</a></li>
+<li class="chapter" data-level="2.2.3" data-path="fivestep.html"><a href="fivestep.html#step-3"><i class="fa fa-check"></i><b>2.2.3</b> Step 3</a></li>
+<li class="chapter" data-level="2.2.4" data-path="fivestep.html"><a href="fivestep.html#step-4"><i class="fa fa-check"></i><b>2.2.4</b> Step 4</a></li>
+<li class="chapter" data-level="2.2.5" data-path="fivestep.html"><a href="fivestep.html#step-5"><i class="fa fa-check"></i><b>2.2.5</b> Step 5</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="fivestep.html"><a href="fivestep.html#elicitation-studies"><i class="fa fa-check"></i><b>2.3</b> Elicitation Studies</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="fivestep.html"><a href="fivestep.html#user-feasibility-study"><i class="fa fa-check"></i><b>2.3.1</b> User Feasibility Study</a></li>
+<li class="chapter" data-level="2.3.2" data-path="fivestep.html"><a href="fivestep.html#elicitation-staffing-company"><i class="fa fa-check"></i><b>2.3.2</b> Elicitation Staffing Company</a></li>
+<li class="chapter" data-level="2.3.3" data-path="fivestep.html"><a href="fivestep.html#elicitation-large-financial-institution"><i class="fa fa-check"></i><b>2.3.3</b> Elicitation Large Financial Institution</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="fivestep.html"><a href="fivestep.html#ch02discussion"><i class="fa fa-check"></i><b>2.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="fivestep.html"><a href="fivestep.html#ch02ethics"><i class="fa fa-check"></i>Ethics Statement</a></li>
+<li class="chapter" data-level="" data-path="fivestep.html"><a href="fivestep.html#ch02funding"><i class="fa fa-check"></i>Funding</a></li>
+<li class="chapter" data-level="" data-path="fivestep.html"><a href="fivestep.html#ch02acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="fivestep.html"><a href="fivestep.html#ch02conflict"><i class="fa fa-check"></i>Conflict of Interest Statement</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="DAC1.html"><a href="DAC1.html"><i class="fa fa-check"></i><b>3</b> Using the Data Agreement Criterion to Rank Experts’ Beliefs</a><ul>
+<li class="chapter" data-level="" data-path="DAC1.html"><a href="DAC1.html#abstract-1"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="3.1" data-path="DAC1.html"><a href="DAC1.html#ch03introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="DAC1.html"><a href="DAC1.html#expert-data-disagreement"><i class="fa fa-check"></i><b>3.2</b> Expert-Data (Dis)Agreement</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="DAC1.html"><a href="DAC1.html#data-agreement-criterion"><i class="fa fa-check"></i><b>3.2.1</b> Data Agreement Criterion</a></li>
+<li class="chapter" data-level="3.2.2" data-path="DAC1.html"><a href="DAC1.html#DACvsBF"><i class="fa fa-check"></i><b>3.2.2</b> Comparison to Ranking by the Bayes Factor</a></li>
+<li class="chapter" data-level="3.2.3" data-path="DAC1.html"><a href="DAC1.html#DACvsBF2"><i class="fa fa-check"></i><b>3.2.3</b> DAC Versus BF</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="DAC1.html"><a href="DAC1.html#empirical-example"><i class="fa fa-check"></i><b>3.3</b> Empirical Example</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="DAC1.html"><a href="DAC1.html#elicitation-procedure"><i class="fa fa-check"></i><b>3.3.1</b> Elicitation Procedure</a></li>
+<li class="chapter" data-level="3.3.2" data-path="DAC1.html"><a href="DAC1.html#ranking-the-experts"><i class="fa fa-check"></i><b>3.3.2</b> Ranking the Experts</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="DAC1.html"><a href="DAC1.html#ch03discussion"><i class="fa fa-check"></i><b>3.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="DAC1.html"><a href="DAC1.html#ch03ethics"><i class="fa fa-check"></i>Ethics Statement</a></li>
+<li class="chapter" data-level="" data-path="DAC1.html"><a href="DAC1.html#ch03funding"><i class="fa fa-check"></i>Funding</a></li>
+<li class="chapter" data-level="" data-path="DAC1.html"><a href="DAC1.html#ch03acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="DAC1.html"><a href="DAC1.html#ch03conflict"><i class="fa fa-check"></i>Conflicts of Interest Statement</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Hierarchical.html"><a href="Hierarchical.html"><i class="fa fa-check"></i><b>4</b> A Step Forward: Bayesian Hierarchical Modelling as a Tool in Assessment of Individual Discrimination Performance</a><ul>
+<li class="chapter" data-level="" data-path="Hierarchical.html"><a href="Hierarchical.html#abstract-2"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="4.1" data-path="Hierarchical.html"><a href="Hierarchical.html#ch04introduction"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="Hierarchical.html"><a href="Hierarchical.html#method"><i class="fa fa-check"></i><b>4.2</b> Method</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="Hierarchical.html"><a href="Hierarchical.html#participants"><i class="fa fa-check"></i><b>4.2.1</b> Participants</a></li>
+<li class="chapter" data-level="4.2.2" data-path="Hierarchical.html"><a href="Hierarchical.html#stimuli"><i class="fa fa-check"></i><b>4.2.2</b> Stimuli</a></li>
+<li class="chapter" data-level="4.2.3" data-path="Hierarchical.html"><a href="Hierarchical.html#procedure"><i class="fa fa-check"></i><b>4.2.3</b> Procedure</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="Hierarchical.html"><a href="Hierarchical.html#results-3"><i class="fa fa-check"></i><b>4.3</b> Results</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="Hierarchical.html"><a href="Hierarchical.html#summary-of-the-group-data-published-in-de_klerk_lost_2019"><i class="fa fa-check"></i><b>4.3.1</b> Summary of the group data published in <span class="citation">Klerk et al. (<span>2019</span>)</span></a></li>
+<li class="chapter" data-level="4.3.2" data-path="Hierarchical.html"><a href="Hierarchical.html#data-screening"><i class="fa fa-check"></i><b>4.3.2</b> Data Screening</a></li>
+<li class="chapter" data-level="4.3.3" data-path="Hierarchical.html"><a href="Hierarchical.html#analysis-1-linear-regression-model-with-autoregressive-ar1-error-structure"><i class="fa fa-check"></i><b>4.3.3</b> Analysis 1: Linear Regression Model with Autoregressive (AR1) Error Structure</a></li>
+<li class="chapter" data-level="4.3.4" data-path="Hierarchical.html"><a href="Hierarchical.html#analysis-2-hierarchical-bayesian-analysis"><i class="fa fa-check"></i><b>4.3.4</b> Analysis 2: Hierarchical Bayesian Analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="Hierarchical.html"><a href="Hierarchical.html#discussion"><i class="fa fa-check"></i><b>4.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="Hierarchical.html"><a href="Hierarchical.html#ch04ethics"><i class="fa fa-check"></i>Ethics Statement</a></li>
+<li class="chapter" data-level="" data-path="Hierarchical.html"><a href="Hierarchical.html#ch04acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="Hierarchical.html"><a href="Hierarchical.html#ch05appendix"><i class="fa fa-check"></i>Appendix A</a></li>
+<li class="chapter" data-level="" data-path="Hierarchical.html"><a href="Hierarchical.html#ch05appendixB"><i class="fa fa-check"></i>Appendix B</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="Hierarchical.html"><a href="Hierarchical.html#software"><i class="fa fa-check"></i><b>4.4.1</b> Software</a></li>
+<li class="chapter" data-level="4.4.2" data-path="Hierarchical.html"><a href="Hierarchical.html#priors"><i class="fa fa-check"></i><b>4.4.2</b> Priors</a></li>
+<li class="chapter" data-level="4.4.3" data-path="Hierarchical.html"><a href="Hierarchical.html#estimation-and-convergence"><i class="fa fa-check"></i><b>4.4.3</b> Estimation and Convergence</a></li>
+<li class="chapter" data-level="4.4.4" data-path="Hierarchical.html"><a href="Hierarchical.html#posterior-predictive-check"><i class="fa fa-check"></i><b>4.4.4</b> Posterior predictive check</a></li>
+<li class="chapter" data-level="4.4.5" data-path="Hierarchical.html"><a href="Hierarchical.html#sensitivity-analysis"><i class="fa fa-check"></i><b>4.4.5</b> Sensitivity Analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="Burns.html"><a href="Burns.html"><i class="fa fa-check"></i><b>5</b> The importance of collaboration in Bayesian analyses with small samples</a><ul>
+<li class="chapter" data-level="" data-path="Burns.html"><a href="Burns.html#abstract-3"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="5.1" data-path="Burns.html"><a href="Burns.html#ch05introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="Burns.html"><a href="Burns.html#latent-growth-models-with-small-sample-sizes"><i class="fa fa-check"></i><b>5.2</b> Latent Growth Models with small sample sizes</a></li>
+<li class="chapter" data-level="5.3" data-path="Burns.html"><a href="Burns.html#empirical-example-analysis-plan"><i class="fa fa-check"></i><b>5.3</b> Empirical example: Analysis plan</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="Burns.html"><a href="Burns.html#research-question-model-specification-and-an-overview-of-data"><i class="fa fa-check"></i><b>5.3.1</b> Research question, model specification and an overview of data</a></li>
+<li class="chapter" data-level="5.3.2" data-path="Burns.html"><a href="Burns.html#specifying-and-understanding-priors"><i class="fa fa-check"></i><b>5.3.2</b> Specifying and understanding priors</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="Burns.html"><a href="Burns.html#empirical-example-conducting-the-analysis"><i class="fa fa-check"></i><b>5.4</b> Empirical example: Conducting the analysis</a></li>
+<li class="chapter" data-level="5.5" data-path="Burns.html"><a href="Burns.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging</a></li>
+<li class="chapter" data-level="5.6" data-path="Burns.html"><a href="Burns.html#moving-forward-alternative-models"><i class="fa fa-check"></i><b>5.6</b> Moving forward: Alternative Models</a></li>
+<li class="chapter" data-level="5.7" data-path="Burns.html"><a href="Burns.html#conclusion"><i class="fa fa-check"></i><b>5.7</b> Conclusion</a></li>
+<li class="chapter" data-level="5.8" data-path="Burns.html"><a href="Burns.html#acknowledgements"><i class="fa fa-check"></i><b>5.8</b> Acknowledgements</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="elicitlgm.html"><a href="elicitlgm.html"><i class="fa fa-check"></i><b>6</b> Expert Elicitation in the Social Sciences: The case of Posttraumatic Stress Symptoms Development in Children with Burn Injuries</a><ul>
+<li class="chapter" data-level="" data-path="elicitlgm.html"><a href="elicitlgm.html#abstract-4"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="6.1" data-path="elicitlgm.html"><a href="elicitlgm.html#ch06introduction"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="elicitlgm.html"><a href="elicitlgm.html#methods"><i class="fa fa-check"></i><b>6.2</b> Methods</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="elicitlgm.html"><a href="elicitlgm.html#motivating-example"><i class="fa fa-check"></i><b>6.2.1</b> Motivating Example</a></li>
+<li class="chapter" data-level="6.2.2" data-path="elicitlgm.html"><a href="elicitlgm.html#expert-elicitation-1"><i class="fa fa-check"></i><b>6.2.2</b> Expert Elicitation</a></li>
+<li class="chapter" data-level="6.2.3" data-path="elicitlgm.html"><a href="elicitlgm.html#sample-of-experts"><i class="fa fa-check"></i><b>6.2.3</b> Sample of Experts</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="elicitlgm.html"><a href="elicitlgm.html#results-4"><i class="fa fa-check"></i><b>6.3</b> Results</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="elicitlgm.html"><a href="elicitlgm.html#individual-and-group-expert-judgements"><i class="fa fa-check"></i><b>6.3.1</b> Individual and Group Expert Judgements</a></li>
+<li class="chapter" data-level="6.3.2" data-path="elicitlgm.html"><a href="elicitlgm.html#prior-data-disagreement"><i class="fa fa-check"></i><b>6.3.2</b> Prior-Data (dis)Agreement</a></li>
+<li class="chapter" data-level="6.3.3" data-path="elicitlgm.html"><a href="elicitlgm.html#audio-recordings"><i class="fa fa-check"></i><b>6.3.3</b> Audio Recordings</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="elicitlgm.html"><a href="elicitlgm.html#discussion-1"><i class="fa fa-check"></i><b>6.4</b> Discussion</a></li>
+<li class="chapter" data-level="" data-path="elicitlgm.html"><a href="elicitlgm.html#conflicts-of-interest"><i class="fa fa-check"></i>Conflicts of Interest</a></li>
+<li class="chapter" data-level="" data-path="elicitlgm.html"><a href="elicitlgm.html#ethics-statement"><i class="fa fa-check"></i>Ethics Statement</a></li>
+<li class="chapter" data-level="" data-path="elicitlgm.html"><a href="elicitlgm.html#acknowledgements-1"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="elicitlgm.html"><a href="elicitlgm.html#funding"><i class="fa fa-check"></i>Funding</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="thesisdiscussion.html"><a href="thesisdiscussion.html"><i class="fa fa-check"></i><b>7</b> Discussion</a><ul>
+<li class="chapter" data-level="7.1" data-path="thesisdiscussion.html"><a href="thesisdiscussion.html#hidden-assumptions"><i class="fa fa-check"></i><b>7.1</b> Hidden assumptions</a></li>
+<li class="chapter" data-level="7.2" data-path="thesisdiscussion.html"><a href="thesisdiscussion.html#expert-knowledge"><i class="fa fa-check"></i><b>7.2</b> Expert Knowledge</a></li>
+<li class="chapter" data-level="7.3" data-path="thesisdiscussion.html"><a href="thesisdiscussion.html#taking-a-decision"><i class="fa fa-check"></i><b>7.3</b> Taking a decision</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="nederlandse-samenvatting.html"><a href="nederlandse-samenvatting.html"><i class="fa fa-check"></i>Nederlandse Samenvatting</a></li>
+<li class="chapter" data-level="" data-path="dankwoord.html"><a href="dankwoord.html"><i class="fa fa-check"></i>Dankwoord</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html"><i class="fa fa-check"></i>Curriculum Vitae</a><ul>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#academic-publications"><i class="fa fa-check"></i>Academic Publications</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#book-chapters"><i class="fa fa-check"></i>Book Chapters</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#technical-reports"><i class="fa fa-check"></i>Technical Reports</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#manuscripts-under-review"><i class="fa fa-check"></i>Manuscripts under review</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#grants"><i class="fa fa-check"></i>Grants</a></li>
+<li class="chapter" data-level="" data-path="curriculum-vitae.html"><a href="curriculum-vitae.html#awards"><i class="fa fa-check"></i>Awards</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="ref.html"><a href="ref.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Hierarchical" class="section level1">
+<h1><span class="header-section-number">4</span> A Step Forward: Bayesian Hierarchical Modelling as a Tool in Assessment of Individual Discrimination Performance</h1>
+
+
+<div id="abstract-2" class="section level2 unnumbered">
+<h2>Abstract</h2>
+
+<p>Individual assessment of infants’ speech discrimination is of great value for studies of language development that seek to relate early and later skills, as well as for clinical work. The present study explored the applicability of the hybrid visual fixation paradigm <span class="citation">(Houston et al., <a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> and the associated statistical analysis approach to assess individual discrimination of a native vowel contrast, /a:/ - /e:/, in Dutch 6 to 10-month-old infants. Houston et al. found that 80% (8/10) of the 9-month-old infants successfully discriminated the contrast between pseudowords boodup - seepug. Using the same approach, we found that 12% (14/117) of the infants in our sample discriminated the highly salient /a:/ - /e:/ contrast. This percentage was reduced to 3% (3/117) when we corrected for multiple testing. Bayesian hierarchical modeling indicated that 50% of the infants showed evidence of discrimination. Advantages of Bayesian hierarchical modeling are that 1) there is no need for a correction for multiple testing and 2) better estimates at the individual level are obtained. Thus, individual speech discrimination can be more accurately assessed using state of the art statistical approaches.</p>
+<!-- \indent _keywords:_ autoregressive error structure, Bayesian hierarchical modeling, hybrid visual fixation, individual analysis, speech sound discrimination -->
+
+</div>
+<div id="ch04introduction" class="section level2">
+<h2><span class="header-section-number">4.1</span> Introduction</h2>
+<p>Early speech discrimination is assumed to be vital for children’s language acquisition, as it is a first step into the formation of speech sound categories. These, in turn, are necessary for word learning <span class="citation">(e.g. Tsao, Liu, &amp; Kuhl, <a href="#ref-tsao_speech_2004" role="doc-biblioref">2004</a>)</span>. These past decades have seen a significant increase in our understanding of the development of speech perception in infants <span class="citation">(see for recent reviews Maurer &amp; Werker, <a href="#ref-maurer_perceptual_2014" role="doc-biblioref">2014</a>; Tsuji &amp; Cristia, <a href="#ref-tsuji_perceptual_2014" role="doc-biblioref">2014</a>)</span>. However, the majority of studies have based their conclusions on group data. It has thus far turned out difficult to make claims about individual performance and development, even though this type of information is critical for understanding individual developmental trajectories as well as clinical questions. It seems that only one study has addressed this matter so far <span class="citation">(Houston et al., <a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>. In the present study, we use a variant of Houston et al.’s hybrid visual fixation paradigm (HVF), and we describe and evaluate a new approach for assessing individual infants’ phoneme discrimination.</p>
+<p>Infant speech discrimination can only be measured indirectly. A frequently used behavioral method is a habituation paradigm. In such paradigms, looking time is the preferred dependent variable. Generally, in habituation paradigms infants are habituated on a set of stimuli (A), followed by a test phase in which infants are tested on new set of stimuli (B), i.e., the ‘dishabituation’ or ‘change’ trials. If infants are sensitive to the difference between A and B, longer listening times are expected to the novel stimuli (B) <span class="citation">(Sokolov, <a href="#ref-sokolov_perception_1963" role="doc-biblioref">1963</a>)</span>. Studies often employ designs with only 2-4 test trials, see <span class="citation">Colombo &amp; Mitchell (<a href="#ref-colombo_infant_2009" role="doc-biblioref">2009</a>)</span> for a review. This can lead to interpretation difficulties, because infant data is, without exception, noisy. Group results often show large individual variation in looking times. This reflects substantial interindividual variation, comprising overall long or short lookers. It also reflects intra-individual variation. This variation may result from a variety of factors, both infant-internal, such as gas in the digestive system, tiredness, developmental level, memory capacity, attentiveness, motivation, and external factors, such as sounds other than the stimuli, stimulus complexity, and task demands. Hence, the length of a look does not merely reflect the mental processing of the stimulus, and thus does not unequivocally mirror habituation or dishabituation <span class="citation">(Oakes, <a href="#ref-oakes_using_2010" role="doc-biblioref">2010</a>)</span>. In order to deal with the noise, researchers typically collapse data over individuals. However, the HVF paradigm <span class="citation">(Houston et al., <a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> uses 14 test trials instead of 2-4 test trials, which in principle allows for individual assessment, as the higher number of test trials will boost the signal-to-noise ratio.</p>
+<p>Recently, there has been a growing interest in explaining individual differences in infants’ early speech perception, i.e. word segmentation and speech sound discrimination skills, see <span class="citation">Cristia, Seidl, Junge, Soderstrom, &amp; Hagoort (<a href="#ref-cristia_predicting_2014" role="doc-biblioref">2014</a>)</span> for a review. A frequently used approach to individual differences is to use follow-up data, such as later vocabulary size, reading scores or other skills to predict (in retrospect) infants’ looking times <span class="citation">(e.g. Altvater-Mackensen &amp; Grossmann, <a href="#ref-altvater-mackensen_learning_2015" role="doc-biblioref">2015</a>; Cristia, <a href="#ref-cristia_fine-grained_2011" role="doc-biblioref">2011</a>; Junge &amp; Cutler, <a href="#ref-junge_early_2014" role="doc-biblioref">2014</a>; Melvin et al., <a href="#ref-melvin_home_2017" role="doc-biblioref">2017</a>; Molfese, <a href="#ref-molfese_predicting_2000" role="doc-biblioref">2000</a>; Newman, Ratner, Jusczyk, Jusczyk, &amp; Dow, <a href="#ref-newman_infants_2006" role="doc-biblioref">2006</a>)</span>. For instance, <span class="citation">Newman et al. (<a href="#ref-newman_infants_2006" role="doc-biblioref">2006</a>)</span> found that 24-month-old toddlers with larger vocabulary sizes were better at speech perception tasks in infancy than their peers with smaller vocabularies. Although the reported correlations between looking time data and later language, cognitive or social measures, e.g. vocabulary size, social interaction, social economic status <span class="citation">(e.g. Altvater-Mackensen &amp; Grossmann, <a href="#ref-altvater-mackensen_learning_2015" role="doc-biblioref">2015</a>)</span> are sometimes low to moderate, the meta-analysis of <span class="citation">Cristia et al. (<a href="#ref-cristia_predicting_2014" role="doc-biblioref">2014</a>)</span> shows that early speech perception skills have a predictive value of later language skills.</p>
+<p>Even though there is a (weak) positive relation between early looking time data and later language, cognitive or social measures, this is not the same as being able to assess an individual child’s ability to discriminate speech sounds or segment words. There are three reasons why individual data collected with the traditional discrimination paradigms cannot provide this information. First, individual data is likely to show that some infants have, on average, longer listening times to the familiarized, than to the new stimuli <span class="citation">(Houston-Price &amp; Nakai, <a href="#ref-houston-price_distinguishing_2004" role="doc-biblioref">2004</a>)</span>. This could be due to some infants having reached the habituation criterion without having fully encoded the stimulus <span class="citation">(Aslin &amp; Fiser, <a href="#ref-aslin_methodological_2005" role="doc-biblioref">2005</a>)</span>; as a consequence they do not look longer to the new stimulus. However, such a looking pattern does not imply that they cannot discriminate A from B <span class="citation">(e.g. Aslin &amp; Fiser, <a href="#ref-aslin_methodological_2005" role="doc-biblioref">2005</a>; Houston-Price &amp; Nakai, <a href="#ref-houston-price_distinguishing_2004" role="doc-biblioref">2004</a>)</span>. This implies that the direction of the difference in raw looking times cannot be used to infer discrimination. Second, it is not a priori clear that a larger looking time difference between stimuli A and B is evidence for better discrimination performance, and a smaller difference reflects poorer discrimination <span class="citation">(Aslin &amp; Fiser, <a href="#ref-aslin_methodological_2005" role="doc-biblioref">2005</a>)</span>, because there is no clear conceptualization of looking time duration and discrimination. Third, although Houston found high test-retest reliability <span class="citation">(Houston et al., <a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>, this test-retest reliability was found to be extremely variable across different experiments in a multi-center study by <span class="citation">Cristia, Seidl, Singh, &amp; Houston (<a href="#ref-cristia_test-retest_2016" role="doc-biblioref">2016</a>)</span>. Across the three participating labs 12 speech perception experiments were conducted, which included testing and retesting of 5-12-month-old infants within 18 days. Some of the labs found significant correlations between performance of the infants tested on two separate days, whereas others did not. One of the labs used the HVF paradigm to assess speech sound discrimination skills of a vowel contrast (/i - u/), a consonant contrast (/sa - <span class="math inline">\(\int\)</span>a/) and a word contrast (boodup-seepug). Here too, test-retest reliability was extremely variable across experiments; there were high test-retest correlations for vowel and consonant contrasts, but not for the word contrast. In conclusion, it appears highly challenging, if not impossible, to infer discrimination at the individual level, based on raw looking time data.</p>
+<p>Evidence for discrimination at the individual level might be found if infant data could be modeled taking into account the individual variances as well as the autoregressive effect, i.e. the correlations in noise between trials. <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> attempted to tackle these issues by using the HVF paradigm and applying statistical analyses on the individual data and test trials. However, the statistical approach by <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>, testing each infant individually using a classical frequentist approach, ignores chance findings based on multiple testing, and misses the opportunity to gain strength in analyses by taking the hierarchical structure of the data into account. Bayesian hierarchical modelling could be a solution to overcome the multiple testing impracticality <span class="citation">(Gelman, Hill, &amp; Yajima, <a href="#ref-gelman_why_2012" role="doc-biblioref">2012</a>)</span>. Additionally, adding (hierarchical) information to the individual estimates reduces noise, and also reduces the number of cases for which estimated effects are found in the wrong direction, type-S (sign) errors, and inflated estimated effects, type-M (magnitude) errors <span class="citation">(Gelman &amp; Tuerlinckx, <a href="#ref-gelman_type_2000" role="doc-biblioref">2000</a>)</span>.</p>
+<p><span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> developed the HVF paradigm to assess discrimination skills at the individual level. HVF is a habituation paradigm that includes more test trials (14 trials) than typically used in habituation studies, facilitating individual analysis. In their study, <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> tested ten 9-month-olds on the pseudowords boodup and seepug. These stimuli could a priori be regarded as highly discriminable for infants this age. Infants were habituated on one of the words (e.g. boodup) and then tested on alternating (boodup-seepug) and non-alternating (boodup-boodup) trials. Data was analyzed using a linear regression model with autoregressive (AR1) error structure. Eight out of the ten infants were able to discriminate the contrast, as indicated by a significant difference in looking time between alternating (boodup-seepug) and non-alternating test trials (boodup-boodup, seepug-seepug). The paradigm has successfully been used by other researchers assessing speech (sound) discrimination skills of infants at group level <span class="citation">(Cristia et al., <a href="#ref-cristia_test-retest_2016" role="doc-biblioref">2016</a>; Dijkstra &amp; Fikkert, <a href="#ref-dijkstra_universal_2011" role="doc-biblioref">2011</a>; Horn, Houston, &amp; Miyamoto, <a href="#ref-horn_speech_2007" role="doc-biblioref">2007</a>; Klerk, Bree, Kerkhoff, &amp; Wijnen, <a href="#ref-de_klerk_lost_2019" role="doc-biblioref">2019</a>; Liu &amp; Kager, <a href="#ref-liu_bilingual_2015" role="doc-biblioref">2015</a>, <a href="#ref-liu_perception_2016" role="doc-biblioref">2016</a>)</span>. The design and analysis applied by <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> might be suitable for assessing individual performance in speech sound discrimination as well.</p>
+<p>In the present study, we applied an adapted variant of <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>‘s procedure to
+infants’ speech sound discrimination: we used a Dutch vowel contrast (/a:/-/e:/).@smits_unfolding_2003 found that when native adults speakers of Dutch were presented with /a:/ and /e:/ in syllable medial position, vowel /e:/ was classified only once as /a:/ out of 1548 instances and the opposite error never occurred. This indicates that the contrast is easy to discriminate by adults. The study by <span class="citation">Klerk et al. (<a href="#ref-de_klerk_lost_2019" role="doc-biblioref">2019</a>)</span> has shown that groups of Dutch learning 6, 8, and 10-month-old infants can indeed discriminate this contrast; moreover, performance increased with age (see Results, 3.1). These findings are in line with theories of speech perception which predict good or agerelated enhancement of discrimination of highly distinctive native speech sounds contrasts <span class="citation">(Maurer &amp; Werker, <a href="#ref-maurer_perceptual_2014" role="doc-biblioref">2014</a>; Tsuji &amp; Cristia, <a href="#ref-tsuji_perceptual_2014" role="doc-biblioref">2014</a>)</span>. The current study investigates outcomes at the individual level rather than the group level, using the data from the previously-published paper by <span class="citation">Klerk et al. (<a href="#ref-de_klerk_lost_2019" role="doc-biblioref">2019</a>)</span>. The primary research question is whether we can obtain similar results at the individual level as <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>. We expect that a large percentage of individual infants will show evidence of discrimination, mirroring the findings reported by <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>.</p>
+<p>In addition, we explore the application of Bayesian Hierarchical modeling to our discrimination data, and compare it to <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>‘s statistical approach. Bayesian Hierarchical modeling might provide better estimates of individual infants’ discrimination performance than classical regression modeling: Using a Bayesian Hierarchical analysis allows us to obtain estimates for each of the individual and group parameters in one model without the need to correct for multiple testing <span class="citation">(Gelman et al., <a href="#ref-gelman_why_2012" role="doc-biblioref">2012</a>)</span>. If it can be assumed that infants within the same age group belong to the same population -i.e. infants are exchangeable within age groups but not between age groups- a hierarchical (multilevel) structure is thus a more powerful approach.</p>
+</div>
+<div id="method" class="section level2">
+<h2><span class="header-section-number">4.2</span> Method</h2>
+<div id="participants" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Participants</h3>
+<p>A total of 117 typically developing, monolingual Dutch 6-10-month-old infants participated. In addition, 53 infants (31% of total recruited) were tested, but their data was not included for analysis because of behavior during test (crying, extreme restlessness, <span class="math inline">\(n = 31\)</span>), technical errors (<span class="math inline">\(n = 12\)</span>), failure to meet the habituation criterion (<span class="math inline">\(n = 5\)</span>; see Procedure), parental interference (<span class="math inline">\(n = 3\)</span>), or ear infection at time of testing (<span class="math inline">\(n = 3\)</span>). An overview of the ages and drop-out rates is provided in Table <a href="Hierarchical.html#tab:ch04tab1">4.1</a>. Note that none of the infants were excluded for failing to meet the pre-and posttest criterion (see Procedure). Parents provided active informed consent before participation.</p>
+<table style="width:99%;">
+<caption><span id="tab:ch04tab1">Table 4.1: </span> Numbers of Participants, Mean Ages and Age Ranges, and Drop-Out Rate per Age Group.</caption>
+<colgroup>
+<col width="11%" />
+<col width="19%" />
+<col width="20%" />
+<col width="14%" />
+<col width="16%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Age Group</th>
+<th align="center">Age Range</th>
+<th align="center">Age (days)</th>
+<th align="center">Infants tested</th>
+<th align="center">Infants included</th>
+<th align="center">Drop-Out rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"><em>month days</em></td>
+<td align="center"><em>M(SD)</em></td>
+<td align="center"><span class="math inline">\(N =\)</span></td>
+<td align="center"><span class="math inline">\(n =\)</span></td>
+<td align="center"><span class="math inline">\(n =\)</span> (%)</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">6.1 - 6.30</td>
+<td align="center">203 (8.4)</td>
+<td align="center">59</td>
+<td align="center">38</td>
+<td align="center">21 (35)</td>
+</tr>
+<tr class="odd">
+<td align="center">8</td>
+<td align="center">8.0 - 8.30</td>
+<td align="center">259 (6.5)</td>
+<td align="center">66</td>
+<td align="center">44</td>
+<td align="center">22 (33)</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">10.3 - 10.30</td>
+<td align="center">320 (12.9)</td>
+<td align="center">45</td>
+<td align="center">35</td>
+<td align="center">10 (22)</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>Total</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><strong>170</strong></td>
+<td align="center"><strong>117</strong></td>
+<td align="center"><strong>53 (31)</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="stimuli" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Stimuli</h3>
+<p>Both auditory as well as visual stimuli were presented in each phase of the procedure. Similar to <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>‘s study, the experiment consisted of a habituation phase, a test phase, and a pre- and posttest to measure participants’ general attentiveness. For more detailed information about the stimuli we refer to <span class="citation">Klerk et al. (<a href="#ref-de_klerk_lost_2019" role="doc-biblioref">2019</a>)</span>.</p>
+<p>During the pre-and posttest infants were presented with both auditory (beep sounds, 330 Hz, played at 65 dB(A), duration 250ms, ISI 1000ms, total duration of ~24 seconds) and visual stimuli. The visual stimuli were three cartoon pictures pseudo-randomly selected from a set of 25 (e.g. train, car, book), displayed for two seconds on a light blue background. These pictures appeared in three different, randomly selected positions within an invisible 3 x 3 grid, see Figure <a href="Hierarchical.html#fig:ch04fig1">4.1</a>. Every two seconds new pictures appeared at different locations.</p>
+<p>In both the habituation and test phase participants heard a speech token repeatedly (with a maximum of 30 repetitions) while being shown one of six still pictures of smiling female faces. The faces were displayed in a random order, one face per trial. <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> used movies of females producing the words: we could not do the same because of technical limitations. Between habituation trials a visual attention getter was displayed: a video of a cute laughing baby. The attention getter shown between test trials was a video clip of a toddler going down a slide (see Figure <a href="Hierarchical.html#fig:ch04fig1">4.1</a> for the visual stimuli). Auditory stimuli were native vowels /a:/ and /e:/, embedded in pseudowords faap (/fa:p/) and feep (/fe:p/). Five tokens of four female Dutch native speakers (aged between 25 and 35 years of age) were obtained. From three speakers one token was selected. From the fourth speaker two tokens were selected, one of which was used during the habituation and test phase and the other only during test phase (see Figure <a href="Hierarchical.html#fig:ch04fig3">4.3</a> for an overview). The four different speakers that were used during the habituation phase were presented per block of 4 trials, in randomized order. All auditory stimuli were played at ~65 dB(A). Tokens were spoken in a child-friendly manner.</p>
+<div class="figure" style="text-align: center"><span id="fig:ch04fig1"></span>
+<img src="figures/chapter_4/Figure1.png" alt="Visual stimuli presented during the pre- and posttest, habituation and test phase. Picture 1 is an example of the visual stimuli during pre-and posttest; 2 is an example of a female face used during habitation and test trials; 3 is a still of the attention getter between habituation trials and 4 is a still of the attention getter between test trials." width="70%" />
+<p class="caption">
+Figure 4.1: Visual stimuli presented during the pre- and posttest, habituation and test phase. Picture 1 is an example of the visual stimuli during pre-and posttest; 2 is an example of a female face used during habitation and test trials; 3 is a still of the attention getter between habituation trials and 4 is a still of the attention getter between test trials.
+</p>
+</div>
+</div>
+<div id="procedure" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> Procedure</h3>
+<p>Infants were seated on their caretaker’s lap in a sound-attenuated booth. As soon as infants looked towards the computer screen in front of them, the experimenter started the first trial. In each trial, the time the participant was looking at the screen was measured. Whenever the participant looked away for 2 consecutive seconds, the trial was ended; a new one started when the infant oriented to the screen again. There was no minimum looking time to the screen. Looking times were coded online using a button box connected to the computer controlling the experiment and acquiring data.</p>
+<p>Pre- and posttest were used to gauge participants’ general attentiveness. If total looking time to the posttest stimulus was less than 50% of the total looking time to the pretest stimulus, the participant was considered to be showing a general loss of attention and was discarded for analysis. This was never the case in our sample (see Participants).</p>
+<p>The habituation phase consisted of a maximum of 12 trials, with a maximum of 30 repetitions of a token per trial (ISI of 1 second) resulting in a total duration of approximately 48 seconds. A 65% habituation criterion was used to determine whether the participant had habituated. To determine whether the habituation criterion was met, a moving window was used (Figure <a href="Hierarchical.html#fig:ch04fig2">4.2</a>). The mean looking times of the first three trials (1-3) was compared to the subsequent three trials (4-6): if looking time had decreased by (minimally) 35%, the criterion was met. If not, the mean looking time of trial 1-3 was compared to 5-7, 6-8, etc., and the same criterion applied, up until the final subset 10-12. Infants who did not meet the habituation criterion were not included in data analysis (<span class="math inline">\(n = 5\)</span>, see Participants). The selection of habituation stimuli (faap (/fa:p/) or feep (/fe:p/)) was counterbalanced between
+infants. Infants were presented with all four voices, in randomized order: in each block of four trials the infant heard all four voices but in randomized order within the blocks (see Figure <a href="Hierarchical.html#fig:ch04fig3">4.3</a>).</p>
+<p>The test phase included a fixed number of 12 trials, with a maximum number of 30 tokens per trial, resulting in a duration of approximately 48 seconds per trial. <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> used 14 test trials (10 non-alternating and 4 alternating). We reduced the number of test phase trials and thus duration, because we know from experience that Dutch infants are not always able to sit through experiments that have the same duration as those conducted with infants in the US. Of these 12 test trials, four were alternating (e.g. /fe:p/-/fa:p/), and 8 non-alternating (e.g. /fa:p/-/fa:p/). The alternating and non-alternating trials were presented in a semi-fixed order: the first trial could be either alternating or non-alternating, which was counterbalanced. Three subsequent alternating trials occurred at positions: 5, 8 and 12. During the test phase a new token of one familiar speaker was introduced, either nonalternating
+or alternating (see Figure <a href="Hierarchical.html#fig:ch04fig3">4.3</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:ch04fig2"></span>
+<img src="figures/chapter_4/Figure2.png" alt="Visual depiction of the assessment of the (65\%) habituation criterion" width="90%" />
+<p class="caption">
+Figure 4.2: Visual depiction of the assessment of the (65%) habituation criterion
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:ch04fig3"></span>
+<img src="figures/chapter_4/Figure3.png" alt="Schematic overview of the experimental procedure with reference to the auditory stimuli only. In this example, the first test trial is non-alternating and consequently the second is alternating. The remaining three alternating trials have a fixed number, viz. the 5th, the 8th and 12th trial. Alternating trials are printed in bold. Token is abbreviated as 'T' and Speakers as 'S'" width="90%" />
+<p class="caption">
+Figure 4.3: Schematic overview of the experimental procedure with reference to the auditory stimuli only. In this example, the first test trial is non-alternating and consequently the second is alternating. The remaining three alternating trials have a fixed number, viz. the 5th, the 8th and 12th trial. Alternating trials are printed in bold. Token is abbreviated as ‘T’ and Speakers as ‘S’
+</p>
+</div>
+</div>
+</div>
+<div id="results-3" class="section level2">
+<h2><span class="header-section-number">4.3</span> Results</h2>
+<div id="summary-of-the-group-data-published-in-de_klerk_lost_2019" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Summary of the group data published in <span class="citation">Klerk et al. (<a href="#ref-de_klerk_lost_2019" role="doc-biblioref">2019</a>)</span></h3>
+<p>The group-based data is presented in Figure <a href="Hierarchical.html#fig:ch04fig4">4.4</a> and Table <a href="Hierarchical.html#tab:ch04tab2">4.2</a>. Mixed Modeling using SPSS (version 23) with Subjects as random factor, Trial Number as a repeated effect (covariance structure AR1), and Trial type (alternating vs. non-alternating) and Age as the fixed factors showed that at group level, infants between 6-10 months of age discriminated /fa:p/ from /fe:p/, at group level <span class="citation">(Klerk et al., <a href="#ref-de_klerk_lost_2019" role="doc-biblioref">2019</a>)</span>. In the current study we focus on the individual data.</p>
+<div class="figure" style="text-align: center"><span id="fig:ch04fig4"></span>
+<img src="figures/chapter_4/Figure4.png" alt="Raw mean looking times (milliseconds) to alternating and non-alternating trials per age group. Error bars represent Confidence Intervals (95\%)." width="90%" />
+<p class="caption">
+Figure 4.4: Raw mean looking times (milliseconds) to alternating and non-alternating trials per age group. Error bars represent Confidence Intervals (95%).
+</p>
+</div>
+<table style="width:99%;">
+<caption><span id="tab:ch04tab2">Table 4.2: </span> Listening Times (seconds) to Alternating and Non-Alternating Trials</caption>
+<colgroup>
+<col width="10%" />
+<col width="18%" />
+<col width="19%" />
+<col width="14%" />
+<col width="11%" />
+<col width="11%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Age Group</th>
+<th align="center">Infants</th>
+<th align="left">Alternating trials</th>
+<th align="center">Non-alternating
+Trials</th>
+<th align="center">Statistics</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"><span class="math inline">\(N\)</span></td>
+<td align="left"><em>M (SD)</em></td>
+<td align="center"><em>M (SD)</em></td>
+<td align="center">F</td>
+<td><em>p</em></td>
+<td><em>Cohen’s d</em></td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">38</td>
+<td align="left">10.4 (8.6)</td>
+<td align="center">7.9 (6.8)</td>
+<td align="center">13.55</td>
+<td>&lt; .001</td>
+<td>.31</td>
+</tr>
+<tr class="odd">
+<td align="center">8</td>
+<td align="center">44</td>
+<td align="left">9.7 (8.6)</td>
+<td align="center">7.1 (6.7)</td>
+<td align="center">21.74</td>
+<td>&lt; .001</td>
+<td>.32</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">35</td>
+<td align="left">8.1 (5.6)</td>
+<td align="center">5.7 (4.5)</td>
+<td align="center">29.24</td>
+<td>&lt; .001</td>
+<td>.45</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>All</strong></td>
+<td align="center"><strong>117</strong></td>
+<td align="left"><strong>9.4 (7.9)</strong></td>
+<td align="center"><strong>7.0 (6.3)</strong></td>
+<td align="center"><strong>62.70</strong></td>
+<td><strong>&lt; .001</strong></td>
+<td><strong>.32</strong></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="data-screening" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Data Screening</h3>
+<p>The raw looking times to alternating and non-alternating trials were not normally distributed; for this reason, a log transformation (Log10) was performed. After this transformation the skewness (.123, SE = .065) and kurtosis (.150, SE = .131) values were acceptable. We refer to the supplementary files for histograms of the raw and log transformed data <a href="https://osf.io/ebrxy/">(https://osf.io/ebrxy/)</a>.</p>
+</div>
+<div id="analysis-1-linear-regression-model-with-autoregressive-ar1-error-structure" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Analysis 1: Linear Regression Model with Autoregressive (AR1) Error Structure</h3>
+<p>To assess individual performance, we used the same regression model with autoregressive effect as <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>,</p>
+<p><span class="math display">\[\begin{equation}
+\begin{array}{l}
+    y_t = b_0 + b_1 C_t + a_t \\ 
+    a_t =
+\begin{cases}
+    \phi_1 a_{t-1} + e_t,&amp; \text{if } t\geq 1\\
+    0,              &amp; \text{otherwise}
+\end{cases}
+\end{array}
+\end{equation}\]</span></p>
+<p>where subscript <span class="math inline">\(t\)</span> denotes the trial number <span class="math inline">\(t=1,...,T\)</span>, <span class="math inline">\(y\)</span>, denotes the looking time of the trial, <span class="math inline">\(C\)</span> denotes the condition (alternating or non-alternating) of the trial, <span class="math inline">\(e\)</span> denotes the error term, <span class="math inline">\(\phi_1\)</span> denotes the autoregressive factor. In this model <span class="math inline">\(b_1C_t\)</span> accounts for the influence of the condition and <span class="math inline">\(b_1\)</span> is interpreted as the difference in looking time for the two conditions. the dependence on the looking time of the previous trial is found in the specification of the error structure <span class="math inline">\(\phi_1a_{t-1}\)</span>. The error in the current time point (<span class="math inline">\(a_t\)</span>) is dependent on the error of the previous time point (<span class="math inline">\(a_{t-1}\)</span>), except for <span class="math inline">\(a_1\)</span>, because <span class="math inline">\(a_1\)</span> is the first trial. There is no carry-over effect from the previous trial and no autoregressive effect. Looking times and statistical outcomes per infant are reported in Appendix <a href="Hierarchical.html#ch05appendix">A</a>. Individual analyses show that condition effects were significant for 14 participants, implying that only 12% of the infants were able to discriminate between alternating and non-alternating trials. When we correct for multiple testing using the Benjamini-Hochberg procedure <span class="citation">(Benjamini &amp; Hochberg, <a href="#ref-benjamini_controlling_1995" role="doc-biblioref">1995</a>)</span>, this number decreases to 3 infants (3/117), a mere 3%.</p>
+<p>Our results do not align with the results of the study of <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>, in which 80% (8/10) of the 9-month-old infants successfully discriminated the contrast. Applying the Benjamini-Hochberg correction for multiple testing to <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> data did not make a difference in their outcomes, because of the few participants tested and the large effect of condition on looking times. Nevertheless, an analysis without having to correct for multiple testing is desirable and Bayesian modeling could be a solution.</p>
+</div>
+<div id="analysis-2-hierarchical-bayesian-analysis" class="section level3">
+<h3><span class="header-section-number">4.3.4</span> Analysis 2: Hierarchical Bayesian Analysis</h3>
+<p>The analyses used in the paper by <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> rely on separate regression analyses for each individual child. However, if we assume that infants are exchangeable within the same age group, that is, that they come from the same population, an alternative and more powerful approach is to model their looking times in a hierarchical (multilevel) structure. By modeling both the individual and group effects in one analysis instead of doing so for 117 separate analyses, one for each individual, part of the observed variance could be explained at the group level instead of trying to explain all variance at the individual level. As a result, we will have reduced uncertainty in our estimates for the individual parameters <span class="citation">(Gelman, <a href="#ref-gelman_multilevel_2006" role="doc-biblioref">2006</a><a href="#ref-gelman_multilevel_2006" role="doc-biblioref">a</a>)</span>. Moreover, by using a Bayesian hierarchical analysis, we are able to obtain estimates for each of the individual and group parameters in one model without the need to correct for multiple testing <span class="citation">(Gelman et al., <a href="#ref-gelman_why_2012" role="doc-biblioref">2012</a>)</span>.</p>
+<p>In our Bayesian hierarchical regression, we modelled the individual infant data in three groups based on their age (6, 8 and 10 months). We used the same model as before, namely a regression model with an AR1 error structure, with Log10 transformed looking times as outcomes and condition (alternating or non-alternating trial) as predictor. For all groups we obtained both group and individual estimates for the intercept (looking time alternating trials), the condition (difference in looking time between alternating and non-alternating trials) and the AR1 effect. Details on the priors, estimation, model fit and sensitivity analyses are given in the supplementary files on the Open Science Framework webpage for this study at (<a href="https://osf.io/ebrxy/" class="uri">https://osf.io/ebrxy/</a>) or in Appendix <a href="Hierarchical.html#ch05appendixB">B</a>. In short, we achieve a good model fit.</p>
+<p>The parameter of interest was the condition parameter. This parameter allowed us to establish whether the looking times differed between the alternating and non-alternating condition for the individual infants. To keep the decision criterion as similar as possible to the previously described analyses, we checked how many of the infants included the value 0 in their 95% credibility interval (CI) for the condition parameter. For the 95% CI (the 0.025 and 0.975 quantiles of the posterior sample) we regard this interval as having a 95% probability of containing the unknown parameter value. In contrast, the 95% Confidence Interval in frequentist statistics relates to (potential) replications of the experiment and expresses the expectation that the interval contains the true parameter estimate in 95% of the experiments. In our study, the percentages of infants whose 95% CI did not include 0 are displayed per age group in Table <a href="Hierarchical.html#tab:ch04tab3">4.3</a>. For the 10-months-olds we found that 77% discriminated between the alternating and non-alternating condition, and 53% of the 6-month-olds did, whilst for the 8-month-old infants this was only 27%.</p>
+<table style="width:99%;">
+<caption><span id="tab:ch04tab3">Table 4.3: </span> Number and Percentage of Infants that Discriminate the Contrast Significantly per Age Group and of Infants that did not include the Value 0 in Their 95% Credibility Interval (CI)</caption>
+<colgroup>
+<col width="10%" />
+<col width="18%" />
+<col width="18%" />
+<col width="18%" />
+<col width="32%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th></th>
+<th align="center">Frequentist
+(non-hierarchical)
+modeling</th>
+<th></th>
+<th align="center">Bayesian Hierarchical modeling</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Age Group</td>
+<td>Participants</td>
+<td align="center">Uncorrected
+Successful
+Discrimination (%)</td>
+<td>Corrected
+Successful
+Discrimination (%)</td>
+<td align="center">Infants without 0 in their 95% CI
+(%)</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>38</td>
+<td align="center">2 (5)</td>
+<td>0 (0)</td>
+<td align="center">20 (53)</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>44</td>
+<td align="center">4 (9)</td>
+<td>2 (5)</td>
+<td align="center">12 (27)</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>35</td>
+<td align="center">8 (23)</td>
+<td>1 (3)</td>
+<td align="center">27 (77)</td>
+</tr>
+<tr class="odd">
+<td><strong>Ttoal</strong></td>
+<td><strong>117</strong></td>
+<td align="center"><strong>14 (12)</strong></td>
+<td><strong>3 (3)</strong></td>
+<td align="center"><strong>59 (50)</strong></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<div class="figure" style="text-align: center"><span id="fig:ch04fig5"></span>
+<img src="figures/chapter_4/Figure5.png" alt="Results of the hierarchical model for each individual per age group. The black dots represent the median; the red bars represent the 95\% Credibility Intervals." width="90%" />
+<p class="caption">
+Figure 4.5: Results of the hierarchical model for each individual per age group. The black dots represent the median; the red bars represent the 95% Credibility Intervals.
+</p>
+</div>
+<p>Figure <a href="Hierarchical.html#fig:ch04fig5">4.5</a> shows the results of the hierarchical model for each individual per age group. Credibility Intervals for the 8-month-old infants show larger uncertainty for the estimates than for the other two age groups, especially the 6-month-olds. The group-estimated effect of condition, depicted in the left panel of Figure <a href="Hierarchical.html#fig:ch04fig6">4.6</a>, increases with age. The estimated random effect for condition is largest in the 8-month-old group, which can be seen from the variance estimates in the right panel of Figure <a href="Hierarchical.html#fig:ch04fig6">4.6</a>. Because the infants of the 8-month-old group differ more from one another than the infants in the other age groups, less shrinkage of estimates occurs and we remain more uncertain about their estimated condition effects. This outcome is visible in the larger credibility intervals for the infants in age group 8 compared to the other two age groups.</p>
+<div class="figure" style="text-align: center"><span id="fig:ch04fig6"></span>
+<img src="figures/chapter_4/Figure6.png" alt="Group estimates for condition effects and variation per age group.  The left panel shows the group estimates for condition effects. The right panel shows the standard deviation of the condition effect per age group. The densities, presented in red, represent the 95\% credibility interval." width="90%" />
+<p class="caption">
+Figure 4.6: Group estimates for condition effects and variation per age group. The left panel shows the group estimates for condition effects. The right panel shows the standard deviation of the condition effect per age group. The densities, presented in red, represent the 95% credibility interval.
+</p>
+</div>
+<p>As part of the model assessment we conducted posterior predictive checks. These checks provide insight into the plausibility to the hypothesized and estimated model by drawing simulations from the posterior model. Figure <a href="Hierarchical.html#fig:ch04fig7">4.7</a> shows how well the model fits the data of a particular child, in this case child 16 in age group 6. Simulations are based on the posterior parameter estimates for this specific child at each specific measurement, taking into account the child-specific estimated looking times for (non-)alternating trials, the child-specific condition effect and the child-specific autoregressive effect. The posterior predictive <span class="math inline">\(p\)</span>-value (ppp) indicates the proportion of simulated values for this measurement that are smaller than the observed value. If ‘ppp’ falls between 0.025 and 0.975 we conclude that our model provides an accurate prediction for this specific observation. Note that this specific child 16 is classified as non-discriminator and that all measurements are accurately captured by the model as shown by the blue bars in each histogram (Figure <a href="Hierarchical.html#fig:ch04fig7">4.7</a>). For an example of a child classified as non-discriminator with less accurate model descriptions for the observed measurement see for instance child 17 from age group 10, measurements (trials) 5 and 7 (see <a href="https://osf.io/ebrxy/" class="uri">https://osf.io/ebrxy/</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:ch04fig7"></span>
+<img src="figures/chapter_4/Figure7.png" alt="Posterior predictive simulations for child 16 in age group 6 for all 12 observed trials. Each histogram contains 6000 simulated values for that particular observation of that specific child based on the posterior parameter estimates. The blue vertical line denotes the actually observed value for the specific measurement." width="90%" />
+<p class="caption">
+Figure 4.7: Posterior predictive simulations for child 16 in age group 6 for all 12 observed trials. Each histogram contains 6000 simulated values for that particular observation of that specific child based on the posterior parameter estimates. The blue vertical line denotes the actually observed value for the specific measurement.
+</p>
+</div>
+<p>To evaluate the effects of the hierarchical regression compared to modelling the individual regressions, we also ran Bayesian regression analyses with AR1 error structure without the multilevel structure. Figure <a href="Hierarchical.html#fig:ch04fig8">4.8</a> shows the estimates with their uncertainty for the condition parameter for all infants in age group 6 (only); the other groups show similar patterns. The figure shows that including the hierarchical structure reduced the uncertainty of the estimates markedly.</p>
+<div class="figure" style="text-align: center"><span id="fig:ch04fig8"></span>
+<img src="figures/chapter_4/Figure8.png" alt="Comparison of results of individual and hierarchical analyses for condition parameter of each infant in the 6-month-olds group. The Hierarchical model reduces the uncertainty (95\% CI represented by red bar) (median represented by the black dot) for the parameter estimates." width="90%" />
+<p class="caption">
+Figure 4.8: Comparison of results of individual and hierarchical analyses for condition parameter of each infant in the 6-month-olds group. The Hierarchical model reduces the uncertainty (95% CI represented by red bar) (median represented by the black dot) for the parameter estimates.
+</p>
+</div>
+<p>Table <a href="Hierarchical.html#tab:ch04tab4">4.4</a> displays the mean log-transformed looking time differences between the alternating and non-alternating trials for all individuals that did not include the value 0 in their 95% CI for the condition effect in the hierarchical regression. These raw data show the direction of the average difference in looking time between alternating and non-alternating trials, as well as the magnitude of the average difference between trial types. As can be seen, both looking time difference directions are present, meaning that the data set includes infants with on average longer looks to alternating trials as well as infants with on average longer looks to non-alternating trials. In addition, Table <a href="Hierarchical.html#tab:ch04tab4">4.4</a> shows that the magnitude of looking time differences between alternating and non-alternating trials shows considerable variation.</p>
+<table style="width:99%;">
+<caption><span id="tab:ch04tab4">Table 4.4: </span> The Mean Looking Time Difference between Alternating and Non-Alternating Trials for the Infants whose Confidence Interval (95%) did not cross the Value 0. The mean log-transformed looking time differences are presented.</caption>
+<colgroup>
+<col width="13%" />
+<col width="10%" />
+<col width="21%" />
+<col width="13%" />
+<col width="13%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Subject</th>
+<th align="center">Group</th>
+<th align="center">Difference</th>
+<th align="center">Subject</th>
+<th align="center">Group</th>
+<th align="center">Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"><em>Age</em></td>
+<td align="center"><em>alternating</em> -
+<em>nonalternating</em></td>
+<td align="center"></td>
+<td align="center"><em>Age</em></td>
+<td align="center"><em>alternating</em> -
+<em>nonalternating</em></td>
+</tr>
+<tr class="even">
+<td align="center">child 02</td>
+<td align="center">6</td>
+<td align="center">-.10</td>
+<td align="center">child 41</td>
+<td align="center">8</td>
+<td align="center">-.27</td>
+</tr>
+<tr class="odd">
+<td align="center">child 03</td>
+<td align="center">6</td>
+<td align="center">-.14</td>
+<td align="center">child 44</td>
+<td align="center">8</td>
+<td align="center">-.07</td>
+</tr>
+<tr class="even">
+<td align="center">child 05</td>
+<td align="center">6</td>
+<td align="center">-.03</td>
+<td align="center">child 01</td>
+<td align="center">10</td>
+<td align="center">.12</td>
+</tr>
+<tr class="odd">
+<td align="center">child 06</td>
+<td align="center">6</td>
+<td align="center">.03</td>
+<td align="center">child 02</td>
+<td align="center">10</td>
+<td align="center">.13</td>
+</tr>
+<tr class="even">
+<td align="center">child 07</td>
+<td align="center">6</td>
+<td align="center">-.10</td>
+<td align="center">child 03</td>
+<td align="center">10</td>
+<td align="center">-.09</td>
+</tr>
+<tr class="odd">
+<td align="center">child 08</td>
+<td align="center">6</td>
+<td align="center">-.01</td>
+<td align="center">child 04</td>
+<td align="center">10</td>
+<td align="center">.25</td>
+</tr>
+<tr class="even">
+<td align="center">child 09</td>
+<td align="center">6</td>
+<td align="center">-.02</td>
+<td align="center">child 05</td>
+<td align="center">10</td>
+<td align="center">.11</td>
+</tr>
+<tr class="odd">
+<td align="center">child 12</td>
+<td align="center">6</td>
+<td align="center">-.05</td>
+<td align="center">child 06</td>
+<td align="center">10</td>
+<td align="center">.09</td>
+</tr>
+<tr class="even">
+<td align="center">child 13</td>
+<td align="center">6</td>
+<td align="center">.02</td>
+<td align="center">child 07</td>
+<td align="center">10</td>
+<td align="center">.15</td>
+</tr>
+<tr class="odd">
+<td align="center">child 14</td>
+<td align="center">6</td>
+<td align="center">-.16</td>
+<td align="center">child 08</td>
+<td align="center">10</td>
+<td align="center">.26</td>
+</tr>
+<tr class="even">
+<td align="center">child 16</td>
+<td align="center">6</td>
+<td align="center">-.13</td>
+<td align="center">child 09</td>
+<td align="center">10</td>
+<td align="center">.16</td>
+</tr>
+<tr class="odd">
+<td align="center">child 19</td>
+<td align="center">6</td>
+<td align="center">-.03</td>
+<td align="center">child 10</td>
+<td align="center">10</td>
+<td align="center">.11</td>
+</tr>
+<tr class="even">
+<td align="center">child 20</td>
+<td align="center">6</td>
+<td align="center">.19</td>
+<td align="center">child 12</td>
+<td align="center">10</td>
+<td align="center">.20</td>
+</tr>
+<tr class="odd">
+<td align="center">child 23</td>
+<td align="center">6</td>
+<td align="center">.03</td>
+<td align="center">child 13</td>
+<td align="center">10</td>
+<td align="center">-.02</td>
+</tr>
+<tr class="even">
+<td align="center">child 24</td>
+<td align="center">6</td>
+<td align="center">.09</td>
+<td align="center">child 14</td>
+<td align="center">10</td>
+<td align="center">.15</td>
+</tr>
+<tr class="odd">
+<td align="center">child 29</td>
+<td align="center">6</td>
+<td align="center">.11</td>
+<td align="center">child 15</td>
+<td align="center">10</td>
+<td align="center">-.12</td>
+</tr>
+<tr class="even">
+<td align="center">child 32</td>
+<td align="center">6</td>
+<td align="center">.06</td>
+<td align="center">child 16</td>
+<td align="center">10</td>
+<td align="center">-.15</td>
+</tr>
+<tr class="odd">
+<td align="center">child 33</td>
+<td align="center">6</td>
+<td align="center">-.07</td>
+<td align="center">child 17</td>
+<td align="center">10</td>
+<td align="center">-.04</td>
+</tr>
+<tr class="even">
+<td align="center">child 34</td>
+<td align="center">6</td>
+<td align="center">-.04</td>
+<td align="center">child 18</td>
+<td align="center">10</td>
+<td align="center">.14</td>
+</tr>
+<tr class="odd">
+<td align="center">child 36</td>
+<td align="center">6</td>
+<td align="center">.08</td>
+<td align="center">child 19</td>
+<td align="center">10</td>
+<td align="center">-.23</td>
+</tr>
+<tr class="even">
+<td align="center">child 01</td>
+<td align="center">8</td>
+<td align="center">-.24</td>
+<td align="center">child 21</td>
+<td align="center">10</td>
+<td align="center">.03</td>
+</tr>
+<tr class="odd">
+<td align="center">child 08</td>
+<td align="center">8</td>
+<td align="center">-.36</td>
+<td align="center">child 23</td>
+<td align="center">10</td>
+<td align="center">.14</td>
+</tr>
+<tr class="even">
+<td align="center">child 13</td>
+<td align="center">8</td>
+<td align="center">-.15</td>
+<td align="center">child 26</td>
+<td align="center">10</td>
+<td align="center">-.02</td>
+</tr>
+<tr class="odd">
+<td align="center">child 17</td>
+<td align="center">8</td>
+<td align="center">.19</td>
+<td align="center">child 27</td>
+<td align="center">10</td>
+<td align="center">.12</td>
+</tr>
+<tr class="even">
+<td align="center">child 20</td>
+<td align="center">8</td>
+<td align="center">.48</td>
+<td align="center">child 28</td>
+<td align="center">10</td>
+<td align="center">.22</td>
+</tr>
+<tr class="odd">
+<td align="center">child 21</td>
+<td align="center">8</td>
+<td align="center">.04</td>
+<td align="center">child 29</td>
+<td align="center">10</td>
+<td align="center">-.10</td>
+</tr>
+<tr class="even">
+<td align="center">child 30</td>
+<td align="center">8</td>
+<td align="center">-.10</td>
+<td align="center">child 32</td>
+<td align="center">10</td>
+<td align="center">.16</td>
+</tr>
+<tr class="odd">
+<td align="center">child 32</td>
+<td align="center">8</td>
+<td align="center">-.12</td>
+<td align="center">child 34</td>
+<td align="center">10</td>
+<td align="center">.36</td>
+</tr>
+<tr class="even">
+<td align="center">child 34</td>
+<td align="center">8</td>
+<td align="center">-.11</td>
+<td align="center">child 35</td>
+<td align="center">10</td>
+<td align="center">.02</td>
+</tr>
+<tr class="odd">
+<td align="center">child 37</td>
+<td align="center">8</td>
+<td align="center">-.08</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="discussion" class="section level2">
+<h2><span class="header-section-number">4.4</span> Discussion</h2>
+<p>The primary aim of this study was to determine if speech discrimination performance can be reliably assessed for individual infants in a habituation design. This is crucial for understanding individual developmental trajectories and in addressing potential clinical questions. In order to do so we used the experimental design, hybrid visual fixation (HVF), and statistical approach, linear regression modeling with autoregressive error structure, reported in <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>. <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> found that 80% (8/10) of their 9-month-old participants discriminated the boodup - seepug contrast. Our study assessed individual native phoneme (/fa:p - /fe:p/) discrimination in Dutch infants aged 6, 8 and 10 months, using a slightly altered version of the HVF paradigm. When conducting the regression analysis that <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> applied, we found that only 12% (14/117) of the infants discriminated the contrast. We were thus not able to replicate <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>’s findings, using the same model as they did.</p>
+<p><span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> did not correct for multiple testing, but when such a correction is applied (as we did), it did not make a difference for the findings of the <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> sample. For our study, however, the correction led to a reduction of the percentage of infants in whom discrimination could be attested to 3% (from 12%). Bayesian Hierarchical modeling provides both group and individual estimates using the same model and therefore has the advantage that it does not require correction for multiple testing. Using a hierarchical model with both the autoregressive effect (looking time decreases during test) and the inclusion of group information led to reduced uncertainty of the estimates of the condition effects (alternating versus non-alternating) at both the group and the individual level. The analysis returned a higher percentage (50%) of infants that showed evidence of discrimination. Evidence of discrimination is defined as the 95% credibility interval that does not include value 0 for the condition effect. For the 10-months-olds we found that 77% discriminated between faap and feep, while 53% of the 6-month-olds and only 27% of the 8-month-olds did. These individual discrimination outcomes are still lower than expected. We expected that most infants would show evidence of discrimination, regardless of age and we predicted discrimination percentages comparable to those obtained by <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>. Seventy-seven percent of the 10-months-old infants discriminated the contrast. This is comparable to findings of 9-month-olds in the study of <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>. It is conceivable that the design (14 alternating and non-alternating test trials) is more suitable for the older than for the younger infants.</p>
+<p>Two design differences between the study by <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> and ours could also account for the diverging results. First, <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> used a word contrast, boodup - seepug, which differs markedly from the phonemic contrast /fa:p - fe:p/ we used. The more conspicuous word contrast may have elicited a larger difference between alternating and nonalternating trials. Second, <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> used 14 test trials, two more non-alternating trials than we did. This might have caused a lower mean looking time to non-alternating trials, as infants’ internal representation of the old (non-alternating) stimulus might become stronger during test, which is expected to result in a larger increase in looking time to new stimuli <span class="citation">(Sokolov, <a href="#ref-sokolov_perception_1963" role="doc-biblioref">1963</a>)</span>. Still, infants of all age groups showed evidence of discrimination <span class="citation">(Klerk et al., <a href="#ref-de_klerk_lost_2019" role="doc-biblioref">2019</a>, and Figure <a href="Hierarchical.html#fig:ch04fig6">4.6</a> of this paper)</span> and this does not seem to align with the lower percentage of infants significantly discriminating the contrast we observed in the current study. However, age-related enhancement of discrimination is shown by an increasing percentage of infants discriminating the contrast, which fits the theory of perceptual attunement <span class="citation">(Maurer &amp; Werker, <a href="#ref-maurer_perceptual_2014" role="doc-biblioref">2014</a>; Tsuji &amp; Cristia, <a href="#ref-tsuji_perceptual_2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p>Our individual analyses are an exploratory extension of the individual analyses done by <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span>; we used Bayesian hierarchical modelling to assess if an infant can discriminate the two stimuli. The theoretical advantages of our approach have been discussed throughout the paper. The approach by <span class="citation">Houston et al. (<a href="#ref-houston_assessing_2007" role="doc-biblioref">2007</a>)</span> and our approach lead to different conclusions for many infants in our study. Strictly speaking, our decision rule, i.e., discrimination is attested if the 95% CI does not include 0, is not an entirely proper method for hypothesis testing. Some shortcomings of forcing decision rules on parameter estimates are discussed in <span class="citation">Lee (<a href="#ref-lee_bayesian_2018" role="doc-biblioref">2018</a>)</span>, where Bayes Factors are advocated. However, the application of Bayes Factors in the current setting would present serious challenges and there are arguments against them in general <span class="citation">(Gelman et al., <a href="#ref-gelman_bayesian_2013" role="doc-biblioref">2013</a>)</span>. On the other hand, our approach is not unprecedented; <span class="citation">Kruschke (<a href="#ref-kruschke_bayesian_2013" role="doc-biblioref">2013</a>)</span>, for example, used a similar approach as an alternative to t-tests, and <span class="citation">Gelman &amp; Tuerlinckx (<a href="#ref-gelman_type_2000" role="doc-biblioref">2000</a>)</span> show that this approach reduces the chance of Type S (sign) errors in comparison to the classical framework. The decision rule we used could be used to infer discrimination.</p>
+<p>The Bayesian hierarchical model presents a more reliable statistical approach: If measurements contain (substantial) noise, this negatively affects the reliability of a measurement. That is, if we measure the same construct multiple times we obtain different results. If we are able to reduce the noise, our measurement becomes less variable and will measure the same construct in a more stable manner over multiple times. By including hierarchical structures in our model we can capture part of the noise in our estimated looking times (see Figure <a href="Hierarchical.html#fig:ch04fig8">4.8</a>). The reduction of the noise leads to less variable representations of the measurements which can be seen as an improvement of the reliability of the measurements <span class="citation">(Gelman et al., <a href="#ref-gelman_why_2012" role="doc-biblioref">2012</a>)</span>.</p>
+<p>The current study aimed at assessing individual outcomes because looking time data is noisy and often challenging to interpret <span class="citation">(Aslin &amp; Fiser, <a href="#ref-aslin_methodological_2005" role="doc-biblioref">2005</a>; Oakes, <a href="#ref-oakes_using_2010" role="doc-biblioref">2010</a>)</span>. Nevertheless, studies do attempt to interpret these individual variations by, for instance, examining followup data and in retrospect analyze the infant looking time data <span class="citation">(e.g. Newman et al., <a href="#ref-newman_infants_2006" role="doc-biblioref">2006</a>)</span>, which at group level give some insight in the relations between early perception skills and later language development <span class="citation">(Cristia et al., <a href="#ref-cristia_predicting_2014" role="doc-biblioref">2014</a>)</span>. However, raw looking time data cannot be used to infer success or failure. In order to classify individuals as discriminators, data should be modelled and advanced statistical methods need to be applied. The method presented in this study allows us to classify individual infants as discriminators or non-discriminators. Moreover, the procedure allows us to investigate how well our model performs for each trial for each individual child using posterior predictive checks, an example can be seen in Figure <a href="Hierarchical.html#fig:ch04fig7">4.7</a>. However, more research needs to be done to investigate replicability of the current study. Factors that will influence outcomes are, for example, sample size, as estimates will be more accurate with increased sample size, and the total number of data points per subject. Future research should also focus on the question whether classification as presented in this study is
+indeed of clinical value: do infants classified as discriminators have better language performance measured at a later age?</p>
+<p>Taken together, assessing individual discrimination performance with an autoregressive model per individual without correcting for multiple testing is not an approach to be favored. On the other hand, if multiple testing is corrected for, significant results rely on sample size, because with each infant that is added another test should be run. Sample size influences the corrected alpha-level, which is arbitrary. A model in which all these issues can be tackled is the Bayesian Hierarchical model: we can account for a decrease in looking time (autoregressive effect); it includes group information in the hierarchical model; it does not require correction for multiple testing, and it provides more confidence in classifying infants as being able to discriminate a stimulus contrast or not. Our findings thus provide a step forward in assessing infants’ speech discrimination.</p>
+</div>
+<div id="ch04ethics" class="section level2 unnumbered">
+<h2>Ethics Statement</h2>
+<p>Informed consent was obtained from the caregiver before testing and the caregiver was allowed to retract this consent and participation any time during testing. The authors declare that the research was conducted in accordance with APA ethical standards as well as The Netherlands Code of Conduct for Scientific Practice issued in 2004 (revised in 2018 by the Association of Universities in the Netherlands (VSNU)).</p>
+</div>
+<div id="ch04acknowledgments" class="section level2 unnumbered">
+<h2>Acknowledgments</h2>
+<p>We are grateful to the infants and their caregivers for participating. We would like to thank the student assistants Sule Kurtçebe, Tinka Versteegh, Lorijn Zaadnoordijk and Joleen Zuidema, who helped collecting data. We would like to thank Derek Houston for sharing some of his raw data with us (see Appendix <a href="Hierarchical.html#ch05appendix">A</a>). This research was funded by The Netherlands Organization for Scientific Research (NWO). Grants nr. 360-70-270, awarded to. F.N.K. Wijnen and nr. VIDI-452-14-006, awarded to R. van de Schoot.</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="ch05appendix" class="section level2 unnumbered">
+<h2>Appendix A</h2>
+
+<table>
+<caption><span id="tab:ch04tab5">Table 4.5: </span> Mean Listening Times per Condition (Alternating and Non-Alternating), Difference Score and <span class="math inline">\(p\)</span> Value for Condition for each Infant. In the column <em>p_adj</em> the <span class="math inline">\(p\)</span>-values are reported for condition (alternating vs. nonalternating) in the autoregressive analyses of each infant. Houston (rows at the bottom) reports on raw looking time data received from Derek Houston (personal communication) which we were able to replicate with our model. Numbers in bold are significant (alpha level .05).</caption>
+<thead>
+<tr class="header">
+<th>Participant</th>
+<th>Age</th>
+<th>Condition</th>
+<th></th>
+<th>Difference</th>
+<th>Statistics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>(months)</td>
+<td>Alternating</td>
+<td>Non-Alternating</td>
+<td>Alt minus Non-alt</td>
+<td>p_adj</td>
+</tr>
+<tr class="even">
+<td><strong>Child 10</strong></td>
+<td><strong>6</strong></td>
+<td><strong>4.05</strong></td>
+<td><strong>3.74</strong></td>
+<td><strong>0.31</strong></td>
+<td><strong>.012</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Child 38</strong></td>
+<td><strong>6</strong></td>
+<td><strong>3.71</strong></td>
+<td><strong>3.59</strong></td>
+<td><strong>0.12</strong></td>
+<td><strong>.022</strong></td>
+</tr>
+<tr class="even">
+<td>Child 31</td>
+<td>6</td>
+<td>3.92</td>
+<td>3.69</td>
+<td>0.22</td>
+<td>.055</td>
+</tr>
+<tr class="odd">
+<td>Child 4</td>
+<td>6</td>
+<td>4.26</td>
+<td>3.98</td>
+<td>0.28</td>
+<td>.055</td>
+</tr>
+<tr class="even">
+<td>Child 18</td>
+<td>6</td>
+<td>4.43</td>
+<td>4.08</td>
+<td>0.35</td>
+<td>.062</td>
+</tr>
+<tr class="odd">
+<td>Child 35</td>
+<td>6</td>
+<td>3.95</td>
+<td>3.67</td>
+<td>0.29</td>
+<td>.074</td>
+</tr>
+<tr class="even">
+<td>Child 15</td>
+<td>6</td>
+<td>4.22</td>
+<td>3.98</td>
+<td>0.24</td>
+<td>.100</td>
+</tr>
+<tr class="odd">
+<td>Child 25</td>
+<td>6</td>
+<td>4.26</td>
+<td>3.94</td>
+<td>0.32</td>
+<td>.113</td>
+</tr>
+<tr class="even">
+<td>Child 29</td>
+<td>6</td>
+<td>4.06</td>
+<td>3.95</td>
+<td>0.11</td>
+<td>.128</td>
+</tr>
+<tr class="odd">
+<td>Child 37</td>
+<td>6</td>
+<td>4.24</td>
+<td>4.02</td>
+<td>0.22</td>
+<td>.133</td>
+</tr>
+<tr class="even">
+<td>Child 17</td>
+<td>6</td>
+<td>3.74</td>
+<td>3.58</td>
+<td>0.16</td>
+<td>.134</td>
+</tr>
+<tr class="odd">
+<td>Child 11</td>
+<td>6</td>
+<td>4.34</td>
+<td>3.99</td>
+<td>0.35</td>
+<td>.14</td>
+</tr>
+<tr class="even">
+<td>Child 26</td>
+<td>6</td>
+<td>4.2</td>
+<td>4.06</td>
+<td>0.14</td>
+<td>.211</td>
+</tr>
+<tr class="odd">
+<td>Child 30</td>
+<td>6</td>
+<td>3.88</td>
+<td>3.75</td>
+<td>0.13</td>
+<td>.23</td>
+</tr>
+<tr class="even">
+<td>Child 14</td>
+<td>6</td>
+<td>3.61</td>
+<td>3.76</td>
+<td>-0.16</td>
+<td>.258</td>
+</tr>
+<tr class="odd">
+<td>Child 3</td>
+<td>6</td>
+<td>3.8</td>
+<td>3.94</td>
+<td>-0.14</td>
+<td>.278</td>
+</tr>
+<tr class="even">
+<td>Child 28</td>
+<td>6</td>
+<td>4.16</td>
+<td>3.9</td>
+<td>0.26</td>
+<td>.293</td>
+</tr>
+<tr class="odd">
+<td>Child 22</td>
+<td>6</td>
+<td>3.9</td>
+<td>3.8</td>
+<td>0.1</td>
+<td>.295</td>
+</tr>
+<tr class="even">
+<td>Child 7</td>
+<td>6</td>
+<td>3.82</td>
+<td>3.91</td>
+<td>-0.1</td>
+<td>.335</td>
+</tr>
+<tr class="odd">
+<td>Child 2</td>
+<td>6</td>
+<td>3.57</td>
+<td>3.67</td>
+<td>-0.1</td>
+<td>.347</td>
+</tr>
+<tr class="even">
+<td>Child 33</td>
+<td>6</td>
+<td>3.87</td>
+<td>3.94</td>
+<td>-0.07</td>
+<td>.406</td>
+</tr>
+<tr class="odd">
+<td>Child 19</td>
+<td>6</td>
+<td>4.01</td>
+<td>4.04</td>
+<td>-0.03</td>
+<td>.416</td>
+</tr>
+<tr class="even">
+<td>Child 27</td>
+<td>6</td>
+<td>4.05</td>
+<td>3.99</td>
+<td>0.06</td>
+<td>.46</td>
+</tr>
+<tr class="odd">
+<td>Child 8</td>
+<td>6</td>
+<td>3.77</td>
+<td>3.78</td>
+<td>-0.01</td>
+<td>.524</td>
+</tr>
+<tr class="even">
+<td>Child 16</td>
+<td>6</td>
+<td>4.02</td>
+<td>4.15</td>
+<td>-0.13</td>
+<td>.56</td>
+</tr>
+<tr class="odd">
+<td>Child 1</td>
+<td>6</td>
+<td>3.97</td>
+<td>3.87</td>
+<td>0.1</td>
+<td>.603</td>
+</tr>
+<tr class="even">
+<td>Child 13</td>
+<td>6</td>
+<td>3.84</td>
+<td>3.82</td>
+<td>0.02</td>
+<td>.665</td>
+</tr>
+<tr class="odd">
+<td>Child 20</td>
+<td>6</td>
+<td>3.96</td>
+<td>3.78</td>
+<td>0.19</td>
+<td>.675</td>
+</tr>
+<tr class="even">
+<td>Child 21</td>
+<td>6</td>
+<td>3.55</td>
+<td>3.47</td>
+<td>0.07</td>
+<td>.675</td>
+</tr>
+<tr class="odd">
+<td>Child 32</td>
+<td>6</td>
+<td>3.72</td>
+<td>3.66</td>
+<td>0.06</td>
+<td>.723</td>
+</tr>
+<tr class="even">
+<td>Child 23</td>
+<td>6</td>
+<td>3.79</td>
+<td>3.76</td>
+<td>0.03</td>
+<td>.725</td>
+</tr>
+<tr class="odd">
+<td>Child 6</td>
+<td>6</td>
+<td>4.09</td>
+<td>4.05</td>
+<td>0.03</td>
+<td>.748</td>
+</tr>
+<tr class="even">
+<td>Child 24</td>
+<td>6</td>
+<td>4.21</td>
+<td>4.12</td>
+<td>0.09</td>
+<td>.773</td>
+</tr>
+<tr class="odd">
+<td>Child 36</td>
+<td>6</td>
+<td>3.99</td>
+<td>3.91</td>
+<td>0.08</td>
+<td>.847</td>
+</tr>
+<tr class="even">
+<td>Child 5</td>
+<td>6</td>
+<td>3.7</td>
+<td>3.73</td>
+<td>-0.03</td>
+<td>.85</td>
+</tr>
+<tr class="odd">
+<td>Child 12</td>
+<td>6</td>
+<td>4.19</td>
+<td>4.23</td>
+<td>-0.05</td>
+<td>.857</td>
+</tr>
+<tr class="even">
+<td>Child 9</td>
+<td>6</td>
+<td>3.79</td>
+<td>3.82</td>
+<td>-0.02</td>
+<td>.899</td>
+</tr>
+<tr class="odd">
+<td>Child 34</td>
+<td>6</td>
+<td>3.88</td>
+<td>3.92</td>
+<td>-0.04</td>
+<td>.905</td>
+</tr>
+<tr class="even">
+<td><strong>Child 9</strong></td>
+<td><strong>8</strong></td>
+<td><strong>4.42</strong></td>
+<td><strong>3.7</strong></td>
+<td><strong>0.72</strong></td>
+<td><strong>.001</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Child 7</strong></td>
+<td><strong>8</strong></td>
+<td><strong>3.76</strong></td>
+<td><strong>3.3</strong></td>
+<td><strong>0.46</strong></td>
+<td><strong>.001</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Child 20</strong></td>
+<td><strong>8</strong></td>
+<td><strong>3.97</strong></td>
+<td><strong>3.49</strong></td>
+<td><strong>0.48</strong></td>
+<td><strong>.022</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Child 15</strong></td>
+<td><strong>8</strong></td>
+<td><strong>3.94</strong></td>
+<td><strong>3.55</strong></td>
+<td><strong>0.38</strong></td>
+<td><strong>.031</strong></td>
+</tr>
+<tr class="even">
+<td>Child 38</td>
+<td>8</td>
+<td>3.43</td>
+<td>3.51</td>
+<td>-0.08</td>
+<td>.051</td>
+</tr>
+<tr class="odd">
+<td>Child 19</td>
+<td>8</td>
+<td>3.95</td>
+<td>3.74</td>
+<td>0.21</td>
+<td>.053</td>
+</tr>
+<tr class="even">
+<td>Child 10</td>
+<td>8</td>
+<td>4.01</td>
+<td>3.73</td>
+<td>0.28</td>
+<td>.057</td>
+</tr>
+<tr class="odd">
+<td>Child 27</td>
+<td>8</td>
+<td>4.2</td>
+<td>4</td>
+<td>0.2</td>
+<td>.062</td>
+</tr>
+<tr class="even">
+<td>Child 35</td>
+<td>8</td>
+<td>4.36</td>
+<td>3.96</td>
+<td>0.4</td>
+<td>.067</td>
+</tr>
+<tr class="odd">
+<td>Child 17</td>
+<td>8</td>
+<td>4.3</td>
+<td>4.11</td>
+<td>0.19</td>
+<td>.092</td>
+</tr>
+<tr class="even">
+<td>Child 40</td>
+<td>8</td>
+<td>4.15</td>
+<td>3.78</td>
+<td>0.37</td>
+<td>.098</td>
+</tr>
+<tr class="odd">
+<td>Child 29</td>
+<td>8</td>
+<td>4.24</td>
+<td>4.02</td>
+<td>0.22</td>
+<td>.142</td>
+</tr>
+<tr class="even">
+<td>Child 5</td>
+<td>8</td>
+<td>4.13</td>
+<td>4</td>
+<td>0.13</td>
+<td>.144</td>
+</tr>
+<tr class="odd">
+<td>Child 11</td>
+<td>8</td>
+<td>3.82</td>
+<td>3.47</td>
+<td>0.35</td>
+<td>.153</td>
+</tr>
+<tr class="even">
+<td>Child 25</td>
+<td>8</td>
+<td>3.88</td>
+<td>3.72</td>
+<td>0.16</td>
+<td>.160</td>
+</tr>
+<tr class="odd">
+<td>Child 6</td>
+<td>8</td>
+<td>3.72</td>
+<td>3.54</td>
+<td>0.18</td>
+<td>.160</td>
+</tr>
+<tr class="even">
+<td>Child 12</td>
+<td>8</td>
+<td>3.85</td>
+<td>3.7</td>
+<td>0.15</td>
+<td>.202</td>
+</tr>
+<tr class="odd">
+<td>Child 13</td>
+<td>8</td>
+<td>3.82</td>
+<td>3.97</td>
+<td>-0.15</td>
+<td>.242</td>
+</tr>
+<tr class="even">
+<td>Child 41</td>
+<td>8</td>
+<td>3.68</td>
+<td>3.95</td>
+<td>-0.27</td>
+<td>.254</td>
+</tr>
+<tr class="odd">
+<td>Child 8</td>
+<td>8</td>
+<td>3.68</td>
+<td>4.04</td>
+<td>-0.36</td>
+<td>.294</td>
+</tr>
+<tr class="even">
+<td>Child 16</td>
+<td>8</td>
+<td>4.25</td>
+<td>4</td>
+<td>0.25</td>
+<td>.319</td>
+</tr>
+<tr class="odd">
+<td>Child 36</td>
+<td>8</td>
+<td>4.06</td>
+<td>3.94</td>
+<td>0.12</td>
+<td>.332</td>
+</tr>
+<tr class="even">
+<td>Child 3</td>
+<td>8</td>
+<td>3.92</td>
+<td>3.8</td>
+<td>0.12</td>
+<td>.354</td>
+</tr>
+<tr class="odd">
+<td>Child 18</td>
+<td>8</td>
+<td>3.9</td>
+<td>3.69</td>
+<td>0.21</td>
+<td>.387</td>
+</tr>
+<tr class="even">
+<td>Child 23</td>
+<td>8</td>
+<td>4.04</td>
+<td>3.85</td>
+<td>0.19</td>
+<td>.397</td>
+</tr>
+<tr class="odd">
+<td>Child 26</td>
+<td>8</td>
+<td>3.84</td>
+<td>3.69</td>
+<td>0.15</td>
+<td>.420</td>
+</tr>
+<tr class="even">
+<td>Child 39</td>
+<td>8</td>
+<td>3.79</td>
+<td>3.59</td>
+<td>0.2</td>
+<td>.440</td>
+</tr>
+<tr class="odd">
+<td>Child 31</td>
+<td>8</td>
+<td>4.18</td>
+<td>4.03</td>
+<td>0.15</td>
+<td>.483</td>
+</tr>
+<tr class="even">
+<td>Child 4</td>
+<td>8</td>
+<td>4.12</td>
+<td>3.98</td>
+<td>0.13</td>
+<td>.499</td>
+</tr>
+<tr class="odd">
+<td>Child 1</td>
+<td>8</td>
+<td>3.8</td>
+<td>4.04</td>
+<td>-0.24</td>
+<td>.592</td>
+</tr>
+<tr class="even">
+<td>Child 33</td>
+<td>8</td>
+<td>3.88</td>
+<td>3.71</td>
+<td>0.17</td>
+<td>.612</td>
+</tr>
+<tr class="odd">
+<td>Child 21</td>
+<td>8</td>
+<td>4.23</td>
+<td>4.19</td>
+<td>0.04</td>
+<td>.672</td>
+</tr>
+<tr class="even">
+<td>Child 2</td>
+<td>8</td>
+<td>3.7</td>
+<td>3.7</td>
+<td>0.01</td>
+<td>.692</td>
+</tr>
+<tr class="odd">
+<td>Child 14</td>
+<td>8</td>
+<td>3.53</td>
+<td>3.6</td>
+<td>-0.07</td>
+<td>.712</td>
+</tr>
+<tr class="even">
+<td>Child 22</td>
+<td>8</td>
+<td>3.87</td>
+<td>3.87</td>
+<td>0</td>
+<td>.716</td>
+</tr>
+<tr class="odd">
+<td>Child 32</td>
+<td>8</td>
+<td>3.89</td>
+<td>4.01</td>
+<td>-0.12</td>
+<td>.728</td>
+</tr>
+<tr class="even">
+<td>Child 44</td>
+<td>8</td>
+<td>3.81</td>
+<td>3.88</td>
+<td>-0.07</td>
+<td>.745</td>
+</tr>
+<tr class="odd">
+<td>Child 30</td>
+<td>8</td>
+<td>3.7</td>
+<td>3.8</td>
+<td>-0.1</td>
+<td>.768</td>
+</tr>
+<tr class="even">
+<td>Child 43</td>
+<td>8</td>
+<td>3.48</td>
+<td>3.54</td>
+<td>-0.05</td>
+<td>.786</td>
+</tr>
+<tr class="odd">
+<td>Child 28</td>
+<td>8</td>
+<td>3.81</td>
+<td>3.78</td>
+<td>0.03</td>
+<td>.904</td>
+</tr>
+<tr class="even">
+<td>Child 37</td>
+<td>8</td>
+<td>4.13</td>
+<td>4.22</td>
+<td>-0.08</td>
+<td>.909</td>
+</tr>
+<tr class="odd">
+<td>Child 34</td>
+<td>8</td>
+<td>3.55</td>
+<td>3.66</td>
+<td>-0.11</td>
+<td>.925</td>
+</tr>
+<tr class="even">
+<td>Child 42</td>
+<td>8</td>
+<td>3.74</td>
+<td>3.75</td>
+<td>-0.01</td>
+<td>.937</td>
+</tr>
+<tr class="odd">
+<td>Child 24</td>
+<td>8</td>
+<td>4.12</td>
+<td>3.87</td>
+<td>0.25</td>
+<td>.947</td>
+</tr>
+<tr class="even">
+<td><strong>Child 20</strong></td>
+<td><strong>10</strong></td>
+<td><strong>4.14</strong></td>
+<td><strong>3.52</strong></td>
+<td><strong>0.62</strong></td>
+<td><strong>.001</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Child 34</strong></td>
+<td><strong>10</strong></td>
+<td><strong>4.23</strong></td>
+<td><strong>3.88</strong></td>
+<td><strong>0.36</strong></td>
+<td><strong>.003</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Child 22</strong></td>
+<td><strong>10</strong></td>
+<td><strong>4.15</strong></td>
+<td><strong>3.66</strong></td>
+<td><strong>0.49</strong></td>
+<td><strong>.005</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Child 24</strong></td>
+<td><strong>10</strong></td>
+<td><strong>3.96</strong></td>
+<td><strong>3.67</strong></td>
+<td><strong>0.29</strong></td>
+<td><strong>.014</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Child 30</strong></td>
+<td><strong>10</strong></td>
+<td><strong>3.85</strong></td>
+<td><strong>3.53</strong></td>
+<td><strong>0.32</strong></td>
+<td><strong>.016</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Child 32</strong></td>
+<td><strong>10</strong></td>
+<td><strong>4.01</strong></td>
+<td><strong>3.85</strong></td>
+<td><strong>0.16</strong></td>
+<td><strong>.018</strong></td>
+</tr>
+<tr class="even">
+<td><strong>Child 31</strong></td>
+<td><strong>10</strong></td>
+<td><strong>4.04</strong></td>
+<td><strong>3.54</strong></td>
+<td><strong>0.5</strong></td>
+<td><strong>.020</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>Child 8</strong></td>
+<td><strong>10</strong></td>
+<td><strong>4.03</strong></td>
+<td><strong>3.76</strong></td>
+<td><strong>0.26</strong></td>
+<td><strong>.043</strong></td>
+</tr>
+<tr class="even">
+<td>Child 9</td>
+<td>10</td>
+<td>3.7</td>
+<td>3.54</td>
+<td>0.16</td>
+<td>.076</td>
+</tr>
+<tr class="odd">
+<td>Child 25</td>
+<td>10</td>
+<td>3.98</td>
+<td>3.66</td>
+<td>0.32</td>
+<td>.096</td>
+</tr>
+<tr class="even">
+<td>Child 14</td>
+<td>10</td>
+<td>3.67</td>
+<td>3.52</td>
+<td>0.15</td>
+<td>.129</td>
+</tr>
+<tr class="odd">
+<td>Child 28</td>
+<td>10</td>
+<td>3.97</td>
+<td>3.75</td>
+<td>0.22</td>
+<td>.155</td>
+</tr>
+<tr class="even">
+<td>Child 11</td>
+<td>10</td>
+<td>3.57</td>
+<td>3.45</td>
+<td>0.12</td>
+<td>.195</td>
+</tr>
+<tr class="odd">
+<td>Child 10</td>
+<td>10</td>
+<td>3.93</td>
+<td>3.82</td>
+<td>0.11</td>
+<td>.197</td>
+</tr>
+<tr class="even">
+<td>Child 12</td>
+<td>10</td>
+<td>4.04</td>
+<td>3.83</td>
+<td>0.2</td>
+<td>.219</td>
+</tr>
+<tr class="odd">
+<td>Child 19</td>
+<td>10</td>
+<td>3.57</td>
+<td>3.81</td>
+<td>-0.23</td>
+<td>.262</td>
+</tr>
+<tr class="even">
+<td>Child 2</td>
+<td>10</td>
+<td>3.99</td>
+<td>3.86</td>
+<td>0.13</td>
+<td>.266</td>
+</tr>
+<tr class="odd">
+<td>Child 4</td>
+<td>10</td>
+<td>4.03</td>
+<td>3.79</td>
+<td>0.25</td>
+<td>.29</td>
+</tr>
+<tr class="even">
+<td>Child 7</td>
+<td>10</td>
+<td>3.97</td>
+<td>3.82</td>
+<td>0.15</td>
+<td>.306</td>
+</tr>
+<tr class="odd">
+<td>Child 16</td>
+<td>10</td>
+<td>3.81</td>
+<td>3.97</td>
+<td>-0.15</td>
+<td>.327</td>
+</tr>
+<tr class="even">
+<td>Child 5</td>
+<td>10</td>
+<td>3.93</td>
+<td>3.81</td>
+<td>0.11</td>
+<td>.344</td>
+</tr>
+<tr class="odd">
+<td>Child 3</td>
+<td>10</td>
+<td>3.84</td>
+<td>3.93</td>
+<td>-0.09</td>
+<td>.395</td>
+</tr>
+<tr class="even">
+<td>Child 18</td>
+<td>10</td>
+<td>3.51</td>
+<td>3.37</td>
+<td>0.14</td>
+<td>.420</td>
+</tr>
+<tr class="odd">
+<td>Child 35</td>
+<td>10</td>
+<td>4.15</td>
+<td>4.13</td>
+<td>0.02</td>
+<td>.520</td>
+</tr>
+<tr class="even">
+<td>Child 15</td>
+<td>10</td>
+<td>3.6</td>
+<td>3.72</td>
+<td>-0.12</td>
+<td>.592</td>
+</tr>
+<tr class="odd">
+<td>Child 27</td>
+<td>10</td>
+<td>3.65</td>
+<td>3.52</td>
+<td>0.12</td>
+<td>.599</td>
+</tr>
+<tr class="even">
+<td>Child 29</td>
+<td>10</td>
+<td>3.67</td>
+<td>3.77</td>
+<td>-0.1</td>
+<td>.601</td>
+</tr>
+<tr class="odd">
+<td>Child 21</td>
+<td>10</td>
+<td>3.87</td>
+<td>3.84</td>
+<td>0.03</td>
+<td>.641</td>
+</tr>
+<tr class="even">
+<td>Child 23</td>
+<td>10</td>
+<td>3.99</td>
+<td>3.85</td>
+<td>0.14</td>
+<td>.734</td>
+</tr>
+<tr class="odd">
+<td>Child 1</td>
+<td>10</td>
+<td>3.83</td>
+<td>3.71</td>
+<td>0.12</td>
+<td>.832</td>
+</tr>
+<tr class="even">
+<td>Child 17</td>
+<td>10</td>
+<td>3.9</td>
+<td>3.93</td>
+<td>-0.03</td>
+<td>.891</td>
+</tr>
+<tr class="odd">
+<td>Child 6</td>
+<td>10</td>
+<td>3.9</td>
+<td>3.81</td>
+<td>0.09</td>
+<td>.899</td>
+</tr>
+<tr class="even">
+<td>Child 33</td>
+<td>10</td>
+<td>3.73</td>
+<td>3.61</td>
+<td>0.12</td>
+<td>.902</td>
+</tr>
+<tr class="odd">
+<td>Child 13</td>
+<td>10</td>
+<td>3.44</td>
+<td>3.46</td>
+<td>-0.02</td>
+<td>.955</td>
+</tr>
+<tr class="even">
+<td>Child 26</td>
+<td>10</td>
+<td>3.59</td>
+<td>3.61</td>
+<td>-0.02</td>
+<td>.996</td>
+</tr>
+<tr class="odd">
+<td><strong>768</strong></td>
+<td><strong>9 (Houston)</strong></td>
+<td><strong>25800</strong></td>
+<td><strong>8380</strong></td>
+<td><strong>17420</strong></td>
+<td><strong>.000</strong></td>
+</tr>
+<tr class="even">
+<td>929</td>
+<td>9 (Houston)</td>
+<td>11614</td>
+<td>7843</td>
+<td>3771</td>
+<td>.056</td>
+</tr>
+<tr class="odd">
+<td>668</td>
+<td>9 (Houston)</td>
+<td>12425</td>
+<td>13060</td>
+<td>-635</td>
+<td>.336</td>
+</tr>
+<tr class="even">
+<td>762</td>
+<td>9 (Houston)</td>
+<td>8671</td>
+<td>6743</td>
+<td>1928</td>
+<td>.529</td>
+</tr>
+</tbody>
+</table>
+
+<div style="page-break-after: always;"></div>
+</div>
+<div id="ch05appendixB" class="section level2 unnumbered">
+<h2>Appendix B</h2>
+<div id="software" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Software</h3>
+<p>We used R version 3.4.3 <span class="citation">(R Core Team, <a href="#ref-r_core_team_r:_2017" role="doc-biblioref">2017</a><a href="#ref-r_core_team_r:_2017" role="doc-biblioref">b</a>)</span> and rstan version 2.17.3 <span class="citation">(Stan Development Team, <a href="#ref-stan_development_team_rstan:_2018" role="doc-biblioref">2018</a><a href="#ref-stan_development_team_rstan:_2018" role="doc-biblioref">b</a>)</span> to estimate the models. We used shinystan version 2.4.0 <span class="citation">(Gabry, <a href="#ref-gabry_shinystan:_2018" role="doc-biblioref">2018</a>)</span> to asses model convergence. The packages ggplot2 version 2.2.1 <span class="citation">(Wickham et al., <a href="#ref-R-ggplot2" role="doc-biblioref">2019</a>)</span> and gridExtra version 2.3 <span class="citation">(Auguie, <a href="#ref-R-gridExtra" role="doc-biblioref">2017</a>)</span> were used in creating our figures and the package foreign version 0.8-69 <span class="citation">(R Core Team, <a href="#ref-r_core_team_foreign:_2017" role="doc-biblioref">2017</a><a href="#ref-r_core_team_foreign:_2017" role="doc-biblioref">a</a>)</span> was used to load the data into R.</p>
+</div>
+<div id="priors" class="section level3">
+<h3><span class="header-section-number">4.4.2</span> Priors</h3>
+<p>We specified half-cauchy priors with location of 0 and scale 2.5 on the variance parameters in accordance with recommendations by <span class="citation">Gelman (<a href="#ref-gelman_prior_2006" role="doc-biblioref">2006</a><a href="#ref-gelman_prior_2006" role="doc-biblioref">b</a>)</span>. All other parameters are modelled with uninformative priors given the scale of the data, namely normal priors with a mean of 0 and a standard deviation of 100.</p>
+</div>
+<div id="estimation-and-convergence" class="section level3">
+<h3><span class="header-section-number">4.4.3</span> Estimation and Convergence</h3>
+<p>We ran 4 chains using 1000 warmup samples and 2500 iterations each. We looked at several indicators to check if our model had converged and if the model was appropriate. The <span class="math inline">\(\hat{R}\)</span> (&lt; 1.01), Monte Carlo standard error (&lt; 5%) and effective sample size (&gt;10%) did not display problematic signs for any of the parameters. No divergent transitions were found and the energy diagnostic for the Hamiltonian Monte Carlo looked fine <span class="citation">(Betancourt, <a href="#ref-betancourt_conceptual_2017" role="doc-biblioref">2017</a>)</span>.</p>
+</div>
+<div id="posterior-predictive-check" class="section level3">
+<h3><span class="header-section-number">4.4.4</span> Posterior predictive check</h3>
+<p>To see if the model was appropriate for the data we performed posterior predictive checks for each observation for each child. That is, we simulated data using the estimated model and looked if the original data would be surprising given the model. If there were few discrepancies between the model generated data and the original data the model was assumed to be appropriate. An example of such posterior predictive checks can be seen in Figure <a href="Hierarchical.html#fig:ch04fig9">4.9</a>. For a pdf including all posterior predictive checks see the document “Posterior_Predictives.pdf” in the data Archive on the Open Science Framework (OSF) webpage for this study at <a href="https://osf.io/ebrxy/">https://osf.io/ebrxy/</a>. Only 3.3% of the observations did not pass this check and there did not seem to be a pattern in which observations did not pass the check. We therefore conclude that the model described the data well.</p>
+</div>
+<div id="sensitivity-analysis" class="section level3">
+<h3><span class="header-section-number">4.4.5</span> Sensitivity Analysis</h3>
+<p>Figure <a href="Hierarchical.html#fig:ch04fig10">4.10</a> shows the effects for the condition parameter estimates if we change the priors on the group SD parameters. We compare a uniform (0, Inf), a half Cauchy (0, 2.5) an inverse gamma (0.1, 0.1) and an inverse gamma (0.5, 0.5) prior. We see that the variation for the individuals stays about the same for the uniform and Cauchy prior but increases a bit if we use the inverse gamma (0.1, 0.1) and somewhat more if we use the inverse gamma (0.5, 0.5) prior. This is due to a prior data conflict for the inverse gamma priors and the data. The data are on the log10 scale and thus we obtain small values with small SD estimates. The estimates are so small that their values are extremely unlikely given the inverse gamma prior specifications. (smaller than 1% chance for inverse gamma (0.1, 0.1) and smaller than 0.001% for inverse gamma (0.5, 0.5)). These priors thus artificially increase variance between individuals as you see in the figure and are not uninformative for this data set. A visual representation of the priors and the lack of support of the inverse gamma priors on parameter space with very small values can be seen in Figures <a href="Hierarchical.html#fig:ch04fig11">4.11</a>. The Cauchy and uniform prior are uninformative given the scale of the data but are not in disagreement with the data. They cause stable results over different choices thus encouraging us to trust the results from the analyses with the half Cauchy(0, 2.5) prior.</p>
+<div class="figure" style="text-align: center"><span id="fig:ch04fig9"></span>
+<img src="figures/chapter_4/Figure9.png" alt="Example of posterior predictive check. 1500 Samples are generated based on the model estimates for each measurement for each individual. The original observation is marked with a blue line if it falls within the 95\% interval of the observations and with red if it falls outside. If the model is a good model the observed data should not be surprising given the model. As such, if the model is good we should expect few observations that we cannot explain and thus few 'red' lines in the histograms. " width="90%" />
+<p class="caption">
+Figure 4.9: Example of posterior predictive check. 1500 Samples are generated based on the model estimates for each measurement for each individual. The original observation is marked with a blue line if it falls within the 95% interval of the observations and with red if it falls outside. If the model is a good model the observed data should not be surprising given the model. As such, if the model is good we should expect few observations that we cannot explain and thus few ‘red’ lines in the histograms.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:ch04fig10"></span>
+<img src="figures/chapter_4/Figure10.png" alt="Results of the sensitivity analyses regarding the effects of the choice of the prior on the group standard deviation parameters  on the condition parameter in which we a interested for this study." width="85%" />
+<p class="caption">
+Figure 4.10: Results of the sensitivity analyses regarding the effects of the choice of the prior on the group standard deviation parameters on the condition parameter in which we a interested for this study.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:ch04fig11"></span>
+<img src="figures/chapter_4/Figure11.png" alt="Visualization of the priors used in the sensitivity analysis, also zoomed at the posterior parameter space that is relevant and we also present the resulting posterior distributions if these priors are used." width="85%" />
+<p class="caption">
+Figure 4.11: Visualization of the priors used in the sensitivity analysis, also zoomed at the posterior parameter space that is relevant and we also present the resulting posterior distributions if these priors are used.
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-altvater-mackensen_learning_2015">
+<p>Altvater-Mackensen, N., &amp; Grossmann, T. (2015). Learning to match auditory and visual speech cues: Social influences on acquisition of phonological categories. <em>Child Development</em>, <em>86</em>(2), 362–378.</p>
+</div>
+<div id="ref-aslin_methodological_2005">
+<p>Aslin, R. N., &amp; Fiser, J. (2005). Methodological challenges for understanding cognitive development in infants. <em>Trends in Cognitive Sciences</em>, <em>9</em>(3), 92–98.</p>
+</div>
+<div id="ref-R-gridExtra">
+<p>Auguie, B. (2017). <em>GridExtra: Miscellaneous functions for "grid" graphics</em>. Retrieved from <a href="https://CRAN.R-project.org/package=gridExtra">https://CRAN.R-project.org/package=gridExtra</a></p>
+</div>
+<div id="ref-benjamini_controlling_1995">
+<p>Benjamini, Y., &amp; Hochberg, Y. (1995). Controlling the false discovery rate: A practical and powerful approach to multiple testing. <em>Journal of the Royal Statistical Society: Series B (Methodological)</em>, <em>57</em>(1), 289–300.</p>
+</div>
+<div id="ref-betancourt_conceptual_2017">
+<p>Betancourt, M. (2017). A conceptual introduction to Hamiltonian Monte Carlo. <em>arXiv Preprint arXiv:1701.02434</em>.</p>
+</div>
+<div id="ref-colombo_infant_2009">
+<p>Colombo, J., &amp; Mitchell, D. W. (2009). Infant visual habituation. <em>Neurobiology of Learning and Memory</em>, <em>92</em>(2), 225–234.</p>
+</div>
+<div id="ref-cristia_fine-grained_2011">
+<p>Cristia, A. (2011). Fine-grained variation in caregivers’/s/predicts their infants’/s/category. <em>The Journal of the Acoustical Society of America</em>, <em>129</em>(5), 3271–3280.</p>
+</div>
+<div id="ref-cristia_predicting_2014">
+<p>Cristia, A., Seidl, A., Junge, C., Soderstrom, M., &amp; Hagoort, P. (2014). Predicting individual variation in language from infant speech perception measures. <em>Child Development</em>, <em>85</em>(4), 1330–1345.</p>
+</div>
+<div id="ref-cristia_test-retest_2016">
+<p>Cristia, A., Seidl, A., Singh, L., &amp; Houston, D. (2016). Test-retest reliability in infant speech perception tasks. <em>Infancy</em>, <em>21</em>(5), 648–667.</p>
+</div>
+<div id="ref-dijkstra_universal_2011">
+<p>Dijkstra, C., &amp; Fikkert, J. (2011). Universal Constraints on the Discrimination of Place of Articulation? Asymmetries in the Discrimination of ’paan’and ’taan’ by 6-month-old Dutch Infants.</p>
+</div>
+<div id="ref-gabry_shinystan:_2018">
+<p>Gabry, J. (2018). <em>Shinystan: Interactive Visual and Numerical Diagnostics and Posterior Analysis for Bayesian Models</em>. Retrieved from <a href="https://CRAN.R-project.org/package=shinystan">https://CRAN.R-project.org/package=shinystan</a></p>
+</div>
+<div id="ref-gelman_multilevel_2006">
+<p>Gelman, A. (2006a). Multilevel (hierarchical) modeling: What it can and cannot do. <em>Technometrics</em>, <em>48</em>(3), 432–435.</p>
+</div>
+<div id="ref-gelman_prior_2006">
+<p>Gelman, A. (2006b). Prior distributions for variance parameters in hierarchical models (comment on article by Browne and Draper). <em>Bayesian Analysis</em>, <em>1</em>(3), 515–534.</p>
+</div>
+<div id="ref-gelman_bayesian_2013">
+<p>Gelman, A., Carlin, J. B., Stern, H. S., Dunson, D. B., Vehtari, A., &amp; Rubin, D. B. (2013). <em>Bayesian data analysis</em>. CRC press.</p>
+</div>
+<div id="ref-gelman_why_2012">
+<p>Gelman, A., Hill, J., &amp; Yajima, M. (2012). Why we (usually) don’t have to worry about multiple comparisons. <em>Journal of Research on Educational Effectiveness</em>, <em>5</em>(2), 189–211.</p>
+</div>
+<div id="ref-gelman_type_2000">
+<p>Gelman, A., &amp; Tuerlinckx, F. (2000). Type S error rates for classical and Bayesian single and multiple comparison procedures. <em>Computational Statistics</em>, <em>15</em>(3), 373–390.</p>
+</div>
+<div id="ref-horn_speech_2007">
+<p>Horn, D. L., Houston, D. M., &amp; Miyamoto, R. T. (2007). Speech discrimination skills in deaf infants before and after cochlear implantation. <em>Audiological Medicine</em>, <em>5</em>(4), 232–241.</p>
+</div>
+<div id="ref-houston_assessing_2007">
+<p>Houston, D. M., Horn, D. L., Qi, R., Ting, J. Y., &amp; Gao, S. (2007). Assessing speech discrimination in individual infants. <em>Infancy</em>, <em>12</em>(2), 119–145.</p>
+</div>
+<div id="ref-houston-price_distinguishing_2004">
+<p>Houston-Price, C., &amp; Nakai, S. (2004). Distinguishing novelty and familiarity effects in infant preference procedures. <em>Infant and Child Development: An International Journal of Research and Practice</em>, <em>13</em>(4), 341–348.</p>
+</div>
+<div id="ref-junge_early_2014">
+<p>Junge, C., &amp; Cutler, A. (2014). Early word recognition and later language skills. <em>Brain Sciences</em>, <em>4</em>(4), 532–559.</p>
+</div>
+<div id="ref-de_klerk_lost_2019">
+<p>Klerk, M. de, Bree, E. de, Kerkhoff, A., &amp; Wijnen, F. (2019). Lost and Found: Decline and Reemergence of Non-Native Vowel Discrimination in the First Year of Life. <em>Language Learning and Development</em>, <em>15</em>(1), 14–31.</p>
+</div>
+<div id="ref-kruschke_bayesian_2013">
+<p>Kruschke, J. K. (2013). Bayesian estimation supersedes the t test. <em>Journal of Experimental Psychology: General</em>, <em>142</em>(2), 573.</p>
+</div>
+<div id="ref-lee_bayesian_2018">
+<p>Lee, M. D. (2018). Bayesian methods in cognitive modeling. <em>Stevens’ Handbook of Experimental Psychology and Cognitive Neuroscience</em>, <em>5</em>, 1–48.</p>
+</div>
+<div id="ref-liu_bilingual_2015">
+<p>Liu, L., &amp; Kager, R. (2015). Bilingual exposure influences infant VOT perception. <em>Infant Behavior and Development</em>, <em>38</em>, 27–36.</p>
+</div>
+<div id="ref-liu_perception_2016">
+<p>Liu, L., &amp; Kager, R. (2016). Perception of a native vowel contrast by Dutch monolingual and bilingual infants: A bilingual perceptual lead. <em>International Journal of Bilingualism</em>, <em>20</em>(3), 335–345.</p>
+</div>
+<div id="ref-maurer_perceptual_2014">
+<p>Maurer, D., &amp; Werker, J. F. (2014). Perceptual narrowing during infancy: A comparison of language and faces. <em>Developmental Psychobiology</em>, <em>56</em>(2), 154–178.</p>
+</div>
+<div id="ref-melvin_home_2017">
+<p>Melvin, S. A., Brito, N. H., Mack, L. J., Engelhardt, L. E., Fifer, W. P., Elliott, A. J., &amp; Noble, K. G. (2017). Home environment, but not socioeconomic status, is linked to differences in early phonetic perception ability. <em>Infancy</em>, <em>22</em>(1), 42–55.</p>
+</div>
+<div id="ref-molfese_predicting_2000">
+<p>Molfese, D. L. (2000). Predicting dyslexia at 8 years of age using neonatal brain responses. <em>Brain and Language</em>, <em>72</em>(3), 238–245.</p>
+</div>
+<div id="ref-newman_infants_2006">
+<p>Newman, R., Ratner, N. B., Jusczyk, A. M., Jusczyk, P. W., &amp; Dow, K. A. (2006). Infants’ early ability to segment the conversational speech signal predicts later language development: A retrospective analysis. <em>Developmental Psychology</em>, <em>42</em>(4), 643.</p>
+</div>
+<div id="ref-oakes_using_2010">
+<p>Oakes, L. M. (2010). Using habituation of looking time to assess mental processes in infancy. <em>Journal of Cognition and Development</em>, <em>11</em>(3), 255–268.</p>
+</div>
+<div id="ref-r_core_team_foreign:_2017">
+<p>R Core Team. (2017a). <em>Foreign: Read Data Stored by ’Minitab’, ’S’, ’SAS’, ’SPSS’, ’Stata’, ’Systat’, ’Weka’, ’dBase’, ...</em> Retrieved from <a href="https://CRAN.R-project.org/package=foreign">https://CRAN.R-project.org/package=foreign</a></p>
+</div>
+<div id="ref-r_core_team_r:_2017">
+<p>R Core Team. (2017b). <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. Retrieved from <a href="https://www.R-project.org/">https://www.R-project.org/</a></p>
+</div>
+<div id="ref-sokolov_perception_1963">
+<p>Sokolov, E. N. (1963). <em>Perception and the conditioned reflex</em>. New York, NY: Macmillan.</p>
+</div>
+<div id="ref-stan_development_team_rstan:_2018">
+<p>Stan Development Team. (2018b). <em>RStan: The R interface to Stan</em>. Retrieved from <a href="http://mc-stan.org/">http://mc-stan.org/</a></p>
+</div>
+<div id="ref-tsao_speech_2004">
+<p>Tsao, F., Liu, H., &amp; Kuhl, P. K. (2004). Speech perception in infancy predicts language development in the second year of life: A longitudinal study. <em>Child Development</em>, <em>75</em>(4), 1067–1084.</p>
+</div>
+<div id="ref-tsuji_perceptual_2014">
+<p>Tsuji, S., &amp; Cristia, A. (2014). Perceptual attunement in vowels: A meta‐analysis. <em>Developmental Psychobiology</em>, <em>56</em>(2), 179–191.</p>
+</div>
+<div id="ref-R-ggplot2">
+<p>Wickham, H., Chang, W., Henry, L., Pedersen, T. L., Takahashi, K., Wilke, C., … Yutani, H. (2019). <em>Ggplot2: Create elegant data visualisations using the grammar of graphics</em>. Retrieved from <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="DAC1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Burns.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": true,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "section"
+},
+"search": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

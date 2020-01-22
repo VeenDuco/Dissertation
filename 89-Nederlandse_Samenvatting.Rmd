@@ -1,0 +1,46 @@
+
+\pagestyle{headings}
+
+<!-- https://tex.stackexchange.com/questions/165915/remove-chapter-number-from-header-memoir-class -->
+\makeatletter
+\renewcommand\chaptermark[1]{%
+	\markboth{\MakeUppercase{#1}}{}
+}
+\makeatother
+
+<!-- \chaptermark{} -->
+# Nederlandse Samenvatting {-}
+
+\chaptermark{NEDERLANDSE SAMENVATTING}
+\thispagestyle{empty}
+
+\markboth{NEDERLANDSE SAMENVATTING}{NEDERLANDSE SAMENVATTING}
+
+Iedereen moet beslissingen maken op basis van incomplete en onzekere informatie. Om ons te helpen de beschikbare informatie te organiseren en interpreteren maken we gebruik van statistiek. Bayesiaanse statistiek is een veelgebruikt conceptueel raamwerk dat kan helpen om de geschikte stappen te bepalen voor de toekomst. Dit statistische raamwerk is een kernonderdeel van deze dissertatie en wordt in alle hoofdstukken gebruikt. 
+
+Bayesiaanse statistiek bied de mogelijkheid om de huidige staat van kennis te beschrijven in termen van waarschijnlijkheid [@jaynes_bayesian_1996]. Meer dan dat, het kan worden gezien als een extensie van logica [@jaynes_probability_2003]. Het beschrijft bovendien hoe we zouden moeten leren van nieuwe informatie [@lindley_understanding_2013]. Bayesiaanse statistiek stelt dat we kansverdelingen kunnen gebruiken om onze huidige staat van kennis over een parameter te beschrijven. Dit kunnen we doen voordat we nieuwe data observeren, dan heet dit een *a priori* kansverdeling, ofwel voorkennis.  Nadat we nieuwe data hebben geobserveerd werken we onze beschrijving van de staat van kennis bij tot een zogeheten *a posteriori* kansverdeling. 
+
+Doordat voorkennis wordt uitgedrukt in termen van kansverdelingen bied dit de mogelijkheid om hier op verschillende manieren invulling aan te geven. Zo kan vorig onderzoek worden meegenomen waarbij rekening gehouden kan worden met systematische verschillen tussen beide onderzoeken als dat nodig is [@spiegelhalter_bayesian_2004, Hoofdstuk 4]. Ook logische kennis kan worden mee genomen. Bijvoorbeeld dat er geen negatieve waarden kunnen zijn als temperatuur in Kelvin wordt gemeten of dat de het aantal deeltjes in de lucht, gemeten bij luchtvervuiling onderzoek in een stad, niet zoveel kan zijn dat er helemaal niet gewoond kan worden. Daarnaast kan worden gedacht aan het uitdrukken van expert kennis in termen van kansverdelingen, dit vraagt echter een vertalingsproces wat wel elicitatie wordt genoemd. 
+
+In deze dissertatie wordt besproken hoe verschillende bronnen van voorkennis gebruikt kunnen worden en afgezet zouden kunnen worden tegen traditionele informatie bronnen in de sociale wetenschappen zoals survey onderzoek. In het specifiek gaat aandacht uit naar de elicitatie van expert kennis. 
+
+In Hoofdstuk [1](#introduction) staat een uitgebreide versie van de uitleg die hierboven gegeven wordt aangaande Bayesiaanse statistiek, voorkennis en expert elicitatie. Daarnaast is een Engelse beschrijving te vinden van de inhoud van de hoofdstukken van deze dissertatie zoals deze ook hieronder in het Nederlands volgt. 
+
+In Hoofdstuk [2](#fivestep) stellen we een elicitatie methodologie voor om over een enkele parameter kennis uit te drukken. Traditioneel wordt dit gedaan door experts te vragen kun kennis uit te drukken in kwantielen van kansverdelingen waarna op basis van die informatie een passende kansverdeling wordt bepaald. Niet alle experts hebben evenveel statistische training gehad of voelen zich even comfortabel bij het uitdrukken van hun kennis in termen van kwantielen. Daarom stellen wij een methode voor die hier niet op gebaseerd is en experts in meerdere stappen helpt bij het uitdrukken van hun kennis in een kansverdeling. Bij elke stap wordt visuele feedback gegeven doormiddel van speciaal ontwikkelde software. We evalueren de voorgestelde methode doormiddel van een haalbaarheidsstudie, een validatie studie voor de eerste stappen in de methode en een voorbeeld van een volledige elicitatie studie. 
+
+In Hoofdstuk [3](#DAC1) bekijken we hoe expert kennis, als alternatieve bron van informatie, gecontrasteerd kan worden met traditionele data. De methode biedt gelijktijdig een manier om expert te rangschikken op basis van technieken die geleend zijn uit de informatie theorie. Wij gebruiken het concept relatieve entropie, of Kullback-Leibler afstand, wat de hoeveelheid verlies van informatie uitdrukt als een bepaalde verdeling wordt benaderd door een andere verdeling. Voor diegene die bekend zijn met model selectie, Akaike's Information Criterion is een benadering van deze afstand [@burnham_model_2002, Hoofdstuk 2].
+
+In Hoofdstuk [4](#Hierarchical) wordt een andere manier uitgelicht om informatie aan een model toe te voegen. We introduceren Bayesiaanse hiërarchische modellen in het veld van spraak discriminatie analyse bij zuigelingen. Deze techniek is niet nieuw van zichzelf maar is tot op heden niet gebruikt in dit veld. Met deze modellen kunnen individuele analyses worden verzorgt binnen de context van een groepsstructuur. Door de groepsstructuur in acht te nemen kunnen we het meeste halen uit de, op individuele basis, kleine data sets met veel ruis. De methode schat of individuen veel op elkaar lijken, of niet, en neemt dit mee in de schatting van de individuele effecten. In essentie wordt de groepsinformatie gebruikt als voorkennis voor de individuele analyses waarbij deze voorkennis sterker is, en meer invloed heeft, als individuen meer op elkaar lijken. 
+
+In Hoofdstuk [5](#Burns) reflecteren we op problemen die voor kunnen komen bij het schatten van steeds gecompliceerdere modellen. We laten zien dat geavanceerde software voorzichtig gebruikt moet worden en de resultaten van de analyses nauwkeurig geïnspecteerd dienen te worden. We geven een voorbeeld van een analyse waarin niet alles volgens plan verloopt. Er wordt geïllustreerd welke waarschuwingen en signalen de software en de *a-posteriori* kansverdelingen afgeven als er problemen ontstaan. Daarnaast worden mogelijke oplossingen aangedragen en wordt beschreven hoe de pijnpunten in de combinatie van het model, de data en de voorkennis gevonden kunnen worden. 
+
+In Hoofdstuk [6](#elicitlgm) combineren we de vorige hoofdstukken. We nemen een complexer model en vragen experts naar hun kennis betreffende dit model. De elicitatie methode uit Hoofdstuk [2](#fivestep) wordt aangepast om parameters van een hiërarchische model (zoals gebruik in Hoofdstukken [4](#Hierarchical) en [5](#Burns)) te kunnen uitvragen. In het specifiek gaat het in dit hoofdstuk om een Latente Groei Curve model dat de ontwikkeling van Posttraumatische stress symptomen beschrijft bij kinderen met brandwonden. De informatie theoretische constructen uit hoofdstuk [3](#DAC1) worden gebruikt om (groepen) experts te vergelijken met elkaar en met traditioneel verzamelde data. 
+
+In Hoofdstuk [7](#thesisdiscussion) reflecteer ik op het werk en de uitleg die gegeven is in de hoofdstukken van deze dissertatie, inclusief de introductie. 
+
+
+
+
+
+
+

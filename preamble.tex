@@ -1,0 +1,50 @@
+% \documentclass[12pt, a4paper, titlepage]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{pdflscape} % this with newcommand for landscape pages
+\newcommand{\blandscape}{\begin{landscape}} %redefine landscape argument from pdflscape \begin{landscape} doesn't work in bookdown
+\newcommand{\elandscape}{\end{landscape}}
+\usepackage{float} % to allow you to put tables and figures in specific places
+\usepackage{fancyhdr} % for short chapter names https://github.com/rstudio/bookdown/issues/360
+
+% https://tex.stackexchange.com/questions/7276/table-caption-width
+\usepackage[width = \textwidth, textfont = it]{caption}
+
+% https://en.wikibooks.org/wiki/LaTeX/Footnotes_and_Margin_Notes
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+
+
+\frontmatter % page numbering starts at introduction
+% \pagenumbering{roman}
+
+
+
+% \usepackage{booktabs}
+% \usepackage{longtable}
+% 
+% 
+% \ifxetex
+%   \usepackage{letltxmacro}
+%   \setlength{\XeTeXLinkMargin}{1pt}
+%   \LetLtxMacro\SavedIncludeGraphics\includegraphics
+%   \def\includegraphics#1#{% #1 catches optional stuff (star/opt. arg.)
+%     \IncludeGraphicsAux{#1}%
+%   }%
+%   \newcommand*{\IncludeGraphicsAux}[2]{%
+%     \XeTeXLinkBox{%
+%       \SavedIncludeGraphics#1{#2}%
+%     }%
+%   }%
+% \fi
+
+% \usepackage{fullpage}
+% \usepackage{pdflscape}
+% \usepackage[margin=1in]{geometry} %for marings
+% \usepackage{setspace} % for double spacing
+% \usepackage{float}
+% \doublespacing
+%\usepackage{newtxtext,newtxmath} % for times new roman
+
+% \usepackage{makeidx} % make index https://bookdown.org/yihui/bookdown/latex-index.html
+% \makeindex
