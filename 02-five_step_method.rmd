@@ -248,7 +248,7 @@ During the elicitation procedures we noticed that not all experts reasoned in th
 All data were analyzed anonymously and were transformed to avoid revealing business-sensitive information. The elicited priors $\pi_d(\theta)$ can be found in Figure \@ref(fig:ch02fig5), together with the posterior distribution $\pi(\theta|y)$. The values for the hyper parameters for $\pi_d(\theta)$ and $\pi(\theta|y)$ can be found in Table \@ref(tab:ch02tab3). We can see, visually in Figure \@ref(fig:ch02fig5) and numerically in Table \@ref(tab:ch02tab3), that experts one and two provide very similar predictions, however expert 2 is less uncertain about the prediction. In the same manner we can see that expert four made a prediction that closely resembles the actual realization.
 
 ```{r ch02fig5, fig.cap = "Results Five-Step Method elicitation study with large financial institution. Elicited expert distributions $\\pi_d(\\theta)$ plotted with results $\\pi(\\theta|y)$.", fig.align = "center", echo = FALSE, out.width = '90%'}
-knitr::include_graphics("figures/chapter_2/Figure_5a.jpg", dpi = 108)
+knitr::include_graphics("figures/chapter_2/Figure_5a.png", dpi = 108)
 ```
 
 
