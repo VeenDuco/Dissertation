@@ -3,7 +3,7 @@
 \chaptermark{ELICITATION IN THE SOCIAL SCIENCES}
 \thispagestyle{empty}
 
-\blfootnote{This chapter is submitted for publication as Veen, D., Egberts, M. R., Van Loey, N. E. E. \& Van de Schoot, R. \textit{Expert Elicitation in the Social Sciences: The case of Posttraumatic Stress Symptoms Development in Children with Burn Injuries} \\
+\blfootnote{This chapter is submitted for publication as Veen, D., Egberts, M. R., van Loey, N. E. E. \& van de Schoot, R. \textit{Expert Elicitation in the Social Sciences: The case of Posttraumatic Stress Symptoms Development in Children with Burn Injuries} \\
 \indent All authors have been involved in the design of the study and the elicitation procedure. DV programmed the elicitation software. ME arranged the elicitation meetings with the experts. DV and ME conducted all elicitation procedures together. DV wrote and revised the paper with contributions and feedback provided by ME, NvL and RvdS.}
 
 

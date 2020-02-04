@@ -25,7 +25,7 @@ As of December 2019, Duco holds a post-doctoral position at Utrecht University t
   - Meershoek, A.J.A., de Vries, E.E., **Veen, D.**, den Ruijter, H.M., & de Borst, G.J. (2019).
 Meta‐analysis of the outcomes of treatment of internal carotid artery near occlusion. *British Journal of Surgery*, 106(6), 665-671.
 
-  - **Veen, D.**, Stoel, D., Schalken, N., Mulder, K., & van de Schoot, R. (2019). Correction: Veen, D.; Stoel, D.; Schalken, N.; Mulder, K.; Van de Schoot, R. Using the Data Agreement Criterion to Rank Experts’ Beliefs. Entropy 2018, 20, 592. *Entropy*, 21(3), 307.
+  - **Veen, D.**, Stoel, D., Schalken, N., Mulder, K., & van de Schoot, R. (2019). Correction: Veen, D.; Stoel, D.; Schalken, N.; Mulder, K.; van de Schoot, R. Using the Data Agreement Criterion to Rank Experts’ Beliefs. Entropy 2018, 20, 592. *Entropy*, 21(3), 307.
 
   - **Veen, D.**, Stoel, D., Schalken, N., Mulder, K., & van de Schoot, R. (2018). Using the Data Agreement Criterion to Rank Experts' Beliefs. *Entropy*, 20(8). Doi: 10.3390/e20080592
 
@@ -37,7 +37,7 @@ Meta‐analysis of the outcomes of treatment of internal carotid artery near occ
 
   - **Veen, D.**, & Egberts, M. R. (2020). The importance of collaboration in Bayesian analyses with small samples. In R. Van de Schoot & M. Miočević (Eds.), *Small sample size solutions: A guide for applied researchers and practitioners.* Routledge.
 
-  - Van de Schoot, R., **Veen, D.**, Smeets, L., Winter, S. D., & Depaoli, S. (2020). A tutorial on using the WAMBS-checklist to avoid the misuse of Bayesian statistics. In R. Van de Schoot & M. Miočević (Eds.), *Small sample size solutions: A guide for applied researchers and practitioners.* Routledge.
+  - van de Schoot, R., **Veen, D.**, Smeets, L., Winter, S. D., & Depaoli, S. (2020). A tutorial on using the WAMBS-checklist to avoid the misuse of Bayesian statistics. In R. Van de Schoot & M. Miočević (Eds.), *Small sample size solutions: A guide for applied researchers and practitioners.* Routledge.
 
 
 ## Technical Reports {-}
